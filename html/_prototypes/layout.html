@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>CUBOX K-FACEON | 삼성 SDS</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<div class="sidebar-menu-inner">
+				<header class="logo-env">
+					<!-- logo -->
+					<div class="logo" style="padding-top: 8px">
+						<a href="/">
+							<img src="../../assets/img/faceon_logo.png" width="120" alt="">
+						</a>
+					</div>
+
+					<!-- logo collapse icon -->
+					<div class="sidebar-collapse">
+						<a href="#" class="sidebar-collapse-icon">
+							<!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+							<i class="entypo-menu"></i>
+						</a>
+					</div>
+				</header>
+
+				<ul id="main-menu" class="main-menu">
+					<li class="root-level">
+						<a href="/">
+							<i class="entypo-chart-bar"></i>
+							<span class="title">대시보드</span>
+						</a>
+					</li>
+
+					<li class="has-sub root-level">
+						<a href="#">
+							<i class="entypo-user"></i>
+							<span class="title">사용자관리</span>
+						</a>
+						<ul>
+							<li>
+								<a href="/user">
+									<i class="entypo-list"></i>
+									<span class="title">사용자목록</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="has-sub root-level">
+						<a href="#">
+							<i class="entypo-users"></i>
+							<span class="title">그룹관리</span>
+						</a>
+						<ul>
+							<li>
+								<a href="/group/organization">
+									<i class="entypo-list"></i>
+									<span class="title">기본그룹</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<i class="entypo-list"></i>
+									<span class="title">사용자정의그룹</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="has-sub root-level">
+						<a href="#">
+							<i class="entypo-newspaper"></i>
+							<span class="title">이력관리</span>
+						</a>
+						<ul>
+							<li>
+								<a href="/history/userCertified">
+									<i class="entypo-list"></i>
+									<span class="title">사용자인증이력</span>
+								</a>
+							</li>
+							<li>
+								<a href="/history/abnormal">
+									<i class="entypo-list"></i>
+									<span class="title">이상행위이력</span>
+								</a>
+							</li>
+							<li>
+								<a href="/history/deviceDetect">
+									<i class="entypo-list"></i>
+									<span class="title">추가모니터/웹캠감지이력</span>
+								</a>
+							</li>
+							<li>
+								<a href="/history/privacyAgree">
+									<i class="entypo-list"></i>
+									<span class="title">개인정보동의이력</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="has-sub root-level">
+						<a href="#">
+							<i class="entypo-key"></i>
+							<span class="title">정책관리</span>
+						</a>
+						<ul>
+							<li>
+								<a href="/policies">
+									<i class="entypo-list"></i>
+									<span class="title">기본정책설정</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<i class="entypo-list"></i>
+									<span class="title">예외정책템플릿관리</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="has-sub root-level">
+						<a href="#">
+							<i class="entypo-tools"></i>
+							<span class="title">에이전트설정</span>
+						</a>
+						<ul>
+							<li>
+								<a>
+									<i class="entypo-list"></i>
+									<span class="title">에이전트인증설정</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<i class="entypo-list"></i>
+									<span class="title">안내문구 설정</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<i class="entypo-list"></i>
+									<span class="title">로그저장 설정</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<i class="entypo-list"></i>
+									<span class="title">개인정보동의 약관</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="has-sub root-level">
+						<a href="#">
+							<i class="entypo-lock"></i>
+							<span class="title">권한관리</span>
+						</a>
+						<ul>
+							<li>
+								<a>
+									<i class="entypo-list"></i>
+									<span class="title">운영자 관리</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<i class="entypo-list"></i>
+									<span class="title">운영자 권한 설정</span>
+								</a>
+							</li>
+							<li>
+								<a>
+									<i class="entypo-list"></i>
+									<span class="title">개인정보 접근이력 조회</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- main-content-header -->
+			<div class="main-content-header">
+				<div class="row">
+					<!-- Profile Info and Notifications -->
+					<div class="col-md-6 col-sm-8 clearfix">
+						<div class="user-info">
+							<!-- Profile Info -->
+							<div class="user-profile-info">
+								<!-- add class "pull-right" if you want to place this from right -->
+								<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+									<span class="avata"><img src="../../assets/img/avata-default.png" alt="" class="img-circle" /></span>
+									<span class="avata-name">안녕하세요. 삼성SDS 님</span>
+								</a>
+								<ul class="dropdown-menu">
+									<!-- Reverse Caret -->
+									<li class="caret"></li>
+									<!-- Profile sub-links -->
+									<li>
+										<a href="#">
+											<i class="entypo-user"></i>
+											Edit Profile
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="entypo-mail"></i>
+											Inbox
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="entypo-clipboard"></i>
+											Tasks
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- Raw Links -->
+					<div class="col-md-6 col-sm-4 hidden-xs">
+						<div class="links-list">
+							<!-- Language Selector -->
+							<div class="dropdown language-selector">
+								Language: &nbsp;
+								<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" data-close-others="true">
+									<span>Korean</span>
+								</a>
+								<ul class="dropdown-menu pull-right">
+									<li>
+										<a href="#">
+											<span>Korean</span>
+										</a>
+									</li>
+									<li class="active">
+										<a href="#">
+											<span>English</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="sep"></li>
+							<div class="link-logout">
+								<a href="/logout">
+									Log Out <i class="entypo-logout right"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- main-content-header -->
+		</div>
+		<!-- //main-content -->
+	</div>
+</body>
+
+</html>

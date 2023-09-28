@@ -1,0 +1,54 @@
+//-------------------------------------------------------------------
+//	분류그룹 : Layout
+//	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+//-------------------------------------------------------------------
+//-------------------------------------------------------------------
+//	@Variables
+//-------------------------------------------------------------------
+$content-padding: 20px;
+$sidebar-width: 280px;
+
+//-------------------------------------------------------------------
+//	@Default
+//-------------------------------------------------------------------
+html, body {height: 100%; position: relative;}
+
+//-------------------------------------------------------------------
+//	@Page Container
+//-------------------------------------------------------------------
+// Container
+.page-container {width: 100%;display: table;height: 100%;table-layout: fixed;}
+
+// Main Content
+.main-content {position: relative;display: table-cell;vertical-align: top;padding: $content-padding; background: #ffffff;width: 100%;}
+.main-content-header {padding-top:10px; padding-bottom:30px; margin-bottom:30px; border-bottom: 1px solid #eeeeee;}
+.main-content-header .row {align-items: center;}
+
+// 사용자정보
+.user-profile-info .avata {width: 44px;}
+.user-profile-info .avata-name {margin-left: 10px;}
+
+// 링크목록
+.links-list {display: flex; justify-content: flex-end; align-items: center;}
+
+//-------------------------------------------------------------------
+//	@Sidebar
+//-------------------------------------------------------------------
+// Header
+.sidebar-menu {display: table-cell;vertical-align: top;background: #182640;width: $sidebar-width;position: relative;z-index: 100;}
+.sidebar-menu .sidebar-menu-inner {position: relative;}
+.sidebar-menu .logo-env {position: relative; width: 100%;padding: 35px;}
+.sidebar-menu .sidebar-collapse {position: absolute; right: 25px; top: 50%; transform: translateY(-50%);}
+.sidebar-menu .sidebar-collapse-icon {display: block; width:24px; height: 24px; border:1px solid #fff;}
+.sidebar-collapsed .sidebar-menu {z-index: 100;width: 65px;}
+.sidebar-collapsed .sidebar-menu .logo-env > div.logo {overflow: hidden;width: 0;}
+
+// Main Menu
+.sidebar-menu .main-menu li a {position: relative;display: block;padding: 10px 20px;color: #fff;z-index: 2;transition: color 250ms ease-in-out, background-color 250ms ease-in-out;}
+.sidebar-menu .main-menu li ul {position: relative;list-style: none;padding: 0;margin: 0;border-top: 1px solid rgba(69, 74, 84, 0.4);display: none;overflow: hidden;z-index: 1;}
+.sidebar-collapsed .sidebar-menu .main-menu > li > a > span:not(.badge) {display: block;position: absolute;top: 0;left: 65px;margin-top: -1px;padding: 12px 10px;background: #303641;border-top: 1px solid #454a54;border-bottom: 1px solid #454a54;width: 250px;visibility: hidden;border-radius: 0 3px 3px 0;background-clip: padding-box;zoom: 1;opacity: 0;
+}
+
+//-------------------------------------------------------------------
+//	@Styles
+//-------------------------------------------------------------------
