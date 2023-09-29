@@ -217,7 +217,8 @@
 							<div class="user-profile-info">
 								<!-- add class "pull-right" if you want to place this from right -->
 								<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-									<span class="avata"><img src="../../assets/img/avata-default.png" alt="" class="img-circle" /></span>
+									<span class="avata"><img src="../../assets/img/avata-default.png" alt=""
+											class="img-circle" /></span>
 									<span class="avata-name">안녕하세요. 삼성SDS 님</span>
 								</a>
 								<ul class="dropdown-menu">
@@ -269,20 +270,217 @@
 								</ul>
 							</div>
 
-							<div class="sep"></li>
-							<div class="link-logout">
-								<a href="/logout">
-									Log Out <i class="entypo-logout right"></i>
-								</a>
+							<div class="sep">
+								</li>
+								<div class="link-logout">
+									<a href="/logout">
+										Log Out <i class="entypo-logout right"></i>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- main-content-header -->
+			<!-- //main-content-header -->
+
+			<!-- main-content-body -->
+			<div class="main-content-body">
+				<!-- breadcrumb -->
+				<ol class="breadcrumb bc-3">
+					<li>
+						<a href="/index"><i class="fa-home"></i>Home</a>
+					</li>
+					<li class="active">
+						<strong>사용자 관리</strong>
+					</li>
+					<li class="active">
+						<strong>사용자 목록</strong>
+					</li>
+				</ol>
+				<!-- //breadcrumb -->
+
+				<!-- main-content-title -->
+				<div class="main-content-title">
+					<h1>사용자 목록</h1>
+					<p class="explain">검색 조건을 설정하지 않을 경우 에이전트 설치/사용 여부와 관계업이 전체 임직원 목록이 노출됩니다.</p>
+				</div>
+				<!-- //main-content-title -->
+
+				<form>
+					<!-- update-info -->
+					<div class="update-info">
+						<p class="txt">최종 업데이트일 : 2023-08-01 13:34:52</p>
+						<button type="button" class="btn outline primary btn-update">사용자 정보 업데이트</button>
+					</div>
+					<!-- //update-info -->
+
+					<!-- panel-search -->
+					<div class="panel-srch">
+
+						<!-- 사용자 -->
+						<div class="srchDiv" style="margin-bottom: 15px;">
+							<div class="col-sm-1 tx_bold" style="width:10%!important;">사용자/부서</div>
+							<div class="col-sm-5" style="padding-left:0;height:inherit;">
+								<button type="button" class="btn btn-outline btn-srch" id="btnSearchUserDept">
+									<i class="entypo-search"></i> 통합검색
+								</button>
+								<span id="seachTargetUserTit"
+									style="font-size:11px;color: black;font-weight: 900;display:none;">총 <span
+										id="seachTargetUserCnt"></span>명</span><span></span>
+								<div class="panel panel-default" data-collapsed="0"
+									style="margin-top: 5px; overflow: auto; height: inherit; display: none;"
+									id="text-main-panel"></div>
+							</div>
+						</div>
+						<!-- // 사용자 -->
+
+						<!-- 에이전트상태 -->
+						<div class="srchDiv" style="margin-top:19px;">
+							<div class="col-2">
+								<label for="rdoAgentStatus">에이전트상태</label>
+							</div>
+							<div class="col-10">
+								<div class="radio radio-replace neon-cb-replacement" style="width:100px;">
+									<label class="cb-wrapper"><input type="radio" name="rdoAgentStatus" value="on">
+										<div class="checked"></div>
+									</label>
+									<label class="tx_input">활성</label>
+								</div>
+								<div class="radio radio-replace neon-cb-replacement" style="width: 100px;">
+									<label class="cb-wrapper"><input type="radio" name="rdoAgentStatus" value="off">
+										<div class="checked"></div>
+									</label>
+									<label class="tx_input">비활성</label>
+								</div>
+							</div>
+						</div>
+						<!-- // 에이전트상태 -->
+
+						<!-- 예외정책적용 -->
+						<div class="srchDiv">
+							<div class="col-sm-2 tx_bold" style="width:10%!important;">예외정책적용</div>
+							<div style="display:flex; align-items: baseline;width:50%;">
+								<div class="radio radio-replace neon-cb-replacement" style="width: 100px;">
+									<label class="cb-wrapper"><input type="radio" id="rdo_expolicy_off"
+											name="rdoExPolicy" value="off">
+										<div class="checked"></div>
+									</label>
+									<label class="tx_input">미적용</label>
+								</div>
+								<div class="radio radio-replace neon-cb-replacement" style="width: 100px;">
+									<label class="cb-wrapper"><input type="radio" id="rdo_expolicy_on"
+											name="rdoExPolicy" value="on">
+										<div class="checked"></div>
+									</label>
+									<label class="tx_input">적용</label>
+								</div>
+							</div>
+						</div>
+						<!-- // 예외정책적용 -->
+
+						<!-- 이벤트 -->
+						<div class="srchDiv divDet">
+							<div class="col-sm-2 tx_bold" style="width:10%!important;">이벤트</div>
+							<div style="display:flex;justify-content: normal;width:50%;">
+								<div class="radio radio-replace neon-cb-replacement" style="margin-right:10px;">
+									<label class="cb-wrapper"><input type="radio" id="eventType01" name="rdoEventTyp"
+											value="01">
+										<div class="checked"></div>
+									</label>
+									<label class="tx_input" for="eventType01">예외정책적용</label>
+								</div>
+								<div class="checkbox-inline" style="background: snow;">
+									<label class="checkboxes" style="margin-right:27px;"><input type="checkbox"
+											name="checkPolicyType1" disabled="" value="PC0002">타인동석</label>
+									<label class="checkboxes" style="margin-right:27px;"><input type="checkbox"
+											name="checkPolicyType2" disabled="" value="PC0003">카메라촬영</label>
+									<label class="checkboxes" style="margin-right:27px;"><input type="checkbox"
+											name="checkPolicyType3" disabled="" value="PC0001">웹캠가림</label>
+									<label class="checkboxes" style="margin-right:27px;"><input type="checkbox"
+											name="checkPolicyType4" disabled="" value="PC0101">추가모니터</label>
+									<label class="checkboxes" style="margin-right:27px;"><input type="checkbox"
+											name="checkPolicyType5" disabled="" value="PC0102">추가웹캠</label>
+									<label class="checkboxes" style="margin-right:27px;"><input type="checkbox"
+											name="checkPolicyType6" disabled="" value="PC0004">자리이석</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="srchDiv divDet" style="margin-bottom: 10px;">
+							<div class="col-sm-1" style="width:10%!important;"></div>
+							<div
+								style="display:flex;width:50%;flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;align-items: center;">
+								<div class="radio radio-replace neon-cb-replacement">
+									<label class="cb-wrapper"><input type="radio" id="eventType02" name="rdoEventTyp"
+											value="02">
+										<div class="checked"></div>
+									</label>
+									<label class="tx_input" for="eventType02">에이전트설치일</label>
+								</div>
+								<div class="radio radio-replace neon-cb-replacement" style="padding-left:5%;">
+									<label class="cb-wrapper"><input type="radio" id="eventType03" name="rdoEventTyp"
+											value="03">
+										<div class="checked"></div>
+									</label>
+									<label class="tx_input" for="eventType03">예외정책시작일</label>
+								</div>
+								<div class="radio radio-replace neon-cb-replacement" style="padding-left:5%;">
+									<label class="cb-wrapper"><input type="radio" id="eventType04" name="rdoEventTyp"
+											value="04">
+										<div class="checked"></div>
+									</label>
+									<label class="tx_input" for="eventType04">예외정책종료일</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="srchDiv divDet" style="margin-top: 15px;display: flex">
+							<div class="col-sm-2 tx_bold" style="width:10%!important;">조회기간</div>
+							<div style="display:flex; align-items: center; justify-content: space-between;">
+								<div class="input-group">
+									<input type="text" id="inputStartDt" name="inputStartDt"
+										class="form-control datepicker" value="" data-format="yyyy-mm-dd"
+										style="width:120px;" autocomplete="off">
+									<div class="input-group-addon">
+										<a href="#"><i class="entypo-calendar"></i></a>
+									</div>
+								</div>
+								&nbsp;&nbsp;-&nbsp;&nbsp;
+								<div class="input-group">
+									<input type="text" id="inputEndDt" name="inputEndDt" class="form-control datepicker"
+										value="" data-format="yyyy-mm-dd" style="width:120px;" autocomplete="off">
+									<div class="input-group-addon">
+										<a href="#"><i class="entypo-calendar"></i></a>
+									</div>
+								</div>
+							</div>
+							<div>
+								<button class="btn btn-outline btn-outline-info" id="btnNowDt"
+									style="margin-left:5px;">오늘</button>
+								<button class="btn btn-outline btn-outline-info" id="btnOneWeekDt">1주일</button>
+								<button class="btn btn-outline btn-outline-info" id="btnOneMonthDt">1개월</button>
+								<button class="btn btn-outline btn-outline-info" id="btnThreeMonthDt">3개월</button>
+								<button class="btn btn-outline btn-outline-info" id="btnSixMonthDt">6개월</button>
+							</div>
+						</div>
+
+						<div class="srchDiv divDet" style="margin-top:5px;display: flex">
+							<div class="col-sm-2 tx_bold" style="width:10%!important;"></div>
+							<div style="display:flex; align-items: center; justify-content: space-between;">
+								<button class="btn btn-outline btn-outline-info" id="btnSearch">검색</button>
+							</div>
+						</div>
+
+					</div>
+					<!-- //panel-search -->
+
+				</form>
+
+			</div>
+			<!-- //main-content-body -->
 		</div>
 		<!-- //main-content -->
-	</div>
 </body>
 
 </html>
