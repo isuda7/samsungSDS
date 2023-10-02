@@ -42,7 +42,16 @@ function mainMenuInit(){
 			$(this).next('ul').slideDown("fast").parent().addClass(clsActive);
 			$itemParent.siblings(".has-sub.root-level").children("ul").slideUp("fast").parent().removeClass(clsActive);
 		}
+		return false;
 	})
+}
+
+/* Main Menu Selected */
+function setMainMenu(n1, n2){
+	var $Node1 = $(".main-menu .root-level").eq(n1);
+	var $Node2 = $Node1.find("li").eq(n2);
+	if ($Node1.length) {$Node1.addClass('is-selected')}
+	if ($Node2.length) {$Node2.addClass('is-selected')}
 }
 
 /* Sidebar Collapse */

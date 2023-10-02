@@ -1,0 +1,48 @@
+//-------------------------------------------------------------------
+//	분류그룹 : Button
+//	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+//-------------------------------------------------------------------
+//-------------------------------------------------------------------
+//	@Variables
+//-------------------------------------------------------------------
+
+//-------------------------------------------------------------------
+//	@Default
+//-------------------------------------------------------------------
+.btn {position:relative;display:inline-flex;justify-content:center;align-items:center;flex:none;margin:0;padding:1.0rem;color:inherit;font-size:inherit;box-sizing:inherit;letter-spacing:inherit;transition:all 0.2s ease;}
+.btn:hover,.btn:active,.btn:focus {color:inherit;}
+
+//-------------------------------------------------------------------
+//	@Common
+//-------------------------------------------------------------------
+.btn.has-icn .icn {position: relative; top: 1px; margin-right: 5px;}
+.btn:focus {border-color: #86b7fe !important;outline: 0;box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);}
+
+//-------------------------------------------------------------------
+//	@Styles
+//-------------------------------------------------------------------
+// 기본버튼
+.btn-basic {min-width: 82px; height: 36px; padding: 0 30px; border-radius: 6px;}
+.btn-basic.btn-primary {background-color: $ColorPrimary; color:#fff; border-color: transparent;}
+.btn-basic.btn-primary:hover, .btn-basic.btn-primary:active, .btn-basic.btn-primary:focus {background-color: $ColorPrimary; color:#fff; color: #fff;}
+.btn-basic.btn-outline-primary {background-color: #fff; color:$ColorPrimary; border-color: $ColorPrimary;}
+.btn-basic.btn-outline-primary:hover, .btn-basic.btn-outline-primary:active, .btn-basic.btn-outline-primary:focus {background-color: #fff; color:$ColorPrimary; border-color: $ColorPrimary;}
+
+// 기간선택
+.btn-group-date {display: flex; align-items: center;}
+.input-group-date + .btn-group-date {margin-left: 10px;}
+
+// 폼버튼
+.btn-control {@include formControls; min-width: 60px;}
+.btn-control:hover, .btn-control:active, .btn-control:focus {@include formControls;}
+.btn-control + .btn-control {margin-left: 5px;}
+.btn-control.excel {color:#107c41;}
+
+// 모듈버튼
+.btn-module {box-sizing: content-box; min-width: 46px; padding:4px 10px; border-radius: 2px; background-color: $ColorPrimaryLight; color: $ColorPrimaryDark; @include FontBody10;}
+.btn-module:hover, .btn-module:active, .btn-module:focus {background-color: $ColorPrimaryLight; color: $ColorPrimaryDark;}
+
+// 검색
+.btn-search {width: 200px; height:28px; padding: 0 30px 2px 30px; border-radius: 6px; background-color: $ColorPrimary; color: white;}
+.btn-search:hover, .btn-search:active, .btn-search:focus {background-color: $ColorPrimary !important; color: white !important;}
+.btn-search:focus {border-color: transparent !important;}

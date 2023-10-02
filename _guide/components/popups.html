@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>CUBOX K-FACEON</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+<title>CUBOX K-FACEON</title>
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- Custom -->
+<link rel="stylesheet" href="../../assets/css/index.css" />
+<script src="../../assets/js/libs/jquery.min.js"></script>
+<!-- Guide 전용 -->
+<link rel="stylesheet" href="css/guide.css" />
+</head>
+<body class="pub_only"><!-- pub_only 퍼블리싱전용 클래스 (개발에 추가하지 않습니다.) -->
+<div class="wrapper sub_page">
+	<!-- Header -->
+	<header class="header"></header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div class="container">
+		<main id="content" class="content" role="main">
+			<div class="content-body">
+				<div class="in-sec">
+					<h1 class="g-h1">Modals</h1>
+				</div>
+				<!-- Section -->
+				<section class="g-section in-sec">
+					<div class="g-section-head">
+						<h2 class="g-h2">Default</h2>
+					</div>
+					<div class="g-section-body">
+						<button type="button" class="btn btn-basic btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlert1"><span>Modal Alert 1줄</span></button>
+						<br /><br />
+						<button type="button" class="btn btn-basic btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlert2"><span>Modal Alert 2줄</span></button>
+						<br /><br />
+						<button type="button" class="btn btn-basic btn-primary"  data-bs-toggle="modal" data-bs-target="#modalConfirm1"><span>Modal Confirm 3줄</span></button>
+						<br /><br />
+						<button type="button" class="btn btn-basic btn-primary"  data-bs-toggle="modal" data-bs-target="#modalConfirm2"><span>Modal Confirm Custom</span></button>
+						<br /><br />
+						<button type="button" class="btn btn-basic btn-primary"  data-bs-toggle="modal" data-bs-target="#modalBasic"><span>Modal Basic</span></button>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</main>
+	</div>
+	<!-- //Container -->
+
+	<!-- Footer -->
+	<footer class="footer"></footer>
+	<!-- //Footer -->
+</div>
+
+<!-- Modal Alert -->
+<div class="modal fade" id="modalAlert1" tabindex="-1" aria-labelledby="modalAlert1Label" aria-hidden="true">
+	<div class="modal-dialog modal-alert">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title" id="modalAlert1Label"><span class="blind">Alert</span></h1>
+				<button type="button" class="btn btn-close" data-bs-dismiss="modal">
+					<i class="icn icn-24-close-gr"><span class="blind">Close</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-msg">
+					<p>입력되지 않은 항목이 있습니다.</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-basic btn-primary" data-bs-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Modal Alert -->
+
+<!-- Modal Alert -->
+<div class="modal fade" id="modalAlert2" tabindex="-1" aria-labelledby="modalAlert2Label" aria-hidden="true">
+	<div class="modal-dialog modal-alert">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title" id="modalAlert2Label"><span class="blind">Alert</span></h1>
+				<button type="button" class="btn btn-close" data-bs-dismiss="modal">
+					<i class="icn icn-24-close-gr"><span class="blind">Close</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-msg">
+					<p>
+						[파일명], [비밀번호], [다운로드사유],<br/>
+						입력 형식이 맞지 않습니다.
+					</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-basic btn-primary" data-bs-dismiss="modal">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Modal Alert -->
+
+<!-- Modal Confirm -->
+<div class="modal fade" id="modalConfirm1" tabindex="-1" aria-labelledby="modalConfirm1Label" aria-hidden="true">
+	<div class="modal-dialog modal-alert">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title" id="modalConfirm1Label"><span class="blind">Confirm</span></h1>
+				<button type="button" class="btn btn-close" data-bs-dismiss="modal">
+					<i class="icn icn-24-close-gr"><span class="blind">Close</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-msg">
+					<p>
+						선택 상태변경을 통해 변경 시 이미지/이력을 보지 않고 <br/>
+						바로 상태를 변경하게 됩니다. 일괄 변경시만 <br/>
+						사용해주세요. 계속해서 진행하시겠습니까?
+					</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-basic btn-outline-primary" data-bs-dismiss="modal">취소</button>
+				<button type="button" class="btn btn-basic btn-primary">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Modal Confirm -->
+
+<!-- Modal Confirm -->
+<div class="modal fade" id="modalConfirm2" tabindex="-1" aria-labelledby="modalConfirm2Label" aria-hidden="true">
+	<div class="modal-dialog modal-alert">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title" id="modalConfirm2Label"><span class="blind">Confirm</span></h2>
+				<button type="button" class="btn btn-close" data-bs-dismiss="modal">
+					<i class="icn icn-24-close-gr"><span class="blind">Close</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-msg">
+					<p>
+						선택 상태변경을 통해 변경 시 이미지/이력을 보지 않고 <br/>
+						이전 상태와 같은 경우는 유지, 다른 경우는 상태가 <br/>
+						변경되며 변경 이력에 노출됩니다.
+					</p>
+				</div>
+				<div class="row mar-t-20 centered">
+					<div class="col-lg-8">
+						<select name="" id="" class="form-select">
+							<option value="" selected>Y(이상행위)</option>
+							<option value="">N(이상행위 아님)</option>
+						</select>
+						<input type="text" placeholder="변경 사유를 입력하세요." class="form-control mar-t-10" />
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-basic btn-outline-primary" data-bs-dismiss="modal">취소</button>
+				<button type="button" class="btn btn-basic btn-primary">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Modal Confirm -->
+
+<!-- Modal Basic -->
+<div class="modal fade" id="modalBasic" tabindex="-1" aria-labelledby="modalBasicLabel" aria-hidden="true">
+	<div class="modal-dialog modal-basic">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title" id="modalBasicLabel">Modal title</h1>
+				<button type="button" class="btn btn-close" data-bs-dismiss="modal">
+					<i class="icn icn-24-close-gr"><span class="blind">Close</span></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p class="modal-msg">
+					Modal Basic
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-basic btn-outline-primary" data-bs-dismiss="modal">취소</button>
+				<button type="button" class="btn btn-basic btn-primary">확인</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //Modal Confirm -->
+
+</body>
+</html>

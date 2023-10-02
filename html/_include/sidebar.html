@@ -1,38 +1,29 @@
 <div class="sidebar-menu-inner">
-	<header class="logo-env">
-		<!-- logo -->
-		<div class="logo" style="padding-top: 8px">
-			<a href="/">
-				<img src="../../assets/img/faceon_logo.png" width="120" alt="">
-			</a>
-		</div>
-
-		<!-- logo collapse icon -->
-		<div class="sidebar-collapse">
-			<a href="#" class="sidebar-collapse-icon">
-				<!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
-				<i class="entypo-menu"></i>
-			</a>
-		</div>
-	</header>
+	<!-- logo collapse icon -->
+	<div class="sidebar-collapse">
+		<button type="button" class="sidebar-collapse-icon" aria-label="메뉴 토글">
+			<i class="icn icn-sidebar-toggle" aria-hidden="false"></i>
+		</button>
+	</div>
 
 	<ul id="main-menu" class="main-menu">
 		<li class="root-level">
-			<a href="/">
-				<i class="entypo-chart-bar"></i>
+			<a href="../dashboard/main.html">
+				<i class="icn icn-sidebar m01" aria-hidden="false"></i>
 				<span class="title">대시보드</span>
+				<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 			</a>
 		</li>
 
 		<li class="has-sub root-level">
-			<a href="#">
-				<i class="entypo-user"></i>
+			<a href="../userMgmt/userList_01.html">
+				<i class="icn icn-sidebar m02" aria-hidden="false"></i>
 				<span class="title">사용자관리</span>
+				<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 			</a>
 			<ul>
 				<li>
-					<a href="/user">
-						<i class="entypo-list"></i>
+					<a href="../userMgmt/userList_01.html">
 						<span class="title">사용자목록</span>
 					</a>
 				</li>
@@ -40,20 +31,19 @@
 		</li>
 
 		<li class="has-sub root-level">
-			<a href="#">
-				<i class="entypo-users"></i>
+			<a href="../groupMgmt/defaultOrgin_01.html">
+				<i class="icn icn-sidebar m03" aria-hidden="false"></i>
 				<span class="title">그룹관리</span>
+				<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 			</a>
 			<ul>
 				<li>
-					<a href="/group/organization">
-						<i class="entypo-list"></i>
+					<a href="../groupMgmt/defaultOrgin_01.html">
 						<span class="title">기본그룹</span>
 					</a>
 				</li>
 				<li>
-					<a>
-						<i class="entypo-list"></i>
+					<a href="../groupMgmt/customOrgin_list_01.html">
 						<span class="title">사용자정의그룹</span>
 					</a>
 				</li>
@@ -61,53 +51,54 @@
 		</li>
 
 		<li class="has-sub root-level">
-			<a href="#">
-				<i class="entypo-newspaper"></i>
+			<a href="../historyMgmt/userCertList.html">
+				<i class="icn icn-sidebar m04" aria-hidden="false"></i>
 				<span class="title">이력관리</span>
+				<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 			</a>
 			<ul>
 				<li>
-					<a href="/history/userCertified">
-						<i class="entypo-list"></i>
-						<span class="title">사용자인증이력</span>
+					<a href="../historyMgmt/userCertList.html">
+						<span class="title">사용자 인증 이력</span>
 					</a>
 				</li>
 				<li>
-					<a href="/history/abnormal">
-						<i class="entypo-list"></i>
-						<span class="title">이상행위이력</span>
+					<a href="../historyMgmt/strangeBehaviorList.html">
+						<span class="title">이상행위 이력</span>
 					</a>
 				</li>
 				<li>
-					<a href="/history/deviceDetect">
-						<i class="entypo-list"></i>
-						<span class="title">추가모니터/웹캠감지이력</span>
+					<a href="../historyMgmt/monitoringList.html">
+						<span class="title">추가모니터/웹켐감지 이력</span>
 					</a>
 				</li>
 				<li>
-					<a href="/history/privacyAgree">
-						<i class="entypo-list"></i>
-						<span class="title">개인정보동의이력</span>
+					<a href="../historyMgmt/privacyAgreeList.html">
+						<span class="title">개인정보 동의 이력</span>
+					</a>
+				</li>
+				<li>
+					<a href="../historyMgmt/deleteCodeIssuedList.html">
+						<span class="title">삭제코드 발급 이력</span>
 					</a>
 				</li>
 			</ul>
 		</li>
 
 		<li class="has-sub root-level">
-			<a href="#">
-				<i class="entypo-key"></i>
+			<a href="../policyMgmt/defaultPolicySet.html">
+				<i class="icn icn-sidebar m05" aria-hidden="false"></i>
 				<span class="title">정책관리</span>
+				<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 			</a>
 			<ul>
 				<li>
-					<a href="/policies">
-						<i class="entypo-list"></i>
+					<a href="../policyMgmt/defaultPolicySet.html">
 						<span class="title">기본정책설정</span>
 					</a>
 				</li>
 				<li>
-					<a>
-						<i class="entypo-list"></i>
+					<a href="../policyMgmt/exceptionPolicyTempMgmtList.html">
 						<span class="title">예외정책템플릿관리</span>
 					</a>
 				</li>
@@ -115,32 +106,29 @@
 		</li>
 
 		<li class="has-sub root-level">
-			<a href="#">
-				<i class="entypo-tools"></i>
+			<a href="../agentMgmt/agentCertSet.html">
+				<i class="icn icn-sidebar m06" aria-hidden="false"></i>
 				<span class="title">에이전트설정</span>
+				<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 			</a>
 			<ul>
 				<li>
-					<a>
-						<i class="entypo-list"></i>
+					<a href="../agentMgmt/agentCertSet.html">
 						<span class="title">에이전트인증설정</span>
 					</a>
 				</li>
 				<li>
-					<a>
-						<i class="entypo-list"></i>
+					<a href="../agentMgmt/guideMsgSet.html">
 						<span class="title">안내문구 설정</span>
 					</a>
 				</li>
 				<li>
-					<a>
-						<i class="entypo-list"></i>
+					<a href="../agentMgmt/logSaveSet.html">
 						<span class="title">로그저장 설정</span>
 					</a>
 				</li>
 				<li>
-					<a>
-						<i class="entypo-list"></i>
+					<a href="../agentMgmt/privacyTermsList.html">
 						<span class="title">개인정보동의 약관</span>
 					</a>
 				</li>
@@ -148,26 +136,24 @@
 		</li>
 
 		<li class="has-sub root-level">
-			<a href="#">
-				<i class="entypo-lock"></i>
+			<a href="../authorityMgmt/administratorMgmtList.html">
+				<i class="icn icn-sidebar m07" aria-hidden="false"></i>
 				<span class="title">권한관리</span>
+				<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 			</a>
 			<ul>
 				<li>
-					<a>
-						<i class="entypo-list"></i>
+					<a href="../authorityMgmt/administratorMgmtList.html">
 						<span class="title">운영자 관리</span>
 					</a>
 				</li>
 				<li>
-					<a>
-						<i class="entypo-list"></i>
+					<a href="../authorityMgmt/authorityMgmtList.html">
 						<span class="title">운영자 권한 설정</span>
 					</a>
 				</li>
 				<li>
-					<a>
-						<i class="entypo-list"></i>
+					<a href="../authorityMgmt/privacyConnectList.html">
 						<span class="title">개인정보 접근이력 조회</span>
 					</a>
 				</li>

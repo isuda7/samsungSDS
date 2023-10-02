@@ -1,0 +1,61 @@
+//-------------------------------------------------------------------
+//	분류그룹 : Form
+//	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+//-------------------------------------------------------------------
+//-------------------------------------------------------------------
+//	@Variables
+//-------------------------------------------------------------------
+
+//-------------------------------------------------------------------
+//	@Elements
+//-------------------------------------------------------------------
+// controls
+.form-control {@include formControls;}
+.form-control:focus {position: relative; z-index: 1;}
+.form-control::placeholder {color: #e4e5ea;}
+.form-select {@include formControls; padding-right: 35px; min-width: 100px;}
+.form-select::placeholder {color: #e4e5ea;}
+.input-group {align-items: center;}
+.input-group-over {display: flex; align-items: center; justify-content: center; position: absolute; right: 10px; top: 50%; transform: translateY(-50%);}
+
+// text
+.form-star {color: $ColorNegative;}
+.form-label {margin: 0;}
+.form-split {display: flex; justify-content: center; align-items: center; padding: 0 7px; color: #000;}
+.input-group .form-byte {margin-left: 10px !important;}
+.input-group .form-byte .now {color: $ColorPrimary;}
+
+// alert
+.alert-guide {color:$ColorNegative;}
+
+//-------------------------------------------------------------------
+//	@Groups
+//-------------------------------------------------------------------
+// field layout
+.field-inline {display: flex; flex-direction: row;}
+.field-inline .form-title {display: flex; min-height: 26px; padding-top:6px; width:100px;}
+.field-inline .form-controls {flex:1 1 auto;}
+.field-block {display: flex; flex-direction: column;}
+.field-block .form-title {display: flex; min-height: 26px; padding-top:6px;}
+.field-block .form-label {width:100px;}
+.field-block .form-controls {margin-top:14px;}
+.field-action {margin-top:20px; text-align: center;}
+.form-controls {display: flex; align-items: center; min-height: 28px; }
+.field-inline,.field-block {padding-top:7px; padding-bottom: 7px;}
+.field-alert {padding-top:13px; padding-bottom: 7px;}
+.field-inline:first-child,.field-block:first-child {padding-top:0;}
+
+// field styles
+.form.outlined {padding: 10px 30px; background-color: #fbfcfd; border:1px solid #e4e5ea;}
+.form.lined .field-inline,
+.form.lined .field-block {
+	padding-top:14px; padding-bottom: 14px; border-bottom:1px solid #e4e5ea;
+	&:first-child {padding-top:0;}
+}
+//-------------------------------------------------------------------
+//	@Types
+//-------------------------------------------------------------------
+// 달력
+.input-group-date {display: flex; align-items: center;}
+.input-group-date .input-group {width:150px;}
+.input-group-date .input-group {width:150px;}

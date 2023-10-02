@@ -1,0 +1,32 @@
+//-------------------------------------------------------------------
+//	분류그룹 : Tables
+//	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+//-------------------------------------------------------------------
+//-------------------------------------------------------------------
+//	@Board
+//-------------------------------------------------------------------
+// Board Toolbar
+.dataTables_wrapper .toolbar {display: flex; margin-bottom: 10px;}
+.dataTables_wrapper .toolbar .left-area {display: flex;}
+.dataTables_wrapper .toolbar .right-area {display:flex; align-items: center; margin-left: auto; text-align: right;}
+.dataTables_wrapper .toolbar .form-select,
+.dataTables_wrapper .toolbar .btn-control {margin-left: 10px;}
+.dataTables_wrapper .toolbar .form-select:first-child,
+.dataTables_wrapper .toolbar .btn-control:first-child {margin-left: 0px;}
+.dataTables_wrapper .toolbar .count .now {color: $ColorPrimary;}
+
+//-------------------------------------------------------------------
+//	@Datatable
+//-------------------------------------------------------------------
+// Scrollbar
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody::-webkit-scrollbar {height: 6px;}
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody::-webkit-scrollbar-thumb {border-radius: 6px;background-color: rgba(74, 76, 93, 0.3);}
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody::-webkit-scrollbar-track {background-color: #fff;}
+
+// Table
+table.dataTable thead th {padding: 13px 10px; background-color: #fbfcfd; color:#4a4c5d; border-top:1px solid #e4e5ea; border-bottom: 1px solid #e4e5ea;}
+table.dataTable tbody th, table.dataTable tbody td {white-space: nowrap; border-bottom: 1px solid #e4e5ea; padding: 13px 10px;}
+table.dataTable tbody td a {text-decoration: underline; text-underline-position: under; color:$ColorPrimary}
+
+// Paginate
+.dataTables_wrapper .dataTables_paginate {float:none; display: flex; align-items: center; justify-content: center; margin-top:20px;}

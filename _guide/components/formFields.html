@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>CUBOX K-FACEON</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+<title>CUBOX K-FACEON</title>
+<!-- Bootstrap -->
+<script src="../../assets/js/libs/datatables.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+<script src="../../assets/js/libs/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+	crossorigin="anonymous"></script>
+<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+<!-- Custom -->
+<link rel="stylesheet" href="../../assets/css/index.css" />
+<script src="../../assets/js/ui/ui.common.js"></script>
+<!-- Guide 전용 -->
+<link rel="stylesheet" href="css/guide.css" />
+</head>
+<body class="pub_only"><!-- pub_only 퍼블리싱전용 클래스 (개발에 추가하지 않습니다.) -->
+<div class="wrapper sub_page">
+	<!-- Header -->
+	<header class="header"></header>
+	<!-- //Header -->
+
+	<!-- Container -->
+	<div class="container">
+		<main id="content" class="content" role="main">
+			<div class="content-body">
+				<div class="in-sec">
+					<h1 class="g-h1">Form Fieldset</h1>
+				</div>
+				<!-- Section -->
+				<section class="g-section in-sec">
+					<div class="g-section-head">
+						<h2 class="g-h2">Form</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">Defulat</h3>
+						<h4 class="g-h4">Inline Layout</h4>
+						<form class="form">
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="" class="form-label">라벨링</label>
+								</div>
+								<div class="form-controls">
+									form control 영역
+								</div>
+							</div>
+						</form>
+						<h4 class="g-h4">Block Layout</h4>
+						<div class="form">
+							<div class="field-block">
+								<div class="form-title">
+									<label for="" class="form-label">라벨링</label>
+								</div>
+								<div class="form-controls">
+									form control 영역
+								</div>
+							</div>
+						</div>
+						<h3 class="g-h3">Example</h3>
+						<h4 class="g-h4">Inline Layout (Basic)</h4>
+						<div class="form">
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="rdoDown" class="form-label">다운로드 범위<span class="form-star" aria-label="필수입력">*</span></label>
+								</div>
+								<div class="form-controls col-lg-3">
+									<!-- 라디오간격 기본값: 20px, gap-lg: 40px -->
+									<div class="radio-inline gap-xl">
+										<label class="radio style1">
+											<input type="radio" name="rdoDown" value="" checked />
+											<span class="value"><span>검색내역</span></span>
+										</label>
+										<label class="radio style1">
+											<input type="radio" name="rdoDown" value="" />
+											<span class="value"><span>전체내역</span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="rdoAgent" class="form-label">에이전트 상태<span class="form-star" aria-label="필수입력">*</span></label>
+								</div>
+								<div class="form-controls">
+									<div class="input-group">
+										<input type="text" class="form-control" />
+										<span class="form-byte">
+											<em class="now">0</em>/50
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="field-alert">
+								<div class="alert-guide">
+									<p>개인정보를 개인용PC에 저장 할 시 암호화가 의무이므로 비밀번호 '사용'을 권장합니다.</p>
+								</div>
+							</div>
+						</div>
+
+						<h4 class="g-h4">Inline Layout (outlined)</h4>
+						<div class="form outlined">
+							<div class="field-inline">
+								<div class="form-title">
+									<strong class="form-label">사용자/부서</strong>
+								</div>
+								<div class="form-controls">
+									<button class="btn btn-control has-icn">
+										<i class="icn icn-16-search-bk"></i>통합검색
+									</button>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="rdoAgent" class="form-label">에이전트 상태</label>
+								</div>
+								<div class="form-controls col-lg-3">
+									<!-- 라디오간격 기본값: 20px, gap-lg: 40px -->
+									<div class="radio-inline gap-xl">
+										<label class="radio style1">
+											<input type="radio" name="rdoAgent" value="on" />
+											<span class="value"><span>활성</span></span>
+										</label>
+										<label class="radio style1">
+											<input type="radio" name="rdoAgent" value="off" />
+											<span class="value"><span>비활성</span></span>
+										</label>
+									</div>
+								</div>
+								<div class="form-title">
+									<label for="rdoPolicy" class="form-label">예외정책 적용</label>
+								</div>
+								<div class="form-controls">
+									<div class="radio-inline gap-xl">
+										<label class="radio style1">
+											<input type="radio" name="rdoPolicy" value="on" />
+											<span class="value"><span>활성</span></span>
+										</label>
+										<label class="radio style1">
+											<input type="radio" name="rdoPolicy" value="off" />
+											<span class="value"><span>비활성</span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="rdoEvent" class="form-label">이벤트</label>
+								</div>
+								<div class="form-controls row">
+									<div class="radio-inline">
+										<label class="radio style1">
+											<input type="radio" name="rdoEvent" value="" />
+											<span class="value"><span>적용예외정책</span></span>
+										</label>
+										<div class="checkbox-inline">
+											<label class="checkbox style1">
+												<input type="checkbox" name="chkEvent" value="PC0002" />
+												<span class="value"><span>타인동석</span></span>
+											</label>
+											<label class="checkbox style1">
+												<input type="checkbox" name="chkEvent" value="PC0003" />
+												<span class="value"><span>카메라촬영</span></span>
+											</label>
+											<label class="checkbox style1">
+												<input type="checkbox" name="chkEvent" value="PC0001" />
+												<span class="value"><span>웹캠가림</span></span>
+											</label>
+											<label class="checkbox style1">
+												<input type="checkbox" name="chkEvent" value="PC0101" />
+												<span class="value"><span>추가모니터</span></span>
+											</label>
+											<label class="checkbox style1">
+												<input type="checkbox" name="chkEvent" value="PC0102" />
+												<span class="value"><span>추가웹캠</span></span>
+											</label>
+										</div>
+									</div>
+									<div class="radio-inline gap-xl">
+										<label class="radio style1">
+											<input type="radio" name="rdoEvent" value="" />
+											<span class="value"><span>예외정책 시작일</span></span>
+										</label>
+										<label class="radio style1">
+											<input type="radio" name="rdoEvent" value="" />
+											<span class="value"><span>예외정책 종료일</span></span>
+										</label>
+										<label class="radio style1">
+											<input type="radio" name="rdoEvent" value="" />
+											<span class="value"><span>에이전트 설치일</span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="" class="form-label">조회기간</label>
+								</div>
+								<div class="form-controls">
+									<!-- 달력선택 -->
+									<div class="input-group-date">
+										<div class="input-group">
+											<input type="text" id="inputStartDt" name="inputStartDt" class="form-control datepicker" value="2023-09-28" data-format="yyyy-mm-dd" autocomplete="off" />
+											<div class="input-group-over">
+												<i class="icn icn-16-calendar-bk"></i>
+											</div>
+										</div>
+										<div class="form-split">~</div>
+										<div class="input-group">
+											<input type="text" id="inputEndDt" name="inputEndDt" class="form-control datepicker" value="2023-10-28" data-format="yyyy-mm-dd" autocomplete="off" />
+											<div class="input-group-over">
+												<i class="icn icn-16-calendar-bk"></i>
+											</div>
+										</div>
+									</div>
+									<!-- //달력선택 -->
+									<!-- 기간선택 -->
+									<div class="btn-group-date">
+										<button type="button" class="btn btn-control">오늘</button>
+										<button type="button" class="btn btn-control">1주일</button>
+										<button type="button" class="btn btn-control">1개월</button>
+										<button type="button" class="btn btn-control">3개월</button>
+										<button type="button" class="btn btn-control">6개월</button>
+									</div>
+									<!-- //기간선택 -->
+									<script>
+										$(function(){
+											$('#inputStartDt').datepicker();
+											$('#inputEndDt').datepicker();
+										})
+									</script>
+								</div>
+							</div>
+							<div class="field-action">
+								<button type="button" class="btn btn-search has-icn">
+									<i class="icn icn-16-search-wh"></i>검색
+								</button>
+							</div>
+						</div>
+
+						<h4 class="g-h4">Block Layout (lined)</h4>
+						<div class="form lined">
+							<div class="field-block">
+								<div class="form-title">
+									<label for="chkEx1All" class="form-label">임직원 정보</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkEx1All" value="off" />
+										<span class="value"><span>전체선택</span></span>
+									</label>
+								</div>
+								<div class="form-controls">
+									<div class="checkbox-inline">
+										<label class="checkbox style1">
+											<input type="checkbox" name="chkEx1" value="" />
+											<span class="value"><span>아이디</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chkEx1" value="" />
+											<span class="value"><span>이름</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chkEx1" value="" />
+											<span class="value"><span>직함</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chkEx1" value="" />
+											<span class="value"><span>이메일</span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="exSelect1" class="form-label">보기개수</label>
+								</div>
+								<div class="form-controls">
+									<select class="form-select" id="exSelect1">
+										<option value="1">5개</option>
+										<option value="2">10개</option>
+										<option value="3" selected>20개</option>
+										<option value="4">30개</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</main>
+	</div>
+	<!-- //Container -->
+
+	<!-- Footer -->
+	<footer class="footer"></footer>
+	<!-- //Footer -->
+</div>
+</body>
+</html>

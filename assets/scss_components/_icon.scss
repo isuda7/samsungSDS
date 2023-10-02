@@ -1,0 +1,48 @@
+//-------------------------------------------------------------------
+//	분류그룹 : Icon
+//	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+//-------------------------------------------------------------------
+//-------------------------------------------------------------------
+//	@Variables
+//-------------------------------------------------------------------
+
+//-------------------------------------------------------------------
+//	@Default
+//-------------------------------------------------------------------
+.icn {display:inline-flex;flex:none;}
+.icn::before {content:'';display:block;background:no-repeat 0 0 / 100% auto;}
+.icn.revers {flex-direction:row-reverse;}
+.icn.btn {padding:5px;}
+
+//-------------------------------------------------------------------
+//	@Styles
+//-------------------------------------------------------------------
+// Sidebar
+.icn-sidebar::before {width:24px; height:24px;}
+.icn-sidebar.m01::before {background-image: url("../img/icn-sidebar-m01-off.png");}
+.icn-sidebar.m02::before {background-image: url("../img/icn-sidebar-m02-off.png");}
+.icn-sidebar.m03::before {background-image: url("../img/icn-sidebar-m03-off.png");}
+.icn-sidebar.m04::before {background-image: url("../img/icn-sidebar-m04-off.png");}
+.icn-sidebar.m05::before {background-image: url("../img/icn-sidebar-m05-off.png");}
+.icn-sidebar.m06::before {background-image: url("../img/icn-sidebar-m06-off.png");}
+.icn-sidebar.m07::before {background-image: url("../img/icn-sidebar-m07-off.png");}
+.is-selected .icn-sidebar.m01::before {background-image: url("../img/icn-sidebar-m01-on.png");}
+.is-selected .icn-sidebar.m02::before {background-image: url("../img/icn-sidebar-m02-on.png");}
+.is-selected .icn-sidebar.m03::before {background-image: url("../img/icn-sidebar-m03-on.png");}
+.is-selected .icn-sidebar.m04::before {background-image: url("../img/icn-sidebar-m04-on.png");}
+.is-selected .icn-sidebar.m05::before {background-image: url("../img/icn-sidebar-m05-on.png");}
+.is-selected .icn-sidebar.m06::before {background-image: url("../img/icn-sidebar-m06-on.png");}
+.is-selected .icn-sidebar.m07::before {background-image: url("../img/icn-sidebar-m07-on.png");}
+.icn-sidebar-toggle::before {width: 19px; height: 30px; background-image: url("../img/icn-sidebar-toggle.png");}
+
+// Commons
+.icn-16-arrow-bk::before {width: 16px; height: 16px; background-image: url("../img/icn-16-arrow-bk.png");}
+.icn-16-arrow-dk::before {width: 16px; height: 16px; background-image: url("../img/icn-16-arrow-dk.png");}
+.icn-16-excel::before {width: 16px; height: 16px; background-image: url("../img/icn-16-excel.png");}
+.icn-16-logout-bk::before {width: 16px; height: 16px; background-image: url("../img/icn-16-logout-bk.png");}
+.icn-16-refresh-bk::before {width: 16px; height: 16px; background-image: url("../img/icn-16-refresh-bk.png");}
+.icn-16-update-bk::before {width: 16px; height: 16px; background-image: url("../img/icn-16-update-bk.png");}
+.icn-16-search-bk::before {width: 16px; height: 16px; background-image: url("../img/icn-16-search-bk.png");}
+.icn-16-search-wh::before {width: 16px; height: 16px; background-image: url("../img/icn-16-search-wh.png");}
+.icn-16-calendar-bk::before {width: 16px; height: 16px; background-image: url("../img/icn-16-search-bk.png");}
+.icn-24-close-gr::before {width: 24px; height: 24px; background-image: url("../img/icn-24-close-gr.png");}

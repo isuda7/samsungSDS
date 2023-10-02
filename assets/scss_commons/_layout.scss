@@ -1,0 +1,87 @@
+//-------------------------------------------------------------------
+//	분류그룹 : Layout
+//	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+//-------------------------------------------------------------------
+//-------------------------------------------------------------------
+//	@Variables
+//-------------------------------------------------------------------
+$content-padding: 30px;
+$sidebar-padding: 20px;
+$sidebar-width: 230px;
+$header-height: 60px;
+
+//-------------------------------------------------------------------
+//	@Default
+//-------------------------------------------------------------------
+html, body {height: 100%; position: relative;}
+
+//-------------------------------------------------------------------
+//	@Page Header
+//-------------------------------------------------------------------
+// Page Header
+.page-header {display: flex; height: $header-height; border-bottom: 1px solid #ced0dc;}
+.logo-area {display: flex; align-items: center; flex:none; width: $sidebar-width; height: 100%; padding-left: $sidebar-padding;}
+.gnb-area {display: flex; align-items: center; flex:1 1 auto; height: 100%; padding-right: $content-padding; text-align: right; @include FontBody14;}
+
+// My Profile
+.gnb-profile {display: flex; align-items: center;}
+.gnb-profile .avata {width: 32px; height: 32px;}
+.gnb-profile .avata-name {margin-left: 10px;}
+
+// Log State
+.gnb-state-area {margin-left: auto; @include FontBody14;}
+.gnb-state {display:flex;}
+.gnb-state .btn-gnb {display:flex; align-items: center; height: 34px; margin-left: 10px; padding:0 10px; background-color: rgba(233, 240, 254, 0.6); border-radius: 6px;}
+.gnb-state .language-dropdown .btn-gnb {width: 110px;}
+
+//-------------------------------------------------------------------
+//	@Page Container
+//-------------------------------------------------------------------
+// Page Container
+.page-container {display: table; table-layout: fixed; width: 100%; height: calc(100% - $header-height);}
+
+// Main Content
+.main-content {position: relative;display: table-cell; vertical-align: top; padding:0; background: #ffffff;width: 100%;}
+.breadcrumb-area {display: flex; align-items: center; height: 36px; padding:0 $content-padding; border-bottom: 1px solid #e4e5ea;}
+.breadcrumb {margin: 0;}
+.main-section {padding:15px $content-padding 60px;}
+
+// Main Section
+.main-section-header .title {@include FontTitle16;}
+.main-section-header .explain {margin-top:10px;}
+
+//-------------------------------------------------------------------
+//	@Sidebar
+//-------------------------------------------------------------------
+// Header
+.sidebar-menu {display: table-cell;vertical-align: top;background: rgba(245, 248, 250, 0.74); width: $sidebar-width;position: relative;z-index: 100; border-right: 1px solid #e4e5ea;}
+.sidebar-menu .sidebar-menu-inner {position: relative;}
+.sidebar-menu .logo-env {position: relative; width: 100%;padding: 35px;}
+.sidebar-menu .sidebar-collapse {position: absolute; right:auto; left: calc(100% + 1px); top: 0;}
+.sidebar-menu .sidebar-collapse-icon {display: block; width:19px; height: 30px;}
+.sidebar-collapsed .sidebar-menu {z-index: 100;width: 65px;}
+.sidebar-collapsed .sidebar-menu .logo-env > div.logo {overflow: hidden;width: 0;}
+
+// Main Menu
+.sidebar-menu .main-menu {padding: 10px;}
+.sidebar-menu .main-menu > .root-level + .root-level {margin-top:20px;}
+.sidebar-menu .main-menu > .root-level > a {position: relative;display: flex; align-items: center; height: 36px;; padding: 10px 20px;color: #000; @include FontBody14; z-index: 2;}
+.sidebar-menu .main-menu > .root-level > a .icn-sidebar {margin-right: 10px;}
+.sidebar-menu .main-menu > .root-level > a .icn-16-arrow-bk {margin-left: auto; transition: transform 0.3s ease;}
+.sidebar-menu .main-menu > .root-level.opened > a .icn-16-arrow-bk {transform: rotate(180deg);}
+.sidebar-menu .main-menu > .root-level > ul {position: relative;list-style: none;padding: 0;margin: 0; display: none;overflow: hidden;z-index: 1;}
+.sidebar-menu .main-menu > .root-level > ul li {margin-top:10px;}
+.sidebar-menu .main-menu > .root-level.is-selected > a {color: $ColorPrimary; font-weight: 700;}
+.sidebar-menu .main-menu > .root-level  > ul a {display:flex; align-items: center; height: 36px; padding: 0 30px 0 40px; @include FontBody12; border-radius: 6px; transition: all 0.2s ease;}
+.sidebar-menu .main-menu > .root-level  > ul a::before {content:'|'; display: block; margin-right: 5px;}
+// .sidebar-menu .main-menu > .root-level  > ul a:hover,
+.sidebar-menu .main-menu > .root-level  > ul li.is-selected a {background-color: $ColorPrimaryDark; color: #fff;}
+.sidebar-collapsed .sidebar-menu .main-menu > .root-level > a > span:not(.badge) {display: block;position: absolute;top: 0;left: 65px;margin-top: -1px;padding: 12px 10px;background: #303641;border-top: 1px solid #454a54;border-bottom: 1px solid #454a54;width: 250px;visibility: hidden;border-radius: 0 3px 3px 0;background-clip: padding-box;zoom: 1;opacity: 0;
+}
+.sidebar-collapsed .sidebar-menu .main-menu > .root-level > ul {display: none !important;}
+.sidebar-collapsed .sidebar-menu .main-menu > .root-level > a {padding-left: 10px;}
+.sidebar-collapsed .sidebar-menu .main-menu > .root-level > a .icn-16-arrow-bk {display: none;}
+
+//-------------------------------------------------------------------
+//	@Styles
+//-------------------------------------------------------------------

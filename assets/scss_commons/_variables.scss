@@ -1,18 +1,20 @@
 //-------------------------------------------------------------------
 //	분류그룹 : Variables
-//	속성순서 : Colors, 
+//	속성순서 : Colors,
 //-------------------------------------------------------------------
 //-------------------------------------------------------------------
 //	@Color (-Opacity, -Light, -Dark)
 //-------------------------------------------------------------------
-// Brand Color 
-$ColorPrimary: #000;
+// Brand Color
+$ColorPrimary: #3f89f7;
+$ColorPrimaryDark: #004098;
+$ColorPrimaryLight: #f2f6fe;
 $ColorSecondary: #000;
 $ColorHighlight: #000;
 
 // State Color
 $ColorPositive: #000;
-$ColorNegative: #000;
+$ColorNegative: #ff3a2d;
 
 // Item Color
 $ColorName1: #000;
@@ -36,20 +38,20 @@ $GapBody: 20px;
 //	@Text
 //-------------------------------------------------------------------
 // Fonts
-@mixin FontBody10 {font-size:1.0rem;line-height: 1.6rem;}
-@mixin FontBody12 {font-size:1.2rem;line-height: 1.8rem;}
-@mixin FontBody13 {font-size:1.3rem;line-height: 1.9rem;}
-@mixin FontBody14 {font-size:1.4rem;line-height: 2.2rem;}
-@mixin FontBody15 {font-size:1.5rem;line-height: 2.3rem;}
-@mixin FontBody16 {font-size:1.6rem;line-height: 2.4rem;}
-@mixin FontTitle10 {font-size:1rem;line-height: 1.6rem;font-weight: 700;}
-@mixin FontTitle13 {font-size:1.3rem;line-height: 1.7rem;font-weight: 700;}
-@mixin FontTitle14 {font-size:1.4rem;line-height: 1.8rem;font-weight: 700;}
-@mixin FontTitle15 {font-size:1.5rem;line-height: 1.9rem;font-weight: 700;}
-@mixin FontTitle16 {font-size:1.6rem;line-height: 2.0rem;font-weight: 700;}
-@mixin FontTitle18 {font-size:1.8rem;line-height: 2.4rem;font-weight: 700;}
-@mixin FontTitle20 {font-size:2.0rem;line-height: 2.6rem;font-weight: 700;}
-@mixin FontTitle22 {font-size:2.2rem;line-height: 2.8rem;font-weight: 700;}
+@mixin FontBody10 {font-size:10px;line-height: 14px;}
+@mixin FontBody12 {font-size:12px;line-height: 16px;}
+@mixin FontBody13 {font-size:13px;line-height: 18px;}
+@mixin FontBody14 {font-size:14px;line-height: 20px;}
+@mixin FontBody15 {font-size:15px;line-height: 22px;}
+@mixin FontBody16 {font-size:16px;line-height: 24px;}
+@mixin FontTitle10 {font-size:10px;line-height: 16px;font-weight: 700;}
+@mixin FontTitle13 {font-size:13px;line-height: 17px;font-weight: 700;}
+@mixin FontTitle14 {font-size:14px;line-height: 18px;font-weight: 700;}
+@mixin FontTitle15 {font-size:15px;line-height: 19px;font-weight: 700;}
+@mixin FontTitle16 {font-size:16px;line-height: 22px;font-weight: 700;}
+@mixin FontTitle18 {font-size:18px;line-height: 24px;font-weight: 700;}
+@mixin FontTitle20 {font-size:20px;line-height: 26px;font-weight: 700;}
+@mixin FontTitle22 {font-size:22px;line-height: 28px;font-weight: 700;}
 
 // Word
 @mixin Ellipsis1 {display:block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
@@ -70,5 +72,13 @@ $GapBody: 20px;
 @mixin Shadow4 {box-shadow:0px 2.4rem 38px rgba(0, 0, 0, 0.02), 0 0.9rem 4.6rem rgba(0, 0, 0, 0.04), 0 1.1rem 1.5rem rgba(0, 0, 0, 0.06);}
 
 //-------------------------------------------------------------------
-//	@Styles
+//	@Components
 //-------------------------------------------------------------------
+@mixin formControls {
+	height: 28px;
+	padding: 5px 10px 7px;
+	border: 1px solid #e4e5ea;
+	border-radius: 6px !important;
+	color: #000000;
+	@include FontBody12;
+}

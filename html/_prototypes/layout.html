@@ -3,63 +3,110 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>CUBOX K-FACEON | 삼성 SDS</title>
+	<title>Layout | CUBOX K-FACEON</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport"
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
 	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
 	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
 	<!-- Custom -->
 	<link rel="stylesheet" href="../../assets/css/index.css" />
-	<script src="../../assets/js/libs/jquery.min.js"></script>
 	<script src="../../assets/js/ui/ui.common.js"></script>
 </head>
 
 <body class="page-body">
+	<header class="page-header">
+		<!-- logo-area -->
+		<div class="logo-area">
+			<a href="/">
+				<img src="../../assets/img/logo-faceon.png" width="120" alt="">
+			</a>
+		</div>
+		<!-- //logo-area -->
+
+		<!-- gnb-area -->
+		<div class="gnb-area">
+			<!-- user-area -->
+			<div class="gnb-profile-area">
+				<div class="gnb-profile">
+					<span class="avata">
+						<img src="../../assets/img/icn-32-myfrofile.png" alt="" class="img-circle" />
+					</span>
+					<span class="avata-name">안녕하세요. 삼성SDS 님</span>
+				</div>
+			</div>
+			<!-- //user-area -->
+			<!-- logState-area -->
+			<div class="gnb-state-area">
+				<div class="gnb-state">
+					<!-- Language Selector -->
+					<div class="dropdown language-dropdown">
+						Language
+						<button type="button" class="btn btn-gnb dropdown-toggle" data-bs-toggle="dropdown" data-close-others="true">
+							<span>Korean</span>
+							<i class="icn icn-16-arrow-bk"></i>
+						</button>
+						<ul class="dropdown-menu pull-right">
+							<li>
+								<a href="#">
+									<span>Korean</span>
+								</a>
+							</li>
+							<li class="active">
+								<a href="#">
+									<span>English</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<button type="button" class="btn btn-gnb">
+						로그아웃 <i class="entypo-logout right"></i>
+					</button>
+				</div>
+			</div>
+			<!-- //logState-area -->
+		</div>
+		<!-- //gnb-area -->
+	</header>
 	<div class="page-container">
 		<!-- sidebar-menu -->
 		<div class="sidebar-menu">
 			<div class="sidebar-menu-inner">
-				<header class="logo-env">
-					<!-- logo -->
-					<div class="logo" style="padding-top: 8px">
-						<a href="/">
-							<img src="../../assets/img/faceon_logo.png" width="120" alt="">
-						</a>
-					</div>
-
-					<!-- logo collapse icon -->
-					<div class="sidebar-collapse">
-						<a href="#" class="sidebar-collapse-icon">
-							<!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
-							<i class="entypo-menu"></i>
-						</a>
-					</div>
-				</header>
+				<!-- logo collapse icon -->
+				<div class="sidebar-collapse">
+					<button type="button" class="sidebar-collapse-icon" aria-label="메뉴 토글">
+						<i class="icn icn-sidebar-toggle" aria-hidden="false"></i>
+					</button>
+				</div>
 
 				<ul id="main-menu" class="main-menu">
 					<li class="root-level">
-						<a href="/">
-							<i class="entypo-chart-bar"></i>
+						<a href="../dashboard/main.html">
+							<i class="icn icn-sidebar m01" aria-hidden="false"></i>
 							<span class="title">대시보드</span>
+							<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 						</a>
 					</li>
 
 					<li class="has-sub root-level">
-						<a href="#">
-							<i class="entypo-user"></i>
+						<a href="../userMgmt/userList_01.html">
+							<i class="icn icn-sidebar m02" aria-hidden="false"></i>
 							<span class="title">사용자관리</span>
+							<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 						</a>
 						<ul>
 							<li>
-								<a href="/user">
-									<i class="entypo-list"></i>
+								<a href="../userMgmt/userList_01.html">
 									<span class="title">사용자목록</span>
 								</a>
 							</li>
@@ -67,20 +114,19 @@
 					</li>
 
 					<li class="has-sub root-level">
-						<a href="#">
-							<i class="entypo-users"></i>
+						<a href="../groupMgmt/defaultOrgin_01.html">
+							<i class="icn icn-sidebar m03" aria-hidden="false"></i>
 							<span class="title">그룹관리</span>
+							<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 						</a>
 						<ul>
 							<li>
-								<a href="/group/organization">
-									<i class="entypo-list"></i>
+								<a href="../groupMgmt/defaultOrgin_01.html">
 									<span class="title">기본그룹</span>
 								</a>
 							</li>
 							<li>
-								<a>
-									<i class="entypo-list"></i>
+								<a href="../groupMgmt/customOrgin_list_01.html">
 									<span class="title">사용자정의그룹</span>
 								</a>
 							</li>
@@ -88,53 +134,54 @@
 					</li>
 
 					<li class="has-sub root-level">
-						<a href="#">
-							<i class="entypo-newspaper"></i>
+						<a href="../historyMgmt/userCertList.html">
+							<i class="icn icn-sidebar m04" aria-hidden="false"></i>
 							<span class="title">이력관리</span>
+							<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 						</a>
 						<ul>
 							<li>
-								<a href="/history/userCertified">
-									<i class="entypo-list"></i>
-									<span class="title">사용자인증이력</span>
+								<a href="../historyMgmt/userCertList.html">
+									<span class="title">사용자 인증 이력</span>
 								</a>
 							</li>
 							<li>
-								<a href="/history/abnormal">
-									<i class="entypo-list"></i>
-									<span class="title">이상행위이력</span>
+								<a href="../historyMgmt/strangeBehaviorList.html">
+									<span class="title">이상행위 이력</span>
 								</a>
 							</li>
 							<li>
-								<a href="/history/deviceDetect">
-									<i class="entypo-list"></i>
-									<span class="title">추가모니터/웹캠감지이력</span>
+								<a href="../historyMgmt/monitoringList.html">
+									<span class="title">추가모니터/웹켐감지 이력</span>
 								</a>
 							</li>
 							<li>
-								<a href="/history/privacyAgree">
-									<i class="entypo-list"></i>
-									<span class="title">개인정보동의이력</span>
+								<a href="../historyMgmt/privacyAgreeList.html">
+									<span class="title">개인정보 동의 이력</span>
+								</a>
+							</li>
+							<li>
+								<a href="../historyMgmt/deleteCodeIssuedList.html">
+									<span class="title">삭제코드 발급 이력</span>
 								</a>
 							</li>
 						</ul>
 					</li>
 
 					<li class="has-sub root-level">
-						<a href="#">
-							<i class="entypo-key"></i>
+						<a href="../policyMgmt/defaultPolicySet.html">
+							<i class="icn icn-sidebar m05" aria-hidden="false"></i>
 							<span class="title">정책관리</span>
+							<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 						</a>
 						<ul>
 							<li>
-								<a href="/policies">
-									<i class="entypo-list"></i>
+								<a href="../policyMgmt/defaultPolicySet.html">
 									<span class="title">기본정책설정</span>
 								</a>
 							</li>
 							<li>
-								<a>
-									<i class="entypo-list"></i>
+								<a href="../policyMgmt/exceptionPolicyTempMgmtList.html">
 									<span class="title">예외정책템플릿관리</span>
 								</a>
 							</li>
@@ -142,32 +189,29 @@
 					</li>
 
 					<li class="has-sub root-level">
-						<a href="#">
-							<i class="entypo-tools"></i>
+						<a href="../agentMgmt/agentCertSet.html">
+							<i class="icn icn-sidebar m06" aria-hidden="false"></i>
 							<span class="title">에이전트설정</span>
+							<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 						</a>
 						<ul>
 							<li>
-								<a>
-									<i class="entypo-list"></i>
+								<a href="../agentMgmt/agentCertSet.html">
 									<span class="title">에이전트인증설정</span>
 								</a>
 							</li>
 							<li>
-								<a>
-									<i class="entypo-list"></i>
+								<a href="../agentMgmt/guideMsgSet.html">
 									<span class="title">안내문구 설정</span>
 								</a>
 							</li>
 							<li>
-								<a>
-									<i class="entypo-list"></i>
+								<a href="../agentMgmt/logSaveSet.html">
 									<span class="title">로그저장 설정</span>
 								</a>
 							</li>
 							<li>
-								<a>
-									<i class="entypo-list"></i>
+								<a href="../agentMgmt/privacyTermsList.html">
 									<span class="title">개인정보동의 약관</span>
 								</a>
 							</li>
@@ -175,26 +219,24 @@
 					</li>
 
 					<li class="has-sub root-level">
-						<a href="#">
-							<i class="entypo-lock"></i>
+						<a href="../authorityMgmt/administratorMgmtList.html">
+							<i class="icn icn-sidebar m07" aria-hidden="false"></i>
 							<span class="title">권한관리</span>
+							<i class="icn icn-16-arrow-bk" aria-hidden="false"></i>
 						</a>
 						<ul>
 							<li>
-								<a>
-									<i class="entypo-list"></i>
+								<a href="../authorityMgmt/administratorMgmtList.html">
 									<span class="title">운영자 관리</span>
 								</a>
 							</li>
 							<li>
-								<a>
-									<i class="entypo-list"></i>
+								<a href="../authorityMgmt/authorityMgmtList.html">
 									<span class="title">운영자 권한 설정</span>
 								</a>
 							</li>
 							<li>
-								<a>
-									<i class="entypo-list"></i>
+								<a href="../authorityMgmt/privacyConnectList.html">
 									<span class="title">개인정보 접근이력 조회</span>
 								</a>
 							</li>
@@ -207,280 +249,30 @@
 
 		<!-- main-content -->
 		<div class="main-content">
-			<!-- main-content-header -->
-			<div class="main-content-header">
-				<div class="row">
-					<!-- Profile Info and Notifications -->
-					<div class="col-md-6 col-sm-8 clearfix">
-						<div class="user-info">
-							<!-- Profile Info -->
-							<div class="user-profile-info">
-								<!-- add class "pull-right" if you want to place this from right -->
-								<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-									<span class="avata"><img src="../../assets/img/avata-default.png" alt=""
-											class="img-circle" /></span>
-									<span class="avata-name">안녕하세요. 삼성SDS 님</span>
-								</a>
-								<ul class="dropdown-menu">
-									<!-- Reverse Caret -->
-									<li class="caret"></li>
-									<!-- Profile sub-links -->
-									<li>
-										<a href="#">
-											<i class="entypo-user"></i>
-											Edit Profile
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<i class="entypo-mail"></i>
-											Inbox
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<i class="entypo-clipboard"></i>
-											Tasks
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- Raw Links -->
-					<div class="col-md-6 col-sm-4 hidden-xs">
-						<div class="links-list">
-							<!-- Language Selector -->
-							<div class="dropdown language-selector">
-								Language: &nbsp;
-								<a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" data-close-others="true">
-									<span>Korean</span>
-								</a>
-								<ul class="dropdown-menu pull-right">
-									<li>
-										<a href="#">
-											<span>Korean</span>
-										</a>
-									</li>
-									<li class="active">
-										<a href="#">
-											<span>English</span>
-										</a>
-									</li>
-								</ul>
-							</div>
-
-							<div class="sep">
-								</li>
-								<div class="link-logout">
-									<a href="/logout">
-										Log Out <i class="entypo-logout right"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 사용자관리 / 사용자목록</div>
 			</div>
-			<!-- //main-content-header -->
-
-			<!-- main-content-body -->
-			<div class="main-content-body">
-				<!-- breadcrumb -->
-				<ol class="breadcrumb bc-3">
-					<li>
-						<a href="/index"><i class="fa-home"></i>Home</a>
-					</li>
-					<li class="active">
-						<strong>사용자 관리</strong>
-					</li>
-					<li class="active">
-						<strong>사용자 목록</strong>
-					</li>
-				</ol>
-				<!-- //breadcrumb -->
-
-				<!-- main-content-title -->
-				<div class="main-content-title">
-					<h1>사용자 목록</h1>
+			<!-- //breadcrumb -->
+			<!-- main-section -->
+			<div class="main-section">
+				<!-- main-content-header -->
+				<div class="main-section-header">
+					<h1 class="title">사용자 목록</h1>
 					<p class="explain">검색 조건을 설정하지 않을 경우 에이전트 설치/사용 여부와 관계업이 전체 임직원 목록이 노출됩니다.</p>
 				</div>
-				<!-- //main-content-title -->
-
-				<form>
-					<!-- update-info -->
-					<div class="update-info">
-						<p class="txt">최종 업데이트일 : 2023-08-01 13:34:52</p>
-						<button type="button" class="btn outline primary btn-update">사용자 정보 업데이트</button>
-					</div>
-					<!-- //update-info -->
-
-					<!-- panel-search -->
-					<div class="panel-srch">
-
-						<!-- 사용자 -->
-						<div class="srchDiv" style="margin-bottom: 15px;">
-							<div class="col-sm-1 tx_bold" style="width:10%!important;">사용자/부서</div>
-							<div class="col-sm-5" style="padding-left:0;height:inherit;">
-								<button type="button" class="btn btn-outline btn-srch" id="btnSearchUserDept">
-									<i class="entypo-search"></i> 통합검색
-								</button>
-								<span id="seachTargetUserTit"
-									style="font-size:11px;color: black;font-weight: 900;display:none;">총 <span
-										id="seachTargetUserCnt"></span>명</span><span></span>
-								<div class="panel panel-default" data-collapsed="0"
-									style="margin-top: 5px; overflow: auto; height: inherit; display: none;"
-									id="text-main-panel"></div>
-							</div>
-						</div>
-						<!-- // 사용자 -->
-
-						<!-- 에이전트상태 -->
-						<div class="srchDiv" style="margin-top:19px;">
-							<div class="col-2">
-								<label for="rdoAgentStatus">에이전트상태</label>
-							</div>
-							<div class="col-10">
-								<div class="radio radio-replace neon-cb-replacement" style="width:100px;">
-									<label class="cb-wrapper"><input type="radio" name="rdoAgentStatus" value="on">
-										<div class="checked"></div>
-									</label>
-									<label class="tx_input">활성</label>
-								</div>
-								<div class="radio radio-replace neon-cb-replacement" style="width: 100px;">
-									<label class="cb-wrapper"><input type="radio" name="rdoAgentStatus" value="off">
-										<div class="checked"></div>
-									</label>
-									<label class="tx_input">비활성</label>
-								</div>
-							</div>
-						</div>
-						<!-- // 에이전트상태 -->
-
-						<!-- 예외정책적용 -->
-						<div class="srchDiv">
-							<div class="col-sm-2 tx_bold" style="width:10%!important;">예외정책적용</div>
-							<div style="display:flex; align-items: baseline;width:50%;">
-								<div class="radio radio-replace neon-cb-replacement" style="width: 100px;">
-									<label class="cb-wrapper"><input type="radio" id="rdo_expolicy_off"
-											name="rdoExPolicy" value="off">
-										<div class="checked"></div>
-									</label>
-									<label class="tx_input">미적용</label>
-								</div>
-								<div class="radio radio-replace neon-cb-replacement" style="width: 100px;">
-									<label class="cb-wrapper"><input type="radio" id="rdo_expolicy_on"
-											name="rdoExPolicy" value="on">
-										<div class="checked"></div>
-									</label>
-									<label class="tx_input">적용</label>
-								</div>
-							</div>
-						</div>
-						<!-- // 예외정책적용 -->
-
-						<!-- 이벤트 -->
-						<div class="srchDiv divDet">
-							<div class="col-sm-2 tx_bold" style="width:10%!important;">이벤트</div>
-							<div style="display:flex;justify-content: normal;width:50%;">
-								<div class="radio radio-replace neon-cb-replacement" style="margin-right:10px;">
-									<label class="cb-wrapper"><input type="radio" id="eventType01" name="rdoEventTyp"
-											value="01">
-										<div class="checked"></div>
-									</label>
-									<label class="tx_input" for="eventType01">예외정책적용</label>
-								</div>
-								<div class="checkbox-inline" style="background: snow;">
-									<label class="checkboxes" style="margin-right:27px;"><input type="checkbox"
-											name="checkPolicyType1" disabled="" value="PC0002">타인동석</label>
-									<label class="checkboxes" style="margin-right:27px;"><input type="checkbox"
-											name="checkPolicyType2" disabled="" value="PC0003">카메라촬영</label>
-									<label class="checkboxes" style="margin-right:27px;"><input type="checkbox"
-											name="checkPolicyType3" disabled="" value="PC0001">웹캠가림</label>
-									<label class="checkboxes" style="margin-right:27px;"><input type="checkbox"
-											name="checkPolicyType4" disabled="" value="PC0101">추가모니터</label>
-									<label class="checkboxes" style="margin-right:27px;"><input type="checkbox"
-											name="checkPolicyType5" disabled="" value="PC0102">추가웹캠</label>
-									<label class="checkboxes" style="margin-right:27px;"><input type="checkbox"
-											name="checkPolicyType6" disabled="" value="PC0004">자리이석</label>
-								</div>
-							</div>
-						</div>
-
-						<div class="srchDiv divDet" style="margin-bottom: 10px;">
-							<div class="col-sm-1" style="width:10%!important;"></div>
-							<div
-								style="display:flex;width:50%;flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;align-items: center;">
-								<div class="radio radio-replace neon-cb-replacement">
-									<label class="cb-wrapper"><input type="radio" id="eventType02" name="rdoEventTyp"
-											value="02">
-										<div class="checked"></div>
-									</label>
-									<label class="tx_input" for="eventType02">에이전트설치일</label>
-								</div>
-								<div class="radio radio-replace neon-cb-replacement" style="padding-left:5%;">
-									<label class="cb-wrapper"><input type="radio" id="eventType03" name="rdoEventTyp"
-											value="03">
-										<div class="checked"></div>
-									</label>
-									<label class="tx_input" for="eventType03">예외정책시작일</label>
-								</div>
-								<div class="radio radio-replace neon-cb-replacement" style="padding-left:5%;">
-									<label class="cb-wrapper"><input type="radio" id="eventType04" name="rdoEventTyp"
-											value="04">
-										<div class="checked"></div>
-									</label>
-									<label class="tx_input" for="eventType04">예외정책종료일</label>
-								</div>
-							</div>
-						</div>
-
-						<div class="srchDiv divDet" style="margin-top: 15px;display: flex">
-							<div class="col-sm-2 tx_bold" style="width:10%!important;">조회기간</div>
-							<div style="display:flex; align-items: center; justify-content: space-between;">
-								<div class="input-group">
-									<input type="text" id="inputStartDt" name="inputStartDt"
-										class="form-control datepicker" value="" data-format="yyyy-mm-dd"
-										style="width:120px;" autocomplete="off">
-									<div class="input-group-addon">
-										<a href="#"><i class="entypo-calendar"></i></a>
-									</div>
-								</div>
-								&nbsp;&nbsp;-&nbsp;&nbsp;
-								<div class="input-group">
-									<input type="text" id="inputEndDt" name="inputEndDt" class="form-control datepicker"
-										value="" data-format="yyyy-mm-dd" style="width:120px;" autocomplete="off">
-									<div class="input-group-addon">
-										<a href="#"><i class="entypo-calendar"></i></a>
-									</div>
-								</div>
-							</div>
-							<div>
-								<button class="btn btn-outline btn-outline-info" id="btnNowDt"
-									style="margin-left:5px;">오늘</button>
-								<button class="btn btn-outline btn-outline-info" id="btnOneWeekDt">1주일</button>
-								<button class="btn btn-outline btn-outline-info" id="btnOneMonthDt">1개월</button>
-								<button class="btn btn-outline btn-outline-info" id="btnThreeMonthDt">3개월</button>
-								<button class="btn btn-outline btn-outline-info" id="btnSixMonthDt">6개월</button>
-							</div>
-						</div>
-
-						<div class="srchDiv divDet" style="margin-top:5px;display: flex">
-							<div class="col-sm-2 tx_bold" style="width:10%!important;"></div>
-							<div style="display:flex; align-items: center; justify-content: space-between;">
-								<button class="btn btn-outline btn-outline-info" id="btnSearch">검색</button>
-							</div>
-						</div>
-
-					</div>
-					<!-- //panel-search -->
-
-				</form>
-
+				<!-- //main-content-header -->
 			</div>
-			<!-- //main-content-body -->
+			<!-- //main-section -->
 		</div>
 		<!-- //main-content -->
+
+		<script>
+			$(function(){
+				$('#inputStartDt').datepicker();
+				$('#inputEndDt').datepicker();
+			})
+		</script>
 </body>
 
 </html>

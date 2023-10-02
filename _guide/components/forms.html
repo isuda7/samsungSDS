@@ -2,18 +2,24 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8" />
-<title>CUBOX K-FACEON | 삼성 SDS</title>
+<title>CUBOX K-FACEON</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
 <meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
-<title>CUBOX K-FACEON | 삼성 SDS</title>
+<title>CUBOX K-FACEON</title>
 <!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="../../assets/js/libs/datatables.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+<script src="../../assets/js/libs/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+	crossorigin="anonymous"></script>
+<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
 <!-- Custom -->
 <link rel="stylesheet" href="../../assets/css/index.css" />
-<script src="../../assets/js/libs/jquery.min.js"></script>
+<script src="../../assets/js/ui/ui.common.js"></script>
 <!-- Guide 전용 -->
 <link rel="stylesheet" href="css/guide.css" />
 </head>
@@ -33,33 +39,69 @@
 				<!-- Section -->
 				<section class="g-section in-sec">
 					<div class="g-section-head">
-						<h2 class="g-h2">Elements</h2>
+						<h2 class="g-h2">Textfield</h2>
 					</div>
 					<div class="g-section-body">
-						<h3 class="g-h3">Textbox / Select / Textarea </h3>
+						<h3 class="g-h3">Input / Textarea</h3>
 						<div class="form-controls">
-							<input type="text" name="" id="" value="" placeholder="Placeholder" class="input demo1">
-							<input type="text" name="" id="" value="Value" placeholder="Placeholder" class="input demo1">
-							<input type="text" name="" id="" value="" placeholder="Placeholder" class="input demo1" readonly>
-							<input type="text" name="" id="" value="" placeholder="Placeholder" class="input demo1" disabled>
-						</div>
-						<br />
-						<div class="form-controls">
-							<select name="" id="" class="select demo1">
-								<option value="">콤보상자1</option>
-								<option value="">콤보상자2</option>
-							</select>
-							<select name="" id="" class="select demo1" aria-readonly="true">
-								<option value="">콤보상자1</option>
-								<option value="">콤보상자2</option>
-							</select>
-							<select name="" id="" class="select demo1" disabled>
-								<option value="">콤보상자1</option>
-								<option value="">콤보상자2</option>
-							</select>
+							<input type="text" name="" id="" value="" placeholder="Placeholder" class="form-control demo1">
+							<input type="text" name="" id="" value="Value" placeholder="Placeholder" class="form-control demo1">
+							<input type="text" name="" id="" value="" placeholder="Placeholder" class="form-control demo1" readonly>
+							<input type="text" name="" id="" value="" placeholder="Placeholder" class="form-control demo1" disabled />
 						</div>
 						<br />
 						<textarea cols="50" rows="2" class="input demo1"></textarea>
+
+						<h3 class="g-h3">달력 및 검색</h3>
+						<h4 class="g-h4">Input Search</h4>
+						<div class="input-group">
+							<input type="text" class="form-control datepicker" value="" />
+							<div class="input-group-over">
+								<i class="icn icn-16-calendar-bk"></i>
+							</div>
+						</div>
+
+						<h4 class="g-h4">Datepicker</h4>
+						<div class="form-controls">
+							<!-- 달력선택 -->
+							<div class="input-group-date">
+								<div class="input-group">
+									<input type="text" id="inputStartDt" name="inputStartDt" class="form-control datepicker" value="2023-09-28" data-format="yyyy-mm-dd" autocomplete="off" />
+									<div class="input-group-over">
+										<i class="icn icn-16-calendar-bk"></i>
+									</div>
+								</div>
+								<div class="form-split">~</div>
+								<div class="input-group">
+									<input type="text" id="inputEndDt" name="inputEndDt" class="form-control datepicker" value="2023-10-28" data-format="yyyy-mm-dd" autocomplete="off" />
+									<div class="input-group-over">
+										<i class="icn icn-16-calendar-bk"></i>
+									</div>
+								</div>
+							</div>
+							<!-- //달력선택 -->
+							<!-- 기간선택 -->
+							<div class="btn-group-date">
+								<button type="button" class="btn btn-control">오늘</button>
+								<button type="button" class="btn btn-control">1주일</button>
+								<button type="button" class="btn btn-control">1개월</button>
+								<button type="button" class="btn btn-control">3개월</button>
+								<button type="button" class="btn btn-control">6개월</button>
+							</div>
+							<!-- //기간선택 -->
+							<script>
+								$(function(){
+									$('#inputStartDt').datepicker();
+									$('#inputEndDt').datepicker();
+								})
+							</script>
+						</div>
+
+
+						<h4 class="g-h4">검색버튼</h4>
+						<button class="btn btn-control has-icn">
+							<i class="icn icn-16-search-bk"></i>통합검색
+						</button>
 
 						<h3 class="g-h3">File Attach</h3>
                         <h4 class="g-h4">기본</h4>
@@ -94,62 +136,160 @@
 								</label>
 							</span>
 						</div>
-						<h3 class="g-h3">Checkbox / Radio / Switch</h3>
-						<div class="check-demo1-area">
-							<span class="check demo1">
-								<input type="checkbox" name="sCheck1" id="sCheck11" checked>
-								<label for="sCheck11"><span class="blind">숨김처리</span></label>
-							</span>
-							<span class="check demo1">
-								<input type="checkbox" name="sCheck1" id="sCheck12">
-								<label for="sCheck12"><span>Label</span></label>
-							</span>
-							<span class="check demo1">
-								<input type="checkbox" name="sCheck1" id="sCheck13" disabled>
-								<label for="sCheck13"><span>Disabled</span></label>
-							</span>
-							<span class="check demo1">
-								<input type="checkbox" name="sCheck1" id="sCheck14">
-								<label for="sCheck14"><span>라벨이<br />두줄인 경우</span></label>
-							</span>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section in-sec">
+					<div class="g-section-head">
+						<h2 class="g-h2">Select</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">Form Select</h3>
+						<select class="form-select" aria-label="Default select example">
+							<option selected>Open this select menu</option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+						<br>
+						<select class="form-select w-auto" aria-label="Default select example">
+							<option selected>Open this select menu</option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section in-sec">
+					<div class="g-section-head">
+						<h2 class="g-h2">Radio/Checkbox</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">Elements</h3>
+						<h4 class="g-h4">Radio</h4>
+						<div class="radio-inline">
+							<label class="radio style1">
+								<input type="radio" name="rdoExPolicy" value="off" />
+								<span class="value"><span>미적용</span></span>
+							</label>
+							<label class="radio style1">
+								<input type="radio" name="rdoExPolicy" value="on" checked />
+								<span class="value"><span>적용</span></span>
+							</label>
+							<label class="radio style1">
+								<input type="radio" name="rdoExPolicy2" value="disabled" disabled />
+								<span class="value"><span>비활성</span></span>
+							</label>
+							<label class="radio style1">
+								<input type="radio" name="rdoExPolicy2" value="disabled" checked disabled />
+								<span class="value"><span>비활성</span></span>
+							</label>
 						</div>
-						<br />
-						<div class="radio-demo1-area">
-							<span class="radio demo1">
-								<input type="radio" name="sRadio1" id="sRadio11" checked>
-								<label for="sRadio11"><span class="blind">숨김처리</span></label>
-							</span>
-							<span class="radio demo1">
-								<input type="radio" name="sRadio1" id="sRadio12">
-								<label for="sRadio12"><span>Label</span></label>
-							</span>
-							<span class="radio demo1">
-								<input type="radio" name="sRadio1" id="sRadio13" disabled>
-								<label for="sRadio13"><span>Disabled</span></label>
-							</span>
-							<span class="radio demo1">
-								<input type="radio" name="sRadio1" id="sRadio14">
-								<label for="sRadio14"><span>라벨이<br />두줄인 경우</span></label>
-							</span>
+						<h4 class="g-h4">Checkbox</h4>
+						<div class="checkbox-inline">
+							<label class="checkbox style1">
+								<input type="checkbox" name="chkExPolicy" value="off" />
+								<span class="value"><span>미적용</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="chkExPolicy" value="on" checked />
+								<span class="value"><span>적용</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="chkExPolicy" value="disabled" disabled />
+								<span class="value"><span>비활성</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="chkExPolicy" value="disabled" checked disabled />
+								<span class="value"><span>비활성</span></span>
+							</label>
 						</div>
-						<br />
-						<div class="switch-demo1-area">
-							<span class="switch demo1">
-								<input type="checkbox" name="sSwitch1" id="sSwitch11" value="">
-								<label for="sSwitch11"></label>
-							</span>
-							<span class="switch demo1">
-								<input type="checkbox" name="sSwitch1" id="sSwitch12" value="" checked>
-								<label for="sSwitch12"></label>
-							</span>
-							<span class="switch demo1">
-								<input type="checkbox" name="sSwitch1" id="sSwitch13" value="" disabled>
-								<label for="sSwitch13"></label>
-							</span>
-							<span class="switch demo1">
-								<input type="checkbox" name="sSwitch1" id="sSwitch14" value="" checked disabled>
-								<label for="sSwitch14"></label>
-							</span>
+						<h3 class="g-h3">Group</h3>
+						<h4 class="g-h4">Block</h4>
+						<div class="checkbox-block">
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType1" value="PC0002" />
+								<span class="value"><span>타인동석</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType1" value="PC0003" />
+								<span class="value"><span>카메라촬영</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType1" value="PC0001" />
+								<span class="value"><span>웹캠가림</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType1" value="PC0101" />
+								<span class="value"><span>추가모니터</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType1" value="PC0102" />
+								<span class="value"><span>추가웹캠</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType1" value="PC0004" />
+								<span class="value"><span>자리이석</span></span>
+							</label>
+						</div>
+						<h4 class="g-h4">Inline (gap 기본)</h4>
+						<div class="checkbox-inline">
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType2" value="PC0002" />
+								<span class="value"><span>타인동석</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType2" value="PC0003" />
+								<span class="value"><span>카메라촬영</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType2" value="PC0001" />
+								<span class="value"><span>웹캠가림</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType2" value="PC0101" />
+								<span class="value"><span>추가모니터</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType2" value="PC0102" />
+								<span class="value"><span>추가웹캠</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType2" value="PC0004" />
+								<span class="value"><span>자리이석</span></span>
+							</label>
+						</div>
+						<h4 class="g-h4">Inline (gap-xl)</h4>
+						<div class="checkbox-inline gap-xl">
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType3" value="PC0002" />
+								<span class="value"><span>타인동석</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType3" value="PC0003" />
+								<span class="value"><span>카메라촬영</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType3" value="PC0001" />
+								<span class="value"><span>웹캠가림</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType3" value="PC0101" />
+								<span class="value"><span>추가모니터</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType3" value="PC0102" />
+								<span class="value"><span>추가웹캠</span></span>
+							</label>
+							<label class="checkbox style1">
+								<input type="checkbox" name="checkPolicyType3" value="PC0004" />
+								<span class="value"><span>자리이석</span></span>
+							</label>
 						</div>
 					</div>
 				</section>

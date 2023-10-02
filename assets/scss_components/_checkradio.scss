@@ -1,0 +1,59 @@
+//-------------------------------------------------------------------
+//	분류그룹 : Checkbox
+//	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
+//-------------------------------------------------------------------
+//-------------------------------------------------------------------
+//	@Variables
+//-------------------------------------------------------------------
+$chk-size: 16px;
+$chk-text-gap: 10px;
+
+//-------------------------------------------------------------------
+//	@Default
+//-------------------------------------------------------------------
+.radio,.switch,.checkbox {
+    position:relative;display:inline-flex;font-size:inherit;line-height:inherit;
+	> input {cursor:pointer;position:absolute;top:0px;left:0px;opacity:0 !important;outline:none;}
+	> input + .value {position:relative;display:block;}
+	> input + .value::before,
+	> input + .value::after {content:"";display:block;position:absolute;}
+}
+
+//-------------------------------------------------------------------
+//	@Group
+//-------------------------------------------------------------------
+// Block
+.radio-block, .checkbox-block {
+	.radio.style1, .checkbox.style1	{width: 100%; padding: 5px 0;}
+}
+
+// Inline
+.radio-inline, .checkbox-inline {
+	display: flex; flex-wrap: wrap; margin: 0 -10px;
+	.radio.style1, .checkbox.style1	{margin: 0 10px; padding: 5px 0;}
+	&.gap-xl {
+		margin: 0 -20px;
+		.radio.style1, .checkbox.style1	{margin: 0 20px;}
+	}
+	// 이중으로 처리되는 경우 여백 초기화
+	.radio-inline, .checkbox-inline {margin-top:0; margin-bottom:0; background-color:#f2f6fe; margin-left: 23px;}
+}
+
+//-------------------------------------------------------------------
+//	@Styles
+//-------------------------------------------------------------------
+// Style1
+.radio.style1, .checkbox.style1 {
+	min-width: $chk-size; min-height: $chk-size;
+	> input + .value::before {width: $chk-size; height: $chk-size; left: 0; top: 0; background: url("../img/icn-16-checkbox-off.png") no-repeat 0 0 / auto 100%;}
+	> input:checked + .value::before {background: url("../img/icn-16-checkbox-on.png") no-repeat 0 0 / auto 100%;}
+	> input:disabled + .value {opacity: 0.4;}
+	> input + .value {display: block; padding-left: $chk-size;}
+	> input + .value > span {padding-left: $chk-text-gap;color: #4a4c5d;}
+	> input:checked + .value > span {color: #000;}
+}
+.radio.style1 {
+	> input + .value::before {background-image: url("../img/icn-16-radio-off.png")}
+	> input:checked + .value::before {background-image: url("../img/icn-16-radio-on.png")}
+
+}

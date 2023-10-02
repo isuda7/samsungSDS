@@ -4,8 +4,8 @@
 	Guide
 -------------------------------------------------------------------*/
 /* Section */
-.g-section {color:#222;}
-.g-section a { color:#222;}
+/* .g-section {color:#222;}
+.g-section a { color:#222;} */
 .g-section + .g-section {margin-top:40px;}
 .g-section-head {position:relative; padding-bottom:10px; border-bottom:1px solid #eee;}
 .g-section-body {margin-top:20px;}

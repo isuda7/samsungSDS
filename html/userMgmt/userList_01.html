@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>사용자 목록 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function(){ });
+		</script>
+	</header>
+	<div class="page-container">
+
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function(){
+					mainMenuInit(); setMainMenu(1, 0);
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 사용자관리 / 사용자목록</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-content-body -->
+			<div class="main-section">
+				<!-- main-content-header -->
+				<div class="main-section-header">
+					<h1 class="title">사용자 목록</h1>
+					<p class="explain">검색 조건을 설정하지 않을 경우 에이전트 설치/사용 여부와 관계업이 전체 임직원 목록이 노출됩니다.</p>
+				</div>
+				<!-- //main-content-header -->
+
+				<!-- Search Form -->
+				<form>
+					<!-- update-info -->
+					<div class="update-info">
+						<p class="txt">최종 업데이트일 : 2023-08-01 13:34:52</p>
+						<button type="button" class="btn outline primary btn-update">사용자 정보 업데이트</button>
+					</div>
+					<!-- //update-info -->
+				</form>
+				<!-- //Search Form -->
+
+			</div>
+			<!-- //main-content-body -->
+		</div>
+		<!-- //main-content -->
+
+		<script>
+			$(function(){
+				$('#inputStartDt').datepicker();
+				$('#inputEndDt').datepicker();
+			})
+		</script>
+</body>
+
+</html>
