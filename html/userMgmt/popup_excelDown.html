@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>엑셀다운로드 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(1, 0); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 사용자관리 / 사용자목록</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-content-body -->
+			<div class="main-section">
+				<button type="button" class="btn btn-control excel has-icn" data-bs-target="#excelDown" data-bs-toggle="modal">
+					<i class="icn icn-16-excel"></i>엑셀다운로드
+				</button>
+			</div>
+			<!-- //main-content-body -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+
+	<!-- Modal Basic -->
+	<div class="modal fade" id="excelDown" tabindex="-1" aria-labelledby="excelDownLabel" aria-hidden="true">
+		<div class="modal-dialog modal-basic modal-xs">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title" id="excelDownLabel">엑셀다운로드</h1>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal">
+						<i class="icn icn-24-close-gr"><span class="blind">Close</span></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form form-exceldown">
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="rdoDown" class="form-label">다운로드 범위<span class="form-star" aria-label="필수입력">*</span></label>
+								</div>
+								<div class="form-controls col-lg-3">
+									<!-- 라디오간격 기본값: 20px, gap-lg: 40px -->
+									<div class="radio-inline gap-xl">
+										<label class="radio style1">
+											<input type="radio" name="rdoDown" value="" />
+											<span class="value"><span>검색내역</span></span>
+										</label>
+										<label class="radio style1">
+											<input type="radio" name="rdoDown" value="" />
+											<span class="value"><span>전체내역</span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="inpFilename" class="form-label">파일명<span class="form-star" aria-label="필수입력">*</span></label>
+								</div>
+								<div class="form-controls">
+									<div class="input-group">
+										<input type="text" id="inpFilename" value="삼성 SDS 01 삼성 SDS 01" class="form-control" />
+										<!-- len2 2자리 영역 -->
+										<span class="form-byte len-2">
+											<em class="now">20</em>/50
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="rdoDown" class="form-label">비밀번호 사용<span class="form-star" aria-label="필수입력">*</span></label>
+								</div>
+								<div class="form-controls col-lg-3">
+									<!-- 라디오간격 기본값: 20px, gap-lg: 40px -->
+									<div class="radio-inline gap-xl">
+										<label class="radio style1">
+											<input type="radio" name="rdoDown" value="" />
+											<span class="value"><span>사용</span></span>
+										</label>
+										<label class="radio style1">
+											<input type="radio" name="rdoDown" value="" />
+											<span class="value"><span>미사용</span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="inpFilename" class="form-label">비밀번호</label>
+								</div>
+								<div class="form-controls">
+									<div class="input-group">
+										<input type="password" id="inpFilename" class="form-control" placeholder="8자리 이상 입력"/>
+										<!-- len2 2자리 영역 -->
+										<span class="form-byte len-2"></span>
+									</div>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="inpFilename" class="form-label">다운로드 사유<span class="form-star" aria-label="필수입력">*</span></label>
+								</div>
+								<div class="form-controls">
+									<div class="input-group">
+										<input type="text" id="inpFilename" class="form-control" />
+										<!-- len2 2자리 영역 -->
+										<span class="form-byte len-2">
+											<em class="now">0</em>/50
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="field-alert">
+								<div class="alert-guide">
+									<p>개인정보를 개인용PC에 저장 할 시 암호화가 의무이므로 비밀번호 '사용'을 권장합니다.</p>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-basic btn-outline-primary" data-bs-dismiss="modal">취소</button>
+					<button type="button" class="btn btn-basic btn-primary">파일다운로드</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Modal Basic -->
+
+	<script>
+		var modal = new bootstrap.Modal(document.getElementById('excelDown'));
+		modal.show();
+	</script>
+
+</body>
+
+</html>

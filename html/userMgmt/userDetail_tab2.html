@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>사용자상세정보 - 사용자인증이력 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(1, 0); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 사용자관리 / 사용자목록 / 사용자상세정보</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-content-body -->
+			<div class="main-section">
+				<!-- main-content-header -->
+				<div class="main-section-header">
+					<h1 class="title">사용자 상세정보</h1>
+				</div>
+				<!-- //main-content-header -->
+
+				<!-- 사용자정보 -->
+				<div class="profile-sec">
+					<div class="avata-area">
+						<span class="avata">
+							<img src="../../assets/img/icn-32-myfrofile.png" alt="" class="img-circle">
+						</span>
+					</div>
+					<div class="info-area">
+						<p class="info-position">상무</p>
+						<p class="info-name">
+							<span class="text">정호연 (sds1000)</span>
+						</p>
+						<p class="info-part">
+							IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트
+						</p>
+					</div>
+					<div class="util-area">
+						<button type="button" class="btn btn-module2 positive">예외정책 적용하기</button>
+					</div>
+				</div>
+				<!-- 사용자정보 -->
+
+				<!-- Tab Container -->
+				<div class="tab-container tab-page">
+					<div class="tab-list" role="tablist">
+						<button type="button" id="tabNav1" role="tab" aria-selected="false" class="tab"><span>기본정보</span></button>
+						<button type="button" id="tabNav2" role="tab" aria-selected="true" class="tab is-selected"><span>사용자인증이력</span></button>
+						<button type="button" id="tabNav3" role="tab" aria-selected="false" class="tab"><span>예외정책/접속이력</span></button>
+						<button type="button" id="tabNav4" role="tab" aria-selected="false" class="tab"><span>이상행위이력</span></button>
+						<button type="button" id="tabNav5" role="tab" aria-selected="false" class="tab"><span>추가모니터/웹감지이력</span></button>
+						<button type="button" id="tabNav6" role="tab" aria-selected="false" class="tab"><span>에이전트설치이력</span></button>
+						<button type="button" id="tabNav7" role="tab" aria-selected="false" class="tab"><span>삭제코드발급이력</span></button>
+					</div>
+
+					<div class="tab-panel" aria-labelledby="tabNav2">
+						<!-- 상세정보 영역 -->
+						<div class="detail-sec">
+							<div class="form-searchbox">
+								<div class="field-inline">
+									<div class="form-title">
+										<label for="" class="form-label">조회기간</label>
+									</div>
+									<div class="form-controls flex-wrap">
+										<!-- 달력선택 -->
+										<div class="input-group-date">
+											<div class="input-group">
+												<input type="text" id="inputStartDt" name="inputStartDt" class="form-control datepicker" value="2023-09-28" data-format="yyyy-mm-dd" autocomplete="off" />
+												<div class="input-group-over">
+													<i class="icn icn-16-calendar-bk"></i>
+												</div>
+											</div>
+											<div class="form-split">~</div>
+											<div class="input-group">
+												<input type="text" id="inputEndDt" name="inputEndDt" class="form-control datepicker" value="2023-10-28" data-format="yyyy-mm-dd" autocomplete="off" />
+												<div class="input-group-over">
+													<i class="icn icn-16-calendar-bk"></i>
+												</div>
+											</div>
+											<script>
+												$(function(){
+													$('#inputStartDt').datepicker();
+													$('#inputEndDt').datepicker();
+												})
+											</script>
+										</div>
+										<!-- //달력선택 -->
+										<!-- 기간선택 -->
+										<div class="btn-group-date">
+											<button type="button" class="btn btn-control btn-outline-primary">오늘</button>
+											<button type="button" class="btn btn-control">1주일</button>
+											<button type="button" class="btn btn-control">1개월</button>
+											<button type="button" class="btn btn-control">3개월</button>
+											<button type="button" class="btn btn-control">6개월</button>
+											<button type="button" class="btn btn-control btn-primary">검색</button>
+										</div>
+										<!-- //기간선택 -->
+										<div class="form-desc mar-l-auto">
+											<p class="detail-update">최종 업데이트일 : 2023-09-05 18:50:21</p>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="field-action">
+									<button type="button" class="btn btn-search has-icn">
+										<i class="icn icn-16-search-wh"></i>검색
+									</button>
+								</div> -->
+							</div>
+							<!-- Datatable -->
+							<div id="tableContainer_wrapper" class="dataTables_wrapper no-footer">
+								<!-- Toolbar -->
+								<div class="toolbar">
+									<div class="left-area">
+										<select class="form-select w-auto">
+											<option value="">이벤트</option>
+											<option value="">로그인</option>
+											<option value="">얼굴등록</option>
+											<option value="">등록실패</option>
+											<option value="">얼굴인증</option>
+											<option value="">인증실패</option>
+										</select>
+										<select class="form-select w-auto">
+											<option value="" selected>20 줄</option>
+											<option value="">40 줄</option>
+											<option value="">60 줄</option>
+											<option value="">80 줄</option>
+											<option value="">100 줄</option>
+										</select>
+										<p class="count">
+											검색결과 <em class="now">1,000</em>건
+										</p>
+									</div>
+									<div class="right-area">
+										<button type="button" class="btn btn-control excel has-icn"
+											data-bs-target="#excelDown" data-bs-toggle="modal">
+											<i class="icn icn-16-excel"></i>엑셀다운로드
+										</button>
+									</div>
+								</div>
+								<!-- // Toolbar -->
+								<div class="dataTables_scroll">
+									<div class="dataTables_scrollHead"
+										style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+										<div class="dataTables_scrollHeadInner"
+											style="box-sizing: content-box; width: 100%; padding-right: 0px;">
+											<table class="table table-bordered datatable dataTable no-footer"
+												aria-describedby="tableContainer_info" role="grid"
+												style="margin-left: 0px; width: 100%;">
+												<thead>
+													<tr role="row">
+														<th class="sorting_disabled" rowspan="1" colspan="1"
+															aria-label="번호" style="width: 81px;">번호</th>
+														<th class="sorting_desc" tabindex="0"
+															aria-controls="tableContainer" rowspan="1" colspan="1"
+															aria-sort="descending"
+															aria-label="인증일시: activate to sort column ascending"
+															style="width: 216px;">인증일시</th>
+														<th class="sorting" tabindex="0" aria-controls="tableContainer"
+															rowspan="1" colspan="1"
+															aria-label="이벤트: activate to sort column ascending"
+															style="width: 150px;">이벤트</th>
+														<th class="alCenter sorting_disabled" rowspan="1" colspan="1"
+															aria-label="이미지" style="width: 104px;">이미지</th>
+														<th class="sorting" tabindex="0" aria-controls="tableContainer"
+															rowspan="1" colspan="1"
+															aria-label="IP: activate to sort column ascending"
+															style="width: 175px;">IP</th>
+													</tr>
+												</thead>
+											</table>
+										</div>
+									</div>
+									<div class="dataTables_scrollBody"
+										style="position: relative; overflow: auto; width: 100%;">
+										<table class="table table-bordered datatable dataTable no-footer"
+											id="tableContainer" aria-describedby="tableContainer_info" role="grid">
+											<thead>
+												<tr role="row" style="height: 0px;">
+													<th class="sorting_disabled" rowspan="1" colspan="1" aria-label="번호"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 81px;">
+														<div class="dataTables_sizing"
+															style="height:0;overflow:hidden;">번호</div>
+													</th>
+													<th class="sorting_desc" aria-controls="tableContainer" rowspan="1"
+														colspan="1" aria-sort="descending"
+														aria-label="일시: activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 216px;">
+														<div class="dataTables_sizing"
+															style="height:0;overflow:hidden;">일시</div>
+													</th>
+													<th class="sorting" aria-controls="tableContainer" rowspan="1"
+														colspan="1"
+														aria-label="이벤트구분: activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 150px;">
+														<div class="dataTables_sizing"
+															style="height:0;overflow:hidden;">이벤트구분</div>
+													</th>
+													<th class="alCenter sorting_disabled" rowspan="1" colspan="1"
+														aria-label="이미지"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 104px;">
+														<div class="dataTables_sizing"
+															style="height:0;overflow:hidden;">이미지</div>
+													</th>
+													<th class="sorting" aria-controls="tableContainer" rowspan="1"
+														colspan="1" aria-label="IP: activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 175px;">
+														<div class="dataTables_sizing"
+															style="height:0;overflow:hidden;">IP</div>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr role="row" class="odd">
+													<td>0</td>
+													<td class="sorting_1">2023-10-02 11:40:00</td>
+													<td>얼굴등록 성공</td>
+													<td class=" alCenter"><button
+															class="btn btn-module"
+															data-bs-toggle="modal" data-bs-target="#listView"
+															data-imageurl="undefined" data-event="얼굴등록" 성공=""
+															data-datetime="2023-10-02T11:40:00+09:00"
+															data-id="F4b89f202-cd63-4ef8-ac66-2c0b4fd7d48e">보기</button>
+													</td>
+													<td>211.106.247.177</td>
+												</tr>
+												<tr role="row" class="even">
+													<td>-1</td>
+													<td class="sorting_1">2023-10-02 11:40:00</td>
+													<td>얼굴등록 성공</td>
+													<td class=" alCenter"><button
+															class="btn btn-module"
+															data-bs-toggle="modal" data-bs-target="#listView"
+															data-imageurl="undefined" data-event="얼굴등록" 성공=""
+															data-datetime="2023-10-02T11:40:00+09:00"
+															data-id="Ff5dc6221-e83b-482d-ae94-e7ae303c5c26">보기</button>
+													</td>
+													<td>211.106.247.177</td>
+												</tr>
+												<tr role="row" class="odd">
+													<td>-2</td>
+													<td class="sorting_1">2023-10-02 11:40:00</td>
+													<td>얼굴등록 성공</td>
+													<td class=" alCenter"><button
+															class="btn btn-module"
+															data-bs-toggle="modal" data-bs-target="#listView"
+															data-imageurl="undefined" data-event="얼굴등록" 성공=""
+															data-datetime="2023-10-02T11:40:00+09:00"
+															data-id="F291c5765-c2ce-41ad-9a02-61604f83733b">보기</button>
+													</td>
+													<td>211.106.247.177</td>
+												</tr>
+												<tr role="row" class="even">
+													<td>-3</td>
+													<td class="sorting_1">2023-10-02 11:40:00</td>
+													<td>얼굴등록 성공</td>
+													<td class=" alCenter"><button
+															class="btn btn-module"
+															data-bs-toggle="modal" data-bs-target="#listView"
+															data-imageurl="undefined" data-event="얼굴등록" 성공=""
+															data-datetime="2023-10-02T11:40:00+09:00"
+															data-id="F206cb92b-86c3-4311-ae35-4a3d67e1cb6a">보기</button>
+													</td>
+													<td>211.106.247.177</td>
+												</tr>
+												<tr role="row" class="odd">
+													<td>-4</td>
+													<td class="sorting_1">2023-10-02 11:40:00</td>
+													<td>얼굴등록 성공</td>
+													<td class=" alCenter"><button
+															class="btn btn-module"
+															data-bs-toggle="modal" data-bs-target="#listView"
+															data-imageurl="undefined" data-event="얼굴등록" 성공=""
+															data-datetime="2023-10-02T11:40:00+09:00"
+															data-id="Fbb96687e-356b-4584-afa5-9db5c49950da">보기</button>
+													</td>
+													<td>211.106.247.177</td>
+												</tr>
+												<tr role="row" class="even">
+													<td>-5</td>
+													<td class="sorting_1">2023-10-02 11:40:00</td>
+													<td>얼굴등록 성공</td>
+													<td class=" alCenter"><button
+															class="btn btn-module"
+															data-bs-toggle="modal" data-bs-target="#listView"
+															data-imageurl="undefined" data-event="얼굴등록" 성공=""
+															data-datetime="2023-10-02T11:40:00+09:00"
+															data-id="F47d031db-6fbb-4588-afeb-4e997424c9a9">보기</button>
+													</td>
+													<td>211.106.247.177</td>
+												</tr>
+												<tr role="row" class="odd">
+													<td>-6</td>
+													<td class="sorting_1">2023-10-02 11:40:00</td>
+													<td>얼굴등록 성공</td>
+													<td class=" alCenter"><button
+															class="btn btn-module"
+															data-bs-toggle="modal" data-bs-target="#listView"
+															data-imageurl="undefined" data-event="얼굴등록" 성공=""
+															data-datetime="2023-10-02T11:40:00+09:00"
+															data-id="F9e6d90e1-7a34-4043-9a04-2e96dab1455e">보기</button>
+													</td>
+													<td>211.106.247.177</td>
+												</tr>
+												<tr role="row" class="even">
+													<td>-7</td>
+													<td class="sorting_1">2023-10-02 11:40:00</td>
+													<td>얼굴등록 성공</td>
+													<td class=" alCenter"><button
+															class="btn btn-module"
+															data-bs-toggle="modal" data-bs-target="#listView"
+															data-imageurl="undefined" data-event="얼굴등록" 성공=""
+															data-datetime="2023-10-02T11:40:00+09:00"
+															data-id="F384f0d85-f68a-42f4-90b4-4da08e9c59d6">보기</button>
+													</td>
+													<td>211.106.247.177</td>
+												</tr>
+												<tr role="row" class="odd">
+													<td>-8</td>
+													<td class="sorting_1">2023-10-02 11:40:00</td>
+													<td>얼굴등록 성공</td>
+													<td class=" alCenter"><button
+															class="btn btn-module"
+															data-bs-toggle="modal" data-bs-target="#listView"
+															data-imageurl="undefined" data-event="얼굴등록" 성공=""
+															data-datetime="2023-10-02T11:40:00+09:00"
+															data-id="F0991b950-2818-465d-9b14-b14bf1ad8b9a">보기</button>
+													</td>
+													<td>211.106.247.177</td>
+												</tr>
+												<tr role="row" class="even">
+													<td>-9</td>
+													<td class="sorting_1">2023-10-02 11:40:00</td>
+													<td>얼굴등록 성공</td>
+													<td class=" alCenter"><button
+															class="btn btn-module"
+															data-bs-toggle="modal" data-bs-target="#listView"
+															data-imageurl="undefined" data-event="얼굴등록" 성공=""
+															data-datetime="2023-10-02T11:40:00+09:00"
+															data-id="F7ab67f77-7062-4a9e-9b77-b5f8f804010e">보기</button>
+													</td>
+													<td>211.106.247.177</td>
+												</tr>
+												<tr role="row" class="odd">
+													<td>-10</td>
+													<td class="sorting_1">2023-10-02 11:40:00</td>
+													<td>얼굴등록 성공</td>
+													<td class=" alCenter"><button
+															class="btn btn-module"
+															data-bs-toggle="modal" data-bs-target="#listView"
+															data-imageurl="undefined" data-event="얼굴등록" 성공=""
+															data-datetime="2023-10-02T11:40:00+09:00"
+															data-id="F3df5abd9-00ae-4c4b-89d5-ad9cec669353">보기</button>
+													</td>
+													<td>211.106.247.177</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="bottom">
+									<div id="tableContainer_processing" class="dataTables_processing"
+										style="display: none;">
+										Processing...</div>
+									<div class="dataTables_paginate paging_simple_numbers" id="tableContainer_paginate">
+										<a class="paginate_button previous disabled" aria-controls="tableContainer"
+											data-dt-idx="0" tabindex="0"
+											id="tableContainer_previous">Previous</a><span><a
+												class="paginate_button current" aria-controls="tableContainer"
+												data-dt-idx="1" tabindex="0">1</a><a class="paginate_button "
+												aria-controls="tableContainer" data-dt-idx="2"
+												tabindex="0">2</a></span><a class="paginate_button next"
+											aria-controls="tableContainer" data-dt-idx="3" tabindex="0"
+											id="tableContainer_next">Next</a>
+									</div>
+								</div>
+							</div>
+							<!-- //Datatable -->
+
+						</div>
+						<!-- //상세정보 영역 -->
+					</div>
+				</div>
+				<!-- //Tab Container -->
+			</div>
+			<!-- //main-content-body -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+</body>
+
+</html>

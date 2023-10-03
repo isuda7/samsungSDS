@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>사용자상세정보 - 기본정보 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(1, 0); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 사용자관리 / 사용자목록 / 사용자상세정보</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-content-body -->
+			<div class="main-section">
+				<!-- main-content-header -->
+				<div class="main-section-header">
+					<h1 class="title">사용자 상세정보</h1>
+				</div>
+				<!-- //main-content-header -->
+
+				<!-- 사용자정보 -->
+				<div class="profile-sec">
+					<div class="avata-area">
+						<span class="avata">
+							<img src="../../assets/img/icn-32-myfrofile.png" alt="" class="img-circle">
+						</span>
+					</div>
+					<div class="info-area">
+						<p class="info-position">상무</p>
+						<p class="info-name">
+							<span class="text">정호연 (sds1000)</span>
+							<span class="chip chip-label orange">예외정책 적용 중</span>
+						</p>
+						<p class="info-part">
+							IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트
+						</p>
+					</div>
+					<div class="util-area">
+						<button type="button" class="btn btn-module2 negative">예외정책 해제하기</button>
+					</div>
+				</div>
+				<!-- 사용자정보 -->
+
+				<!-- Tab Container -->
+				<div class="tab-container tab-page">
+					<div class="tab-list" role="tablist">
+						<button type="button" id="tabNav1" role="tab" aria-selected="true" class="tab is-selected"><span>기본정보</span></button>
+						<button type="button" id="tabNav2" role="tab" aria-selected="false" class="tab"><span>사용자인증이력</span></button>
+						<button type="button" id="tabNav3" role="tab" aria-selected="false" class="tab"><span>예외정책/접속이력</span></button>
+						<button type="button" id="tabNav4" role="tab" aria-selected="false" class="tab"><span>이상행위이력</span></button>
+						<button type="button" id="tabNav5" role="tab" aria-selected="false" class="tab"><span>추가모니터/웹감지이력</span></button>
+						<button type="button" id="tabNav6" role="tab" aria-selected="false" class="tab"><span>에이전트설치이력</span></button>
+						<button type="button" id="tabNav7" role="tab" aria-selected="false" class="tab"><span>삭제코드발급이력</span></button>
+					</div>
+
+					<div class="tab-panel" aria-labelledby="tabNav1">
+						<!-- 상세정보 영역 -->
+						<div class="detail-sec">
+							<!-- 상세정보 툴바 -->
+							<div class="detail-toolbar">
+								<p class="detail-desc">개인정보 및 에이전트 설치 정보를 확인할 수 있습니다.</p>
+								<p class="detail-update">최종 업데이트일 : 2023-09-05 18:50:21</p>
+							</div>
+							<!-- //상세정보 툴바 -->
+							<!-- 상세정보 테이블 -->
+							<div class="detail-table">
+								<table class="table">
+									<caption>기본정보</caption>
+									<colgroup>
+										<col style="width:13%" />
+										<col style="width:20%" />
+										<col style="width:13%" />
+										<col style="width:20%" />
+										<col style="width:13%" />
+										<col style="width:21%" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">아이디<span class="form-star">*</span></th>
+											<td></td>
+											<th scope="row">이름<span class="form-star">*</span></th>
+											<td>정호연</td>
+											<th scope="row">직함<span class="form-star">*</span></th>
+											<td>상무</td>
+										</tr>
+										<tr>
+											<th scope="row">이메일<span class="form-star">*</span></th>
+											<td>email12345@samsung.com</td>
+											<th scope="row">전화번호<span class="form-star">*</span></th>
+											<td colspan="3">
+												<div class="text-wrap">
+													<p>010-1234-5678</p>
+													<button type="button" class="btn btn-module mar-l-10">삭제코드 발급</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">소속<span class="form-star">*</span></th>
+											<td colspan="3">IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트</td>
+											<th scope="row">파견부서<span class="form-star">*</span></th>
+											<td>IOT사업부/ 신사업파트</td>
+										</tr>
+										<tr>
+											<th scope="row">PC 정보<span class="form-star">*</span></th>
+											<td colspan="5">PC978</td>
+										</tr>
+										<tr>
+											<th scope="row">에이전트 설치여부<span class="form-star">*</span></th>
+											<td>설치</td>
+											<th scope="row">에이전트 설치일<span class="form-star">*</span></th>
+											<td>2023-03-01</td>
+											<th scope="row">에이전트 상태<span class="form-star">*</span></th>
+											<td>활성</td>
+										</tr>
+										<tr>
+											<th scope="row">등록이미지<span class="form-star">*</span></th>
+											<td>
+												<button type="button" class="btn btn-module" data-bs-target="#listView" data-bs-toggle="modal">보기</button>
+											</td>
+											<th scope="row">이미지 등록일<span class="form-star">*</span></th>
+											<td colspan="3">2023-03-01</td>
+										</tr>
+										<tr>
+											<th scope="row">개인정보 동의여부<span class="form-star">*</span></th>
+											<td>동의</td>
+											<th scope="row">개인정보 동의일<span class="form-star">*</span></th>
+											<td>2023-03-01</td>
+											<th scope="row">동의약관버전<span class="form-star">*</span></th>
+											<td>Ver. 1.0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //상세정보 테이블 -->
+						</div>
+						<!-- //상세정보 영역 -->
+					</div>
+				</div>
+				<!-- //Tab Container -->
+			</div>
+			<!-- //main-content-body -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+</body>
+
+</html>

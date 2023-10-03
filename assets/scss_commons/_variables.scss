@@ -9,22 +9,17 @@
 $ColorPrimary: #3f89f7;
 $ColorPrimaryDark: #004098;
 $ColorPrimaryLight: #f2f6fe;
-$ColorSecondary: #000;
-$ColorHighlight: #000;
+// $ColorSecondary: #000;
+// $ColorHighlight: #000;
 
 // State Color
-$ColorPositive: #000;
+// $ColorPositive: #000;
 $ColorNegative: #ff3a2d;
 
-// Item Color
-$ColorName1: #000;
-$ColorName2: #000;
-
 // Grayscale
-$GrayTextButton: #000;
-$GrayTextLabel: #000;
-$GrayBorderHeader: #000;
-$GrayBorderContent: #000;
+$ColorBlack: #222222;
+$ColorDark: #4c4c4c;
+
 
 //-------------------------------------------------------------------
 //	@Size (Width-, Height-, Gap-)
@@ -47,7 +42,7 @@ $GapBody: 20px;
 @mixin FontTitle10 {font-size:10px;line-height: 16px;font-weight: 700;}
 @mixin FontTitle13 {font-size:13px;line-height: 17px;font-weight: 700;}
 @mixin FontTitle14 {font-size:14px;line-height: 18px;font-weight: 700;}
-@mixin FontTitle15 {font-size:15px;line-height: 19px;font-weight: 700;}
+@mixin FontTitle15 {font-size:15px;line-height: 20px;font-weight: 700;}
 @mixin FontTitle16 {font-size:16px;line-height: 22px;font-weight: 700;}
 @mixin FontTitle18 {font-size:18px;line-height: 24px;font-weight: 700;}
 @mixin FontTitle20 {font-size:20px;line-height: 26px;font-weight: 700;}
@@ -79,6 +74,7 @@ $GapBody: 20px;
 	padding: 5px 10px 7px;
 	border: 1px solid #e4e5ea;
 	border-radius: 6px !important;
+	background-color: #fff;
 	color: #000000;
 	@include FontBody12;
 }

@@ -3,9 +3,55 @@
 //	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
 //-------------------------------------------------------------------
 //-------------------------------------------------------------------
-	@완료시
+//	@페이지
 //-------------------------------------------------------------------
+// 프로필영역
+.profile-sec {display: flex; align-items: center; padding: 20px; border:1px solid #e4e5ea; border-radius: 6px;}
+.profile-sec .avata-area {flex:none; margin-right: 18px;}
+.profile-sec .info-area {flex:1 1 auto;}
+.profile-sec .util-area {margin-left: auto;}
+.profile-sec .avata {width: 62px; height: 62px;}
+.profile-sec .info-position {color: $ColorPrimaryDark;}
+.profile-sec .info-name {display: flex; align-items: center; margin: 2px 0; @include FontBody16;}
+.profile-sec .info-name .chip {margin-left: 10px;}
+.profile-sec .info-part {color:#4a4c5d;}
+.main-section-header + .profile-sec {margin-top:10px;}
 
-//-------------------------------------------------------------------
-	@데이터없을시
-//-------------------------------------------------------------------
+// 등록 이미지 보기
+.preview-thumb img {width: 100%;}
+
+// 사용자검색
+.user-search-sec .search-area .input-group {margin-left: 10px;}
+.user-search-sec .desc-area {display: flex; justify-content: space-between; align-items: center; min-height: 28px; margin-bottom: 10px;}
+.user-search-sec .desc-area .msg {color:#4a4c5d;}
+.user-search-list {display: flex;}
+.user-search-list .tree-area {display: flex; width: 316px; flex:none; margin-right: 30px;;}
+.user-search-list .table-area {width: auto; flex:1 1 auto;}
+.user-search-list .table-scroll-area {max-height:480px; overflow-y: auto;}
+.user-search-list .table-scroll-area::-webkit-scrollbar {width: 6px;}
+.user-search-list .table-scroll-area::-webkit-scrollbar-thumb {border-radius: 6px;background-color: rgba(74, 76, 93, 0.3);}
+.user-search-list .table-scroll-area::-webkit-scrollbar-track {background-color: #fff;}
+
+// 조직도
+.tree-box {width: 100%; padding: 10px 20px; border: 1px solid #e4e5ea;}
+.aciTree .aciTreeLi {margin-top:10px;}
+.aciTree > .aciTreeUl > .aciTreeLi:first-child {margin-top:0;}
+.aciTree .aciTreeLine,
+.aciTree .aciTreeButton,
+.aciTree .aciTreePush,
+.aciTree .aciTreeItem,
+.aciTree .aciTreeIcon,
+.aciTree .aciTreeText,
+.aciTree .aciTreeColumn {display: inline-block; line-height: 16px;font-size: 12px;color: #000;}
+.aciTree .aciTreeLine .aciTreePush {margin-right: 5px; width:10px; height: 10px;}
+.aciTree .aciTreeInode>.aciTreeLine .aciTreePush {background:url("../img/icn-10-tree-plus.png") no-repeat 0 0 / 100% auto ;}
+.aciTree .aciTreeOpen>.aciTreeLine .aciTreePush {background:url("../img/icn-10-tree-minus.png") no-repeat 0 0 / 100% auto ;}
+.aciTree .aciTreeBranch {padding-left: 20px;}
+.aciTree .aciTreeLine .aciTreeEntry {padding: 0 5px;}
+.aciTree .aciTreeLine.aciTreeHover .aciTreeEntry {background-color: $ColorPrimaryLight;;}
+.aciTree .aciTreeLine.aciTreeSelected .aciTreeEntry {background-color: $ColorPrimaryLight; color: $ColorPrimary;}
+.aciTree .aciTreeLine.aciTreeSelected .aciTreeItem .aciTreeText {color: $ColorPrimary;}
+
+// 상세정보
+.detail-toolbar {position: relative; padding-top:33px; padding-bottom: 10px; text-align: right;}
+.detail-toolbar .detail-desc {position: absolute; left: 20px; top: 4px; padding: 8px 10px; border: 1px solid #e4e5ea; color: $ColorPrimaryDark;}

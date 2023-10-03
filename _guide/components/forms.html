@@ -54,10 +54,12 @@
 
 						<h3 class="g-h3">달력 및 검색</h3>
 						<h4 class="g-h4">Input Search</h4>
-						<div class="input-group">
-							<input type="text" class="form-control datepicker" value="" />
+						<div class="input-group type-search">
+							<input type="text" class="form-control" value="" />
 							<div class="input-group-over">
-								<i class="icn icn-16-calendar-bk"></i>
+								<button type="button" class="btn"><i class="icn icn-16-calendar-bk">
+									<span class="blind">검색</span></i>
+								</button>
 							</div>
 						</div>
 
@@ -82,7 +84,7 @@
 							<!-- //달력선택 -->
 							<!-- 기간선택 -->
 							<div class="btn-group-date">
-								<button type="button" class="btn btn-control">오늘</button>
+								<button type="button" class="btn btn-control btn-outline-primary">오늘</button>
 								<button type="button" class="btn btn-control">1주일</button>
 								<button type="button" class="btn btn-control">1개월</button>
 								<button type="button" class="btn btn-control">3개월</button>
@@ -100,7 +102,7 @@
 
 						<h4 class="g-h4">검색버튼</h4>
 						<button class="btn btn-control has-icn">
-							<i class="icn icn-16-search-bk"></i>통합검색
+							<i class="icn icn-16-search-bk" aria-hidden="true"></i>통합검색
 						</button>
 
 						<h3 class="g-h3">File Attach</h3>

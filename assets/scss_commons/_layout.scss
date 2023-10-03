@@ -5,6 +5,7 @@
 //-------------------------------------------------------------------
 //	@Variables
 //-------------------------------------------------------------------
+$body-min-width: 1200px;
 $content-padding: 30px;
 $sidebar-padding: 20px;
 $sidebar-width: 230px;
@@ -19,7 +20,7 @@ html, body {height: 100%; position: relative;}
 //	@Page Header
 //-------------------------------------------------------------------
 // Page Header
-.page-header {display: flex; height: $header-height; border-bottom: 1px solid #ced0dc;}
+.page-header {display: flex; min-width: $body-min-width; height: $header-height; border-bottom: 1px solid #ced0dc;}
 .logo-area {display: flex; align-items: center; flex:none; width: $sidebar-width; height: 100%; padding-left: $sidebar-padding;}
 .gnb-area {display: flex; align-items: center; flex:1 1 auto; height: 100%; padding-right: $content-padding; text-align: right; @include FontBody14;}
 
@@ -38,7 +39,7 @@ html, body {height: 100%; position: relative;}
 //	@Page Container
 //-------------------------------------------------------------------
 // Page Container
-.page-container {display: table; table-layout: fixed; width: 100%; height: calc(100% - $header-height);}
+.page-container {display: table; table-layout: fixed; min-width: $body-min-width; width: 100%; height: calc(100% - $header-height);}
 
 // Main Content
 .main-content {position: relative;display: table-cell; vertical-align: top; padding:0; background: #ffffff;width: 100%;}
@@ -81,6 +82,18 @@ html, body {height: 100%; position: relative;}
 .sidebar-collapsed .sidebar-menu .main-menu > .root-level > ul {display: none !important;}
 .sidebar-collapsed .sidebar-menu .main-menu > .root-level > a {padding-left: 10px;}
 .sidebar-collapsed .sidebar-menu .main-menu > .root-level > a .icn-16-arrow-bk {display: none;}
+@media screen and (max-width:1440px){
+	.sidebar-menu {z-index: 100;width: 65px;}
+	.sidebar-menu .logo-env > div.logo {overflow: hidden;width: 0;}
+	.sidebar-menu .sidebar-collapse {display: none;}
+	.sidebar-menu .main-menu > .root-level > a > span:not(.badge) {display: block;position: absolute;top: 0;left: 65px;margin-top: -1px;padding: 12px 10px;background: #303641;border-top: 1px solid #454a54;border-bottom: 1px solid #454a54;width: 250px;visibility: hidden;border-radius: 0 3px 3px 0;background-clip: padding-box;zoom: 1;opacity: 0;
+	}
+	.sidebar-menu .main-menu > .root-level > ul {display: none !important;}
+	.sidebar-menu .main-menu > .root-level > a {padding-left: 10px;}
+	.sidebar-menu .main-menu > .root-level > a .icn-16-arrow-bk {display: none;}
+
+}
+
 
 //-------------------------------------------------------------------
 //	@Styles

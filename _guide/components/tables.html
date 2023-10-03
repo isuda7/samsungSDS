@@ -47,12 +47,14 @@
 								<!-- Toolbar -->
 								<div class="toolbar">
 									<div class="left-area">
-										<button type="button" class="btn btn-control">보기옵션 설정</button>
+										<button type="button" class="btn btn-control" data-bs-target="#userListOption" data-bs-toggle="modal">
+											보기옵션 설정
+										</button>
 										<select class="form-select w-auto">
 											<option value="" selected>설치일순</option>
 											<option value="">이름순</option>
 										</select>
-										<button type="button" class="btn btn-control excel has-icn">
+										<button type="button" class="btn btn-control excel has-icn" data-bs-target="#excelDown" data-bs-toggle="modal">
 											<i class="icn icn-16-excel"></i>엑셀다운로드
 										</button>
 									</div>
@@ -60,8 +62,8 @@
 										<p class="count">
 											검색결과 <em class="now">1,000</em>건
 										</p>
-										<button type="button" class="btn btn-control has-icn">
-											<i class="icn icn-16-update-bk"></i>검색조건 초기화
+										<button type="button" class="btn btn-control has-icn" data-bs-target="#userSearch" data-bs-toggle="modal">
+											<i class="icn icn-16-refresh-bk"></i>검색조건 초기화
 										</button>
 									</div>
 								</div>
@@ -403,8 +405,8 @@
 													<td class=" alCenter">김전무</td>
 													<td>전무</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00001" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00001" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">a@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -438,7 +440,7 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">
-														<button class="btn btn-module" id="btnDelCode" value="0" data-target="#listView" data-toggle="modal">발급</button>
+														<button class="btn btn-module" id="btnDelCode" value="0" data-bs-target="#listView" data-bs-toggle="modal">발급</button>
 													</td>
 												</tr>
 												<tr role="row" class="even">
@@ -447,8 +449,8 @@
 													<td class=" alCenter">박상무</td>
 													<td>상무</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00011" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00011" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">k@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -482,8 +484,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="odd">
 													<td class=" alCenter">29</td>
@@ -491,8 +493,8 @@
 													<td class=" alCenter">이전무</td>
 													<td>전무</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00002" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00002" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">b@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -527,8 +529,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="even">
 													<td class=" alCenter">28</td>
@@ -569,8 +571,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="odd">
 													<td class=" alCenter">27</td>
@@ -578,8 +580,8 @@
 													<td class=" alCenter">차전무</td>
 													<td>전무</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00007" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00007" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">g@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -613,8 +615,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="even">
 													<td class=" alCenter">26</td>
@@ -622,8 +624,8 @@
 													<td class=" alCenter">박프로</td>
 													<td>프로</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00017" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00017" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">q@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -657,8 +659,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="odd">
 													<td class=" alCenter">25</td>
@@ -706,8 +708,8 @@
 													<td class=" alCenter">최프로</td>
 													<td>프로</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00016" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00016" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">p@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -741,8 +743,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="odd">
 													<td class=" alCenter">23</td>
@@ -750,8 +752,8 @@
 													<td class=" alCenter">김상무</td>
 													<td>상무</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00008" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00008" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">h@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -785,8 +787,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="even">
 													<td class=" alCenter">22</td>
@@ -794,8 +796,8 @@
 													<td class=" alCenter">김프로</td>
 													<td>프로</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00018" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00018" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">r@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -829,8 +831,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="odd">
 													<td class=" alCenter">21</td>
@@ -838,8 +840,8 @@
 													<td class=" alCenter">이프로</td>
 													<td>프로</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00021" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00021" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">u@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -873,8 +875,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="even">
 													<td class=" alCenter">20</td>
@@ -882,8 +884,8 @@
 													<td class=" alCenter">이상무</td>
 													<td>상무</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00009" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00009" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">i@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -917,8 +919,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="odd">
 													<td class=" alCenter">19</td>
@@ -959,8 +961,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="even">
 													<td class=" alCenter">18</td>
@@ -1001,8 +1003,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="odd">
 													<td class=" alCenter">17</td>
@@ -1083,8 +1085,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="odd">
 													<td class=" alCenter">15</td>
@@ -1092,8 +1094,8 @@
 													<td class=" alCenter">차프로</td>
 													<td>프로</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00023" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00023" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">x@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -1127,8 +1129,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="even">
 													<td class=" alCenter">14</td>
@@ -1136,8 +1138,8 @@
 													<td class=" alCenter">박전무</td>
 													<td>전무</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00004" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00004" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">d@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -1171,8 +1173,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="odd">
 													<td class=" alCenter">13</td>
@@ -1180,8 +1182,8 @@
 													<td class=" alCenter">차상무</td>
 													<td>상무</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00014" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00014" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">n@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -1215,8 +1217,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 												<tr role="row" class="even">
 													<td class=" alCenter">12</td>
@@ -1224,8 +1226,8 @@
 													<td class=" alCenter">최전무</td>
 													<td>전무</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnViewImage" value="00003" data-target="#listView"
-															data-toggle="modal">보기</button></td>
+															id="btnViewImage" value="00003" data-bs-target="#listView"
+															data-bs-toggle="modal">보기</button></td>
 													<td class=" alCenter">c@samsung.com</td>
 													<td class=" alCenter"></td>
 													<td class="alLeft sorting_1">
@@ -1259,8 +1261,8 @@
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter">0건</td>
 													<td class=" alCenter"><button class="btn btn-module"
-															id="btnDelCode" value="0" data-target="#listView"
-															data-toggle="modal">발급</button></td>
+															id="btnDelCode" value="0" data-bs-target="#listView"
+															data-bs-toggle="modal">발급</button></td>
 												</tr>
 											</tbody>
 										</table>
@@ -1334,6 +1336,31 @@
 		<footer class="footer"></footer>
 		<!-- //Footer -->
 	</div>
+
+	<!-- Modal Basic -->
+	<div class="modal fade" id="listView" tabindex="-1" aria-labelledby="listViewLabel" aria-hidden="true">
+		<div class="modal-dialog modal-basic">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title" id="listViewLabel">Modal title</h1>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal">
+						<i class="icn icn-24-close-gr"><span class="blind">Close</span></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="modal-msg">
+						Modal Basic
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-basic btn-outline-primary" data-bs-dismiss="modal">취소</button>
+					<button type="button" class="btn btn-basic btn-primary">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Modal Basic -->
+
 </body>
 
 </html>

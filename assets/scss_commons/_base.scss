@@ -23,9 +23,9 @@ html, body {height: 100%; text-size-adjust:none; -webkit-text-size-adjust: none;
 ::before,::after,
 html, body, div, ul, ol, dl, li, dt, dd, p, h1, h2, h3, h4, h5, h6, table, thead, tbody, tr, th, td, caption, address, article, aside,
 canvas, details, figure, figcaption, main, footer, header, menu, nav, section,
-button, select, textarea, input, form, fieldset, legend, label, a, span, strong, em, address, pre, code, dfn, small, i, b {margin:0; padding:0; border:0; list-style:none; font-style:normal; font-size:inherit; font-weight:inherit; font-family:inherit; color:inherit; box-sizing:inherit; -webkit-box-sizing:inherit; -moz-box-sizing:inherit; -o-box-sizing:inherit; -webkit-print-color-adjust:exact;}
+button, select, textarea, input, form, fieldset, legend, label, a, span, strong, em, address, pre, code, dfn, small, i, b {margin:0; padding:0; border:0; list-style:none; font-style:normal; font-size:inherit; font-weight:inherit; font-family:inherit; color:inherit; letter-spacing: inherit; box-sizing:inherit; -webkit-box-sizing:inherit; -moz-box-sizing:inherit; -o-box-sizing:inherit; -webkit-print-color-adjust:exact;}
 main, article, aside, canvas, details, figure, figcaption, footer, header, menu, nav, section {display:block;}
-body {font-family:'NotoSans', 'sans-serif'; font-size:12px; line-height:16px; word-break:normal; word-wrap:break-word; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
+body {font-family:'NotoSans', 'sans-serif'; font-size:12px; line-height:16px; letter-spacing:-0.6px; word-break:normal; word-wrap:break-word; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
 [hidden] {display:none;}
 button {background-color:transparent; cursor:pointer;}
 fieldset, iframe {width:100%;}
@@ -74,12 +74,27 @@ input::-webkit-calendar-picker-indicator {-webkit-appearance:none;}
 .nowrap {@include Ellipsis1;}
 .row.centered {justify-content: center;}
 
-// margin
-.mar-t-10 {margin-top:10px;}
-.mar-t-20 {margin-top:20px;}
-.mar-t-30 {margin-top:30px;}
-.mar-t-40 {margin-top:40px;}
-.mar-t-50 {margin-top:50px;}
+// align
+.alCenter {text-align: center;}
 
+// Display
+.mar-l-auto {margin-left: auto;}
+
+// margin
+.mar-t-0 {margin-top:0px !important;}
+.mar-t-10 {margin-top:10px !important;}
+.mar-t-20 {margin-top:20px !important;}
+.mar-t-30 {margin-top:30px !important;}
+.mar-t-40 {margin-top:40px !important;}
+.mar-t-50 {margin-top:50px !important;}
+.mar-b-0 {margin-bottom:0px !important;}
+
+// width
 .w-auto {width:auto !important;}
 .w-260 {width:260px !important;}
+
+// color
+.text-primary {color: $ColorPrimary !important;}
+
+// font
+.bold {font-weight: 700 !important;}

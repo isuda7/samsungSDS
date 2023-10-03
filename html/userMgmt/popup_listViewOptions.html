@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>엑셀다운로드 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(1, 0); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 사용자관리 / 사용자목록</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-content-body -->
+			<div class="main-section">
+				<button type="button" class="btn btn-control" data-bs-target="#userListOption" data-bs-toggle="modal">
+					보기옵션 설정
+				</button>
+			</div>
+			<!-- //main-content-body -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+
+	<!-- Modal Basic -->
+	<div class="modal fade" id="userListOption" tabindex="-1" aria-labelledby="userListOptionLabel" aria-hidden="true">
+		<div class="modal-dialog modal-basic modal-md">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title" id="userListOptionLabel">사용자 목록 보기 옵션</h1>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal">
+						<i class="icn icn-24-close-gr"><span class="blind">Close</span></i>
+					</button>
+				</div>
+				<div class="modal-body mar-b-0">
+					<form>
+						<div class="form lined">
+							<div class="field-block">
+								<div class="form-title">
+									<label for="chk1All" class="form-label bold">임직원 정보</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chk1All" value="off" />
+										<span class="value"><span>전체선택</span></span>
+									</label>
+									<div class="alert-guide">
+										<p>*아이디와 이름은 필수 보기 항목입니다.</p>
+									</div>
+								</div>
+								<div class="form-controls">
+									<div class="checkbox-inline">
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk1" value="" />
+											<span class="value"><span>아이디</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk1" value="" />
+											<span class="value"><span>이름</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk1" value="" />
+											<span class="value"><span>직함</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk1" value="" />
+											<span class="value"><span>이메일</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk1" value="" />
+											<span class="value"><span>전화번호</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk1" value="" />
+											<span class="value"><span>소속(조직도 기준)</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk1" value="" />
+											<span class="value"><span>파견부서</span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="field-block">
+								<div class="form-title">
+									<label for="chk2All" class="form-label bold">에이전트 정보</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chk2All" value="off" />
+										<span class="value"><span>전체선택</span></span>
+									</label>
+								</div>
+								<div class="form-controls">
+									<div class="checkbox-inline">
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk2" value="" />
+											<span class="value"><span>PC정보</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk2" value="" />
+											<span class="value"><span>에이전트 설치 여부</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk2" value="" />
+											<span class="value"><span>에이전트 설치일</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk2" value="" />
+											<span class="value"><span>인증이미지</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk2" value="" />
+											<span class="value"><span>인증이미지 등록일</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk2" value="" />
+											<span class="value"><span>에이전트상태</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk2" value="" />
+											<span class="value"><span>개인정보동의 여부</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk2" value="" />
+											<span class="value"><span>개인정보 동의일</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk2" value="" />
+											<span class="value"><span>개인정보 동의일</span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="field-block">
+								<div class="form-title">
+									<label for="chk3All" class="form-label bold">보안정책</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chk3All" value="off" />
+										<span class="value"><span>전체선택</span></span>
+									</label>
+								</div>
+								<div class="form-controls">
+									<div class="checkbox-inline">
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk3" value="" />
+											<span class="value"><span>보안정책 적용 여부</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk3" value="" />
+											<span class="value"><span>예외정책 적용 여부</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk3" value="" />
+											<span class="value"><span>적용예외 정책</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk3" value="" />
+											<span class="value"><span>예외정책 시작일</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chk3" value="" />
+											<span class="value"><span>예외정책 종료일</span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="exSelect1" class="form-label">보기개수</label>
+								</div>
+								<div class="form-controls">
+									<select class="form-select w-auto" id="exSelect1">
+										<option value="1" selected>20 줄</option>
+										<option value="2">40 줄</option>
+										<option value="3">60 줄</option>
+										<option value="4">100 줄</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-basic btn-outline-primary" data-bs-dismiss="modal">취소</button>
+					<button type="button" class="btn btn-basic btn-primary">적용</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Modal Basic -->
+
+	<script>
+		var modal = new bootstrap.Modal(document.getElementById('userListOption'));
+		modal.show();
+	</script>
+
+</body>
+
+</html>

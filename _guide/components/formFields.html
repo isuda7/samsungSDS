@@ -93,7 +93,8 @@
 								<div class="form-controls">
 									<div class="input-group">
 										<input type="text" class="form-control" />
-										<span class="form-byte">
+										<!-- len-2 2자리 영역 -->
+										<span class="form-byte len-2">
 											<em class="now">0</em>/50
 										</span>
 									</div>
@@ -106,16 +107,22 @@
 							</div>
 						</div>
 
-						<h4 class="g-h4">Inline Layout (outlined)</h4>
-						<div class="form outlined">
+						<h4 class="g-h4">Inline Layout (Searchbox)</h4>
+						<div class="form form-searchbox">
 							<div class="field-inline">
 								<div class="form-title">
 									<strong class="form-label">사용자/부서</strong>
 								</div>
-								<div class="form-controls">
-									<button class="btn btn-control has-icn">
-										<i class="icn icn-16-search-bk"></i>통합검색
+								<div class="form-controls flex-wrap">
+									<button type="button" class="btn btn-control has-icn" data-bs-target="#userSearch" data-bs-toggle="modal">
+										<i class="icn icn-16-search-bk" aria-hidden="true"></i>통합검색
 									</button>
+									<div class="search-count">
+										<span class="text-primary">*</span>총 9명
+									</div>
+									<div class="form-listbox">
+										김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1)
+									</div>
 								</div>
 							</div>
 							<div class="field-inline">
@@ -204,7 +211,7 @@
 								<div class="form-title">
 									<label for="" class="form-label">조회기간</label>
 								</div>
-								<div class="form-controls">
+								<div class="form-controls flex-wrap">
 									<!-- 달력선택 -->
 									<div class="input-group-date">
 										<div class="input-group">
@@ -220,23 +227,26 @@
 												<i class="icn icn-16-calendar-bk"></i>
 											</div>
 										</div>
+										<script>
+											$(function(){
+												$('#inputStartDt').datepicker();
+												$('#inputEndDt').datepicker();
+											})
+										</script>
 									</div>
 									<!-- //달력선택 -->
 									<!-- 기간선택 -->
 									<div class="btn-group-date">
-										<button type="button" class="btn btn-control">오늘</button>
+										<button type="button" class="btn btn-control btn-outline-primary">오늘</button>
 										<button type="button" class="btn btn-control">1주일</button>
 										<button type="button" class="btn btn-control">1개월</button>
 										<button type="button" class="btn btn-control">3개월</button>
 										<button type="button" class="btn btn-control">6개월</button>
 									</div>
 									<!-- //기간선택 -->
-									<script>
-										$(function(){
-											$('#inputStartDt').datepicker();
-											$('#inputEndDt').datepicker();
-										})
-									</script>
+									<div class="form-desc">
+										<span class="form-star">*</span>이벤트 검색 시 반드시 기간을 설정해주세요.
+									</div>
 								</div>
 							</div>
 							<div class="field-action">
@@ -250,11 +260,14 @@
 						<div class="form lined">
 							<div class="field-block">
 								<div class="form-title">
-									<label for="chkEx1All" class="form-label">임직원 정보</label>
+									<label for="chkEx1All" class="form-label bold">임직원 정보</label>
 									<label class="checkbox style1">
 										<input type="checkbox" name="chkEx1All" value="off" />
 										<span class="value"><span>전체선택</span></span>
 									</label>
+									<div class="alert-guide">
+										<p>*아이디와 이름은 필수 보기 항목입니다.</p>
+									</div>
 								</div>
 								<div class="form-controls">
 									<div class="checkbox-inline">
@@ -282,11 +295,11 @@
 									<label for="exSelect1" class="form-label">보기개수</label>
 								</div>
 								<div class="form-controls">
-									<select class="form-select" id="exSelect1">
-										<option value="1">5개</option>
-										<option value="2">10개</option>
-										<option value="3" selected>20개</option>
-										<option value="4">30개</option>
+									<select class="form-select w-auto" id="exSelect1">
+										<option value="1">20줄</option>
+										<option value="2">40줄</option>
+										<option value="3" selected>60줄</option>
+										<option value="4">100줄</option>
 									</select>
 								</div>
 							</div>
