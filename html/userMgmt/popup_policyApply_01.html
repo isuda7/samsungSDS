@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>예외정책 적용 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(1, 0); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 사용자관리 / 사용자목록</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-content-body -->
+			<div class="main-section">
+				<button type="button" class="btn btn-module2 positive" data-bs-target="#policyApply" data-bs-toggle="modal">
+					예외정책 적용하기
+				</button>
+			</div>
+			<!-- //main-content-body -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+
+	<!-- Modal Basic -->
+	<div class="modal fade" id="policyApply" tabindex="-1" aria-labelledby="policyApplyLabel" aria-hidden="true">
+		<div class="modal-dialog modal-basic modal-md">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title" id="policyApplyLabel">예외정책 적용</h1>
+					<button type="button" class="btn btn-close" data-bs-dismiss="modal">
+						<i class="icn icn-24-close-gr"><span class="blind">Close</span></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form">
+							<div class="field-inline">
+								<div class="form-title">
+									<strong class="form-label">사용자명</strong>
+								</div>
+								<div class="form-controls">
+									정호연 (sds1000)
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="inputStartDt" class="form-label">기간</label>
+								</div>
+								<div class="form-controls">
+									<!-- 달력선택 -->
+									<div class="input-group-date">
+										<div class="input-group">
+											<input type="text" id="inputStartDt" name="inputStartDt" class="form-control datepicker" value="2023-09-28" data-format="yyyy-mm-dd" autocomplete="off" />
+											<div class="input-group-over">
+												<i class="icn icn-16-calendar-bk"></i>
+											</div>
+										</div>
+										<div class="form-split">~</div>
+										<div class="input-group">
+											<input type="text" id="inputEndDt" name="inputEndDt" class="form-control datepicker" value="2023-10-28" data-format="yyyy-mm-dd" autocomplete="off" />
+											<div class="input-group-over">
+												<i class="icn icn-16-calendar-bk"></i>
+											</div>
+										</div>
+										<script>
+											$(function(){
+												$('#inputStartDt').datepicker();
+												$('#inputEndDt').datepicker();
+											})
+										</script>
+									</div>
+									<!-- //달력선택 -->
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="chk2All" class="form-label">적용할 예외정책</label>
+								</div>
+								<div class="form-controls flex-wrap">
+									<div class="radio-inline">
+										<label class="radio style1">
+											<input type="radio" name="rdoPolicy" value="" />
+											<span class="value"><span>정책 템플릿 선택</span></span>
+										</label>
+										<select class="form-select w-auto">
+											<option value="">선택</option>
+											<option value="" selected>C레벨</option>
+										</select>
+										<div class="dropdown dropdown-level">
+											<button type="button" class="btn text-primary linked dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+											aria-expanded="false">상세보기</button>
+											<div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+												<div class="dropdown-title">
+													<strong>C레벨</strong>
+												</div>
+												<dl class="dropdown-define">
+													<dt>적용 예외정책</dt>
+													<dd>타인동석, 카메라촬영, 웹캠가림, 추가모니터, 추가웹캠</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+									<div class="radio-inline">
+										<label class="radio style1">
+											<input type="radio" name="rdoPolicy" value="" />
+											<span class="value"><span>개별 정책 선택</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="radio" name="rdoPolicy" value="" />
+											<span class="value"><span>개별 정책 선택</span></span>
+										</label>
+										<p class="form-desc fs-10">
+											<span class="text-primary">*</span>선택 사용자의 현재 예외정책이 자동 체크되어 보여집니다.
+										</p>
+									</div>
+									<div class="checkbox-inline outer">
+										<label class="checkbox style1">
+											<input type="checkbox" name="chkPolicy" value="" />
+											<span class="value"><span>타인동석</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chkPolicy" value="" />
+											<span class="value"><span>카메라촬영</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chkPolicy" value="" />
+											<span class="value"><span>웹캠가림</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chkPolicy" value="" />
+											<span class="value"><span>추가모니터</span></span>
+										</label>
+										<label class="checkbox style1">
+											<input type="checkbox" name="chkPolicy" value="" />
+											<span class="value"><span>추가웹캠</span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="frmContent" class="form-label">적용사유</label>
+								</div>
+								<div class="form-controls flex-wrap">
+									<textarea name="" id="frmContent" cols="30" rows="3" placeholder="사유를 입력하세요." class="form-control"></textarea>
+									<div class="alert-guide mar-t-10">
+										<p>관리자에서 직접 예외정책 적용시 사유를 입력해 주세요.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-basic btn-outline-primary" data-bs-dismiss="modal">취소</button>
+					<button type="button" class="btn btn-basic btn-primary">적용</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Modal Basic -->
+
+	<script>
+		var modal = new bootstrap.Modal(document.getElementById('policyApply'));
+		modal.show();
+	</script>
+
+</body>
+
+</html>

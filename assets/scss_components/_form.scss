@@ -13,6 +13,7 @@
 .form-control {@include formControls;}
 .form-control:focus {position: relative; z-index: 1; box-shadow: 0 0 0 3px rgba(13,110,253,.25);}
 .form-control::placeholder {color: #ccc;}
+textarea.form-control {@include formControls; height: auto; padding-top:10px; padding-bottom: 10px;}
 .form-select {@include formControls; padding-right: 35px; min-width: 100px;}
 .form-select::placeholder {color: #e4e5ea;}
 .input-group {align-items: center;}
@@ -32,7 +33,7 @@
 .alert-guide {color:$ColorNegative;}
 
 // Description
-.form-desc {line-height: 28px;}
+.form-desc {margin-left: 10px; line-height: 28px;}
 
 // Update Info
 .form-update {display: flex; justify-content: flex-end; align-items: center; text-align: right; margin-top:-22px;}
@@ -63,12 +64,14 @@
 .field-block .form-label {width:100px;}
 .field-block .form-title .alert-guide {margin-left: 10px;}
 .field-block .form-controls {margin-top:14px;}
-.field-action {margin-top:20px; text-align: center;}
-.form-controls {display: flex; align-items: center; min-height: 28px; }
 .field-inline,.field-block {padding-top:7px; padding-bottom: 7px;}
-.field-alert {padding-top:13px; padding-bottom: 7px;}
 .field-inline:first-child,.field-block:first-child {padding-top:0;}
 .field-inline:last-child {padding-bottom:0;}
+.field-action {margin-top:20px; text-align: center;}
+.form-controls {display: flex; align-items: center; min-height: 28px; }
+.form-controls.row {margin: 0;}
+.form-controls .alert-guide {margin-top:10px; margin-bottom: 10px;}
+.field-alert {padding-top:13px; padding-bottom: 7px;}
 
 // field styles
 .form.lined .field-inline,

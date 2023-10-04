@@ -29,15 +29,29 @@ $chk-text-gap: 10px;
 
 // Inline
 .radio-inline, .checkbox-inline {
-	display: flex; flex-wrap: wrap; flex:none; margin: 0 -10px;
+	display: flex; flex-wrap: wrap; margin: 0 -10px;
 	.radio.style1, .checkbox.style1	{margin: 0 10px; padding: 5px 0;}
+	.form-select {margin:0 10px;}
 	&.gap-xl {
 		margin: 0 -20px;
 		.radio.style1, .checkbox.style1	{margin: 0 20px;}
 	}
+	&.outer {background-color:#f2f6fe; border-radius: 6px;}
 	// 이중으로 처리되는 경우 여백 초기화
-	.radio-inline, .checkbox-inline {margin-top:0; margin-bottom:0; background-color:#f2f6fe; margin-left: 23px;}
+	.radio-inline, .checkbox-inline {margin-top:0; margin-bottom:0; background-color:#f2f6fe; margin-left: 23px; border-radius: 6px;}
 }
+
+.form-controls {
+	& > .radio-inline, & > .checkbox-inline {
+		width:calc(100% - 0px); padding: 0;
+		&.outer {margin: 0 0 0 0; width:calc(100% - 0px);}
+		& + .radio-inline,
+		& + .checkbox-inline {
+			margin-top:10px;
+		}
+	}
+}
+
 
 //-------------------------------------------------------------------
 //	@Styles

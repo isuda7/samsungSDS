@@ -1,69 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="utf-8" />
-<title>CUBOX K-FACEON</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
-<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
-<title>CUBOX K-FACEON</title>
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<!-- Custom -->
-<link rel="stylesheet" href="../../assets/css/index.css" />
-<script src="../../assets/js/libs/jquery.min.js"></script>
-<!-- Guide 전용 -->
-<link rel="stylesheet" href="css/guide.css" />
+	<meta charset="utf-8" />
+	<title>예외접속이력 보기 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
 </head>
-<body class="pub_only"><!-- pub_only 퍼블리싱전용 클래스 (개발에 추가하지 않습니다.) -->
-<div class="wrapper sub_page">
-	<!-- Header -->
-	<header class="header"></header>
-	<!-- //Header -->
 
-	<!-- Container -->
-	<div class="container">
-		<main id="content" class="content" role="main">
-			<div class="content-body">
-				<div class="in-sec">
-					<h1 class="g-h1">Modals</h1>
-				</div>
-				<!-- Section -->
-				<section class="g-section in-sec">
-					<div class="g-section-head">
-						<h2 class="g-h2">Default</h2>
-					</div>
-					<div class="g-section-body">
-						<button type="button" class="btn btn-basic btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlert1"><span>Modal Alert 1줄</span></button>
-						<br /><br />
-						<button type="button" class="btn btn-basic btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlert2"><span>Modal Alert 2줄</span></button>
-						<br /><br />
-						<button type="button" class="btn btn-basic btn-primary"  data-bs-toggle="modal" data-bs-target="#modalConfirm1"><span>Modal Confirm 3줄</span></button>
-						<br /><br />
-						<button type="button" class="btn btn-basic btn-primary"  data-bs-toggle="modal" data-bs-target="#modalConfirm2"><span>Modal Confirm Custom</span></button>
-						<br /><br />
-						<button type="button" class="btn btn-basic btn-primary"  data-bs-toggle="modal" data-bs-target="#modalBasic"><span>Modal Basic</span></button>
-						<br /><br />
-						<div style="font-size: 14px; line-height: 22px;;">
-							<p>.modal-basic.modal-mini : w 260 (예: 등록 이미지 보기)</p>
-							<p>.modal-basic.modal-xs : w 460 (예: 엑셀 다운로드)</p>
-							<p>.modal-basic.modal-md : w 670 (예: 사용자 목록 보기 옵션)</p>
-							<p>.modal-basic.modal-xs : w 926</p>
-						</div>
-					</div>
-				</section>
-				<!-- //Section -->
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(1, 0); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 사용자관리 / 사용자목록</div>
 			</div>
-		</main>
+			<!-- //breadcrumb -->
+			<!-- main-content-body -->
+			<div class="main-section">
+				<button type="button" class="btn btn-basic btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlert1"><span>Modal Alert 1줄</span></button>
+				<br /><br />
+				<button type="button" class="btn btn-basic btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlert2"><span>Modal Alert 2줄</span></button>
+				<br /><br />
+				<button type="button" class="btn btn-basic btn-primary"  data-bs-toggle="modal" data-bs-target="#modalConfirm1"><span>Modal Confirm 3줄</span></button>
+				<br /><br />
+				<button type="button" class="btn btn-basic btn-primary"  data-bs-toggle="modal" data-bs-target="#modalConfirm2"><span>Modal Confirm Custom</span></button>
+				<br /><br />
+				<button type="button" class="btn btn-basic btn-primary"  data-bs-toggle="modal" data-bs-target="#modalBasic"><span>Modal Basic</span></button>
+				<br /><br />
+			</div>
+			<!-- //main-content-body -->
+		</div>
+		<!-- //main-content -->
 	</div>
-	<!-- //Container -->
-
-	<!-- Footer -->
-	<footer class="footer"></footer>
-	<!-- //Footer -->
-</div>
+	<!-- //page-container -->
 
 <!-- Modal Alert -->
 <div class="modal fade" id="modalAlert1" tabindex="-1" aria-labelledby="modalAlert1Label" aria-hidden="true">
@@ -202,4 +207,5 @@
 <!-- //Modal Basic -->
 
 </body>
+
 </html>

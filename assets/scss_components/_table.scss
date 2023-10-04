@@ -15,6 +15,7 @@
 .dataTables_wrapper .toolbar .right-area .btn-control {margin-left: 10px;}
 .dataTables_wrapper .toolbar .form-select:first-child,
 .dataTables_wrapper .toolbar .btn-control:first-child {margin-left: 0px;}
+.dataTables_wrapper .toolbar .user-info {margin-right: 10px;}
 .dataTables_wrapper .toolbar .count .now {color: $ColorPrimary;}
 
 //-------------------------------------------------------------------
@@ -30,6 +31,9 @@ table.dataTable thead th {position: relative; background-image: none !important;
 table.dataTable tbody th, table.dataTable tbody td {white-space: nowrap; border-bottom: 1px solid #e4e5ea; padding: 13px 10px;}
 table.dataTable tbody td a {text-decoration: underline; text-underline-position: under; color:$ColorPrimary}
 .dataTables_wrapper.no-footer .dataTables_scrollBody {border-bottom: 0;}
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody::-webkit-scrollbar {width: 6px;}
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody::-webkit-scrollbar-thumb {border-radius: 6px;background-color: rgba(74, 76, 93, 0.3);}
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody::-webkit-scrollbar-track {background-color: #fff;}
 
 // Sorting
 table.dataTable thead th.sorting:after,
