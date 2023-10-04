@@ -58,7 +58,8 @@
 
 
 // 검색
-.btn-search {width: 200px; height:28px; padding: 0 30px 2px 30px; border-radius: 6px; background-color: $ColorPrimary; color: white;}
+.btn-search {width: 200px; height:28px; padding: 0 20px 2px 20px; border-radius: 6px; background-color: $ColorPrimary; color: white;}
 .btn-search:hover, .btn-search:active, .btn-search:focus {background-color: $ColorPrimary !important; color: white !important;}
 .btn-search:focus {border-color: transparent !important;}
+.btn-group-date .btn-search {width:auto; margin-left: 20px;}
 
