@@ -3,7 +3,23 @@
 //	속성순서 : 레이아웃, 사이징, 박스모양, 글자모양, 문단모양, 기타모양
 //-------------------------------------------------------------------
 //-------------------------------------------------------------------
-//	@페이지
+//	@공통
+//-------------------------------------------------------------------
+// main-section-header
+.main-section-header {position: relative;}
+.main-section-header .title {@include FontTitle16;}
+.main-section-header .explain-wrap {display: flex;}
+.main-section-header .explain {margin-top:10px;}
+.main-section-header .alert-guide {margin-top:10px; margin-left: 20px;}
+.main-section-header.lined {margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #e4e5ea;}
+.main-section-header.lined .btn-module2 {position: absolute; right: 0; bottom: 10px;}
+
+// main-sub-header
+.main-sub-header {display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #e4e5ea;}
+.main-sub-header .title {font-weight: 700;}
+
+//-------------------------------------------------------------------
+//	@사용자관리
 //-------------------------------------------------------------------
 // 프로필영역
 .profile-sec {display: flex; align-items: center; padding: 20px; border:1px solid #e4e5ea; border-radius: 6px;}
@@ -25,15 +41,12 @@
 .user-search-sec .desc-area {display: flex; justify-content: space-between; align-items: center; min-height: 28px; margin-bottom: 10px;}
 .user-search-sec .desc-area .msg {color:#4a4c5d;}
 .user-search-list {display: flex;}
-.user-search-list .tree-area {display: flex; width: 316px; flex:none; margin-right: 30px;;}
+.user-search-list .tree-area {display: flex; width: 316px; flex:none; margin-right: 30px;}
 .user-search-list .table-area {width: auto; flex:1 1 auto;}
-.table-scroll-area {max-height:480px; overflow-y: auto;}
-.table-scroll-area::-webkit-scrollbar {width: 6px;}
-.table-scroll-area::-webkit-scrollbar-thumb {border-radius: 6px;background-color: rgba(74, 76, 93, 0.3);}
-.table-scroll-area::-webkit-scrollbar-track {background-color: #fff;}
+.table-scroll-area {max-height:480px; overflow-y: auto; @include scrollbarY;}
 
 // 조직도
-.tree-box {width: 100%; padding: 10px 20px; border: 1px solid #e4e5ea;}
+.tree-box {width: 100%; height: 100%; padding: 10px 20px; border: 1px solid #e4e5ea;border-radius: 10px;}
 .aciTree .aciTreeLi {margin-top:10px;}
 .aciTree > .aciTreeUl > .aciTreeLi:first-child {margin-top:0;}
 .aciTree .aciTreeLine,
@@ -55,3 +68,95 @@
 // 상세정보
 .detail-toolbar {position: relative; padding-top:33px; padding-bottom: 10px; text-align: right;}
 .detail-toolbar .detail-desc {position: absolute; left: 20px; top: 4px; padding: 8px 10px; border: 1px solid #e4e5ea; color: $ColorPrimaryDark;}
+
+// 이상행위 이미지 보기
+.strangePreview-sec {display: flex; justify-content: space-between;}
+.strangePreview-sec .preview-area {width:446px;}
+.strangePreview-sec .strangeForm-area {width: 500px;}
+.strangePreview-sec .form-listbox {height: 120px; overflow: auto; @include scrollbarY;}
+
+// 추가모니터 이미지 보기
+.monitoringPreview-sec {display: flex; justify-content: space-between;}
+.monitoringPreview-sec .preview-area {width:220px;}
+.monitoringPreview-sec .strangeForm-area {width: 500px;}
+.monitoringPreview-sec .form-listbox {height: 120px; overflow: auto; @include scrollbarY;}
+
+// 이미지 보기
+.preview-grid {display: flex; flex-wrap: wrap; margin:-10px -3px;;}
+.preview-grid .preview-col {margin:10px 3px;}
+.preview-grid .preview-thumb {width:220px; height: 140px; background-color: #d9d9d9;}
+.preview-grid .preview-thumb img {width:100%; height: 100%; object-fit: cover;}
+.preview-grid .preview-title {margin-top:5px;}
+
+//-------------------------------------------------------------------
+//	@그룹관리
+//-------------------------------------------------------------------
+// 그룹관리 목록 공통
+.group-search-list {display: flex;}
+.group-search-list .tree-area {display: flex; width: 316px; flex:none; margin-right: 30px;;}
+.group-search-list .table-area {width: auto; flex:1 1 auto;}
+.group-search-list .edit-area {width: auto; flex:1 1 auto;}
+.group-search-list .edit-sec,
+.group-search-list .tree-sec {display: flex; flex-direction: column; height: 100%; width: 100%;}
+.group-search-list .tree-header {display: flex; align-items: center; justify-content: space-between; min-height: 28px; margin-bottom: 10px;}
+.group-search-list .tree-title {display: flex; align-items: center; line-height: 28px;}
+.group-search-list .tree-title .icn {margin-right: 5px;}
+.group-search-list .tree-box {min-height: 320px;}
+.group-search-list .form + .form {margin-top:34px;}
+
+.table-scroll-area {max-height:480px; overflow-y: auto; @include scrollbarY;}
+
+// 사용자정의그룹
+.tree-list-group .btn {display: block; width: auto; text-align: left; padding: 5px 10px; border-radius: 2px;}
+.tree-list-group .btn:active,
+.tree-list-group .btn.is-selected {background-color: $ColorPrimaryLight;}
+.tree-list-group .btn:not(.is-selected):hover,
+.tree-list-group .btn:not(.is-selected):focus {background-color: #f8f8f8;}
+.tree-list-group .btn em {color: $ColorPrimary;}
+.tree-list-group .btn + .btn {margin-top:10px;}
+.list-nodata {padding-top: 20px; text-align: center; color: #4a4c5d;}
+
+// 편집모드
+.edit-box {width: 100%; height: 100%; padding: 30px; border: 1px solid #e4e5ea; border-radius: 10px;}
+.edit-header {margin-bottom: 20px;}
+.edit-title {@include FontBody16; font-weight: 700;}
+
+// 그룹정보변경이력
+.history-list-group .item {display: flex; align-items: center;}
+.history-list-group .item + .item {margin-top:10px;}
+.history-list-group .item > span,
+.history-list-group .item > button {margin-right: 4px;}
+.history-scroll-area {max-height:400px; overflow-y: auto; @include scrollbarY;}
+
+// 신규그룹
+.form-create-sec {width: 820px;}
+.form-create-sec .form + .form {margin-top: 20px;}
+
+//-------------------------------------------------------------------
+//	@이력관리
+//-------------------------------------------------------------------
+
+
+
+//-------------------------------------------------------------------
+//	@정책관리
+//-------------------------------------------------------------------
+// 기본정책
+.form-seterbox-wrap .form-action {margin-top: 60px;}
+
+// 예외정책 템플릿관리
+.policy-temp-group {display: flex; margin: 0 -10px; margin-top: 10px;}
+.policy-temp-box {display: flex; flex-direction: column; width: calc(25% - 20px); margin: 0 10px; padding: 16px 30px 20px 30px; border:1px solid #e4e5ea; background-color: #fbfcfd; border-radius: 6px;}
+.policy-temp-box .box-header {display: flex; align-items: center; justify-content: space-between;}
+.policy-temp-box .box-header .title {font-weight: 700;}
+.policy-temp-box .box-header .btn {font-size: 10px; line-height: 14px;}
+.policy-temp-box .box-checklist {margin-top:20px; margin-bottom: 20px;}
+.policy-temp-box .box-checklist .item {display: flex; align-items: center;}
+.policy-temp-box .box-checklist .item .icn {margin-right: 10px;}
+.policy-temp-box .box-checklist .item + .item {margin-top:10px;}
+.policy-temp-box .box-action {width: 100%; margin-top: auto;}
+.policy-temp-box .box-action .btn {width: 100%;}
+
+// 예외정책 편집
+.form-temp-sec {width: 820px;}
+.form-temp-sec .form-action {margin-top: 20px;}

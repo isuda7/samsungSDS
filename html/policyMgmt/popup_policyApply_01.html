@@ -78,15 +78,25 @@
 						<!-- 2023-10-07 확인문구 추가 -->
 						<p class="form-checking mar-b-20">
 							<i class="icn icn-11-feel-pr" aria-hidden="true"></i>
-							적용할 예외정책과 기간을 선택해주세요.
+							사용자를 검색하여 해당 예외정책을 적용하세요.
 						</p>
 						<div class="form">
 							<div class="field-inline">
 								<div class="form-title">
 									<strong class="form-label">사용자명</strong>
 								</div>
-								<div class="form-controls">
-									정호연 (sds1000)
+								<div class="form-controls flex-wrap">
+									<button type="button" class="btn btn-control has-icn" data-bs-target="#userSearch" data-bs-toggle="modal">
+										<i class="icn icn-16-search-bk" aria-hidden="true"></i>통합검색
+									</button>
+									<!-- 검색이후 결과 -->
+									<div class="search-count">
+										<span class="text-primary">*</span>총 9명
+									</div>
+									<div class="form-listbox scroll-2">
+										김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1)
+									</div>
+									<!-- //검색이후 결과 -->
 								</div>
 							</div>
 							<div class="field-inline">
@@ -123,65 +133,8 @@
 								<div class="form-title">
 									<label for="chk2All" class="form-label">적용할 예외정책</label>
 								</div>
-								<div class="form-controls flex-wrap">
-									<div class="radio-inline">
-										<label class="radio style1">
-											<input type="radio" name="rdoPolicy" value="" />
-											<span class="value"><span>정책 템플릿 선택</span></span>
-										</label>
-										<select class="form-select w-auto">
-											<option value="">선택</option>
-											<option value="" selected>C레벨</option>
-										</select>
-										<div class="dropdown dropdown-level">
-											<button type="button" class="btn text-primary linked dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-											aria-expanded="false">상세보기</button>
-											<div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-												<div class="dropdown-title">
-													<strong>C레벨</strong>
-												</div>
-												<dl class="dropdown-define">
-													<dt>적용 예외정책</dt>
-													<dd>타인동석, 카메라촬영, 웹캠가림, 추가모니터, 추가웹캠</dd>
-												</dl>
-											</div>
-										</div>
-									</div>
-									<div class="radio-inline">
-										<label class="radio style1">
-											<input type="radio" name="rdoPolicy" value="" />
-											<span class="value"><span>개별 정책 선택</span></span>
-										</label>
-										<label class="checkbox style1">
-											<input type="radio" name="rdoPolicy" value="" />
-											<span class="value"><span>개별 정책 선택</span></span>
-										</label>
-										<p class="form-desc fs-10">
-											<span class="text-primary">*</span>선택 사용자의 현재 예외정책이 자동 체크되어 보여집니다.
-										</p>
-									</div>
-									<div class="checkbox-inline outer">
-										<label class="checkbox style1">
-											<input type="checkbox" name="chkPolicy" value="" />
-											<span class="value"><span>타인동석</span></span>
-										</label>
-										<label class="checkbox style1">
-											<input type="checkbox" name="chkPolicy" value="" />
-											<span class="value"><span>카메라촬영</span></span>
-										</label>
-										<label class="checkbox style1">
-											<input type="checkbox" name="chkPolicy" value="" />
-											<span class="value"><span>웹캠가림</span></span>
-										</label>
-										<label class="checkbox style1">
-											<input type="checkbox" name="chkPolicy" value="" />
-											<span class="value"><span>추가모니터</span></span>
-										</label>
-										<label class="checkbox style1">
-											<input type="checkbox" name="chkPolicy" value="" />
-											<span class="value"><span>추가웹캠</span></span>
-										</label>
-									</div>
+								<div class="form-controls">
+									<button type="button" class="btn linked text-primary">그룹장 이상</button>
 								</div>
 							</div>
 							<div class="field-inline">
@@ -189,7 +142,7 @@
 									<label for="frmContent" class="form-label">적용사유</label>
 								</div>
 								<div class="form-controls flex-wrap">
-									<textarea name="" id="frmContent" cols="30" rows="3" placeholder="사유를 입력하세요." class="form-control"></textarea>
+									<textarea name="" id="frmContent" cols="30" rows="3" placeholder="부서 개편으로 인한 그룹장 예외정책 일괄 추가" class="form-control"></textarea>
 									<div class="alert-guide mar-t-10">
 										<p>관리자에서 직접 예외정책 적용시 사유를 입력해 주세요.</p>
 									</div>

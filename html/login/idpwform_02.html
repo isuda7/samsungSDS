@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>로그인 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="login-body">
+	<!-- login-container -->
+	<div class="login-container">
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- main-content-body -->
+			<div class="main-section">
+				<!-- 로고영역 -->
+				<div class="logo-area">
+					<div class="login-logo">
+						<img src="../../assets/img/logo-faceon-login.png" alt="K-FACEON" class="img-faceon" />
+						<span class="split"></span>
+						<img src="../../assets/img/logo-cubox.png" alt="CUBOX" class="img-cubox" />
+					</div>
+					<div class="login-title">
+						<div class="tit1"><span>재택근무</span></div>
+						<div class="tit2"><em>PC 영상 보안 솔루션</em><span class="label">관리 서버</span></div>
+					</div>
+				</div>
+				<!-- //로고영역 -->
+				<!-- 입력영역 -->
+				<div class="form-area">
+					<form>
+						<div class="login-form">
+							<div class="field">
+								<label for="frmID" class="login-label">아이디</label>
+								<input type="text" id="frmID" class="form-control" value="admin" placeholder="아이디를 입력하세요." />
+							</div>
+							<div class="field">
+								<label for="frmPassword" class="login-label">비밀번호</label>
+								<div class="input-group">
+									<input type="password" id="frmPassword" class="form-control" value="111111" placeholder="비밀번호를 입력하세요." />
+									<div class="input-group-over">
+										<button type="button" class="btn btn-visibility is-hide">
+											<i class="icn icn-24-visibility hide"><span class="blind">비밀번호 감추기</span></i>
+											<i class="icn icn-24-visibility show"><span class="blind">비밀번호 보이기</span></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<div class="input-group type-cert">
+									<div class="input-group">
+										<input type="text" id="frmCert" class="form-control" value="" placeholder="인증번호를 입력해주세요." />
+										<div class="input-group-over">
+											<div class="text-cert text-primary">02:59</div>
+										</div>
+									</div>
+									<button type="button" class="btn btn-login btn-primary">확인</button>
+								</div>
+								<p class="form-checking">
+									<i class="icn icn-16-checking-pr" aria-hidden="true"></i>
+									인증번호가 오지 않거나 입력시간이 초과된 경우 재전송 해주세요.
+									<button type="button" class="btn linked text-primary">재전송하기</button>
+								</p>
+							</div>
+							<div class="field-action">
+								<button type="button" class="btn btn-login btn-primary btn-block" disabled>로그인</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- //입력영역 -->
+			</div>
+			<!-- //main-content-body -->
+
+			<div class="logo-sds">
+				<img src="../../assets/img/logo-samsungsds.png" alt="SAMSUNG SDS" />
+			</div>
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //login-container -->
+</body>
+
+</html>

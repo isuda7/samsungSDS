@@ -5,15 +5,29 @@
 //-------------------------------------------------------------------
 //	@로그인
 //-------------------------------------------------------------------
+.login-body {background: url("../img/bg-login-body.png") no-repeat center center / cover #F3F7FA;}
+.login-container {display: flex; align-items: center; justify-content: center; width:100%; height: 100%;}
+.login-container .main-content {position: relative; width:1140px; height: 610px; padding: 60px 126px 60px 180px; border-radius: 30px; background: url("../img/bg-login-content.png") no-repeat center center / cover #fff;}
+.login-container .main-content .logo-sds {position: absolute; top:100%; left: 50%; transform: translate(-50%, 24px);}
+.login-container .main-content .logo-sds img {height: 30px;}
+.login-container .main-section {display: flex; justify-content: space-between; padding: 0;}
+.login-container .logo-area {width: 320px;}
+.login-container .form-area {width:400px; height: calc(550px - 75px);}
+.login-container .form-area > form {height: 100%;}
 
-//-------------------------------------------------------------------
-//	@약관동의
-//-------------------------------------------------------------------
+.login-container .login-logo {display: flex; align-items: center;}
+.login-container .login-logo .img-faceon {width: 150px;}
+.login-container .login-logo .split {display: block; width: 1px; height: 13px; margin: 0 3px; background-color: #1c8fab;}
+.login-container .login-logo .img-cubox {width: 76px;}
 
-//-------------------------------------------------------------------
-//	@회원가입
-//-------------------------------------------------------------------
+.login-title {margin-top:23px;}
+.login-title .tit2 {display: flex; align-items: center; margin-top:5px;}
+.login-title .tit1 span {font-size: 22px; line-height: 30px; color: #4a4c5d;}
+.login-title .tit2 em {font-size: 30px; line-height: 40px; color: #000; font-weight: 700; letter-spacing: -1.5px;}
+.login-title .tit2 .label {position: relative; top: 2px; display: inline-flex; align-items: center; margin-left: 10px; padding: 4px 5px 6px 5px; border-radius: 4px; background-color: #004098; color: #fff;}
 
-//-------------------------------------------------------------------
-//	@가입완료
-//-------------------------------------------------------------------
+.login-form {position: relative; height: 100%; padding-top:100px;}
+.login-form .field + .field {margin-top:28px;}
+.login-form .login-label {display: block; margin-bottom: 10px; @include FontBody14;}
+.login-form .form-control {font-size: 16px; height: 48px; padding: 0 20px;}
+.login-form .field-action {position: absolute; left: 0; bottom: 0; width: 100%;}

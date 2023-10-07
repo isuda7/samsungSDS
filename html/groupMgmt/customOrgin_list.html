@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>사용자정의그룹 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(2, 1); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 그룹관리 / 사용자정의그룹</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-content-body -->
+			<div class="main-section">
+				<!-- main-content-header -->
+				<div class="main-section-header lined">
+					<h1 class="title">사용자정의그룹</h1>
+					<p class="explain">사용자 정의 그룹을 생성하고 관리할 수 있습니다.</p>
+				</div>
+				<!-- //main-content-header -->
+
+				<!-- 검색결과영역 -->
+				<div class="group-search-list">
+					<div class="tree-area">
+						<div class="tree-sec">
+							<div class="tree-header">
+								<strong class="tree-title"><i class="icn icn-16-tree-pr"></i>사용자정의그룹</strong>
+								<button type="button" class="btn btn-control text-primary-dark">편집모드로 전환</button>
+							</div>
+							<div class="tree-box">
+								<div class="list-group tree-list-group">
+									<button type="button" class="btn">AITFT <em>(20명)</em></button>
+									<button type="button" class="btn">혁신과제TFT <em>(20명)</em></button>
+									<button type="button" class="btn">그룹장 <em>(10명)</em></button>
+									<button type="button" class="btn is-selected">C라벨 <em>(10명)</em></button>
+									<button type="button" class="btn">신사업TFT <em>(7명)</em></button>
+									<button type="button" class="btn">서버교체보안TFT <em>(10명)</em></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="table-area">
+						<div class="table-sec">
+							<div class="tree-header">
+								<div class="tree-title">
+									<strong>C레벨 (10명)</strong>
+								</div>
+							</div>
+							<!-- Datatable -->
+							<div id="tableSearchContainer_wrapper" class="dataTables_wrapper no-footer">
+								<!-- Toolbar -->
+								<div class="toolbar">
+									<div class="left-area">
+										<button type="button" class="btn btn-control"><span>선택 예외정책 적용</span></button>
+										<button type="button" class="btn btn-control"><span>선택 예외정책 해제</span></button>
+									</div>
+								</div>
+								<!-- // Toolbar -->
+
+								<div id="tableSearchContainer_processing" class="dataTables_processing" style="display: none;">Processing...</div>
+
+								<div class="dataTables_scroll">
+									<div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+										<div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 100%; padding-right: 0px;">
+											<table class="table table-bordered datatable no-footer dataTable"
+												style="height: 100%; margin-left: 0px; width: 100%;" role="grid">
+												<colgroup>
+													<col width="30px" />
+													<col width="50px" />
+													<col width="60px" />
+													<col width="60px" />
+													<col width="120px" />
+													<col width="120px" />
+													<col width="120px" />
+													<col />
+													<col width="120px" />
+													<col width="120px" />
+												</colgroup>
+												<thead>
+													<tr role="row">
+														<th class="select-checkbox sorting_disabled" rowspan="1" colspan="1" aria-label=""
+															style="text-align: center; vertical-align: middle;">
+															<label class="checkbox style1">
+																<input type="checkbox" name="chkTblAll" value="" />
+																<span class="value" aria-label="전체선택"></span>
+															</label>
+														</th>
+														<th class="sorting_asc" tabindex="0" aria-controls="tableSearchContainer" rowspan="1"
+															colspan="1" aria-label="번호: activate to sort column descending"
+															aria-sort="ascending">번호</th>
+														<th class="sorting" tabindex="0" aria-controls="tableSearchContainer" rowspan="1"
+															colspan="1" aria-label="이름: activate to sort column descending"
+															aria-sort="ascending">이름</th>
+														<th class="sorting" tabindex="0" aria-controls="tableSearchContainer" rowspan="1"
+															colspan="1" aria-label="아이디: activate to sort column ascending">아이디
+														</th>
+														<th class="sorting" tabindex="0" aria-controls="tableSearchContainer" rowspan="1"
+															colspan="1" aria-label="직함: activate to sort column ascending">에이전트상태
+														</th>
+														<th class="sorting" tabindex="0" aria-controls="tableSearchContainer" rowspan="1"
+															colspan="1" aria-label="소속: activate to sort column ascending">보안정책적용
+														</th>
+														<th class="sorting" tabindex="0" aria-controls="tableSearchContainer" rowspan="1"
+															colspan="1" aria-label="소속: activate to sort column ascending">예외정책적용
+														</th>
+														<th class="sorting" tabindex="0" aria-controls="tableSearchContainer" rowspan="1"
+															colspan="1" aria-label="소속: activate to sort column ascending">적용된 예외정책
+														</th>
+														<th class="sorting" tabindex="0" aria-controls="tableSearchContainer" rowspan="1"
+															colspan="1" aria-label="소속: activate to sort column ascending">예외정책 시작일
+														</th>
+														<th class="sorting" tabindex="0" aria-controls="tableSearchContainer" rowspan="1"
+															colspan="1" aria-label="소속: activate to sort column ascending">예외정책 종료일
+														</th>
+													</tr>
+												</thead>
+											</table>
+										</div>
+									</div>
+									<div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%; height: 480px;">
+										<table class="table table-bordered datatable no-footer dataTable" id="tableSearchContainer"
+											style="height:100%;" role="grid">
+											<colgroup>
+												<col width="30px" />
+												<col width="50px" />
+												<col width="60px" />
+												<col width="60px" />
+												<col width="120px" />
+												<col width="120px" />
+												<col width="120px" />
+												<col />
+												<col width="120px" />
+												<col width="120px" />
+											</colgroup>
+											<thead>
+												<tr role="row" style="height: 0px;">
+													<th class="select-checkbox sorting_disabled" rowspan="1" colspan="1" aria-label=""
+														style="text-align: center; vertical-align: middle; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; ">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">
+															<label class="checkbox style1">
+																<input type="checkbox" name="chkTblAll" value="" />
+																<span class="value"></span>
+															</label>
+														</div>
+													</th>
+													<th class="sorting" aria-controls="tableSearchContainer" rowspan="1" colspan="1"
+														aria-label="아이디: activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; ">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">번호</div>
+													</th>
+													<th class="sorting_asc" aria-controls="tableSearchContainer" rowspan="1" colspan="1"
+														aria-sort="ascending" aria-label="이름: activate to sort column descending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; ">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">이름</div>
+													</th>
+													<th class="sorting" aria-controls="tableSearchContainer" rowspan="1" colspan="1"
+														aria-label="아이디: activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; ">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">아이디</div>
+													</th>
+													<th class="sorting" aria-controls="tableSearchContainer" rowspan="1" colspan="1"
+														aria-label="직함: activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; ">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">에이전트상태</div>
+													</th>
+													<th class="sorting" aria-controls="tableSearchContainer" rowspan="1" colspan="1"
+														aria-label="소속: activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; ">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">보안정책적용</div>
+													</th>
+													<th class="sorting" aria-controls="tableSearchContainer" rowspan="1" colspan="1"
+														aria-label="소속: activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; ">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">예외정책적용</div>
+													</th>
+													<th class="sorting" aria-controls="tableSearchContainer" rowspan="1" colspan="1"
+														aria-label="소속: activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; ">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">적용된 예외정책</div>
+													</th>
+													<th class="sorting" aria-controls="tableSearchContainer" rowspan="1" colspan="1"
+														aria-label="소속: activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; ">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">예외정책 시작일</div>
+													</th>
+													<th class="sorting" aria-controls="tableSearchContainer" rowspan="1" colspan="1"
+														aria-label="소속: activate to sort column ascending"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; ">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">예외정책 종료일</div>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr role="row" class="even selected">
+													<td class="select-checkbox"></td>
+													<td class="alCenter">100</td>
+													<td class="alCenter"><a href="/ko/user/sds1">박상무</a></td>
+													<td class="alCenter">sds1</td>
+													<td class="alCenter">활성</td>
+													<td class="alCenter">적용</td>
+													<td class="alCenter">적용</td>
+													<td>타인동석, 카메라촬영, 웹캠가림</td>
+													<td class="alCenter">2023-09-10</td>
+													<td class="alCenter">2023-09-10</td>
+												</tr>
+												<tr role="row" class="odd selected">
+													<td class="select-checkbox"></td>
+													<td class="alCenter">100</td>
+													<td class="alCenter"><a href="/ko/user/sds1">박상무</a></td>
+													<td class="alCenter">sds1</td>
+													<td class="alCenter">활성</td>
+													<td class="alCenter">적용</td>
+													<td class="alCenter">적용</td>
+													<td>타인동석, 카메라촬영, 웹캠가림</td>
+													<td class="alCenter">2023-09-10</td>
+													<td class="alCenter">2023-09-10</td>
+												</tr>
+												<tr role="row" class="even">
+													<td class="select-checkbox"></td>
+													<td class="alCenter">100</td>
+													<td class="alCenter"><a href="/ko/user/sds1">박상무</a></td>
+													<td class="alCenter">sds1</td>
+													<td class="alCenter">활성</td>
+													<td class="alCenter">적용</td>
+													<td class="alCenter">적용</td>
+													<td>타인동석, 카메라촬영, 웹캠가림</td>
+													<td class="alCenter">2023-09-10</td>
+													<td class="alCenter">2023-09-10</td>
+												</tr>
+												<tr role="row" class="odd">
+													<td class="select-checkbox"></td>
+													<td class="alCenter">100</td>
+													<td class="alCenter"><a href="/ko/user/sds1">박상무</a></td>
+													<td class="alCenter">sds1</td>
+													<td class="alCenter">활성</td>
+													<td class="alCenter">적용</td>
+													<td class="alCenter">적용</td>
+													<td>타인동석, 카메라촬영, 웹캠가림</td>
+													<td class="alCenter">2023-09-10</td>
+													<td class="alCenter">2023-09-10</td>
+												</tr>
+												<tr role="row" class="even">
+													<td class="select-checkbox"></td>
+													<td class="alCenter">100</td>
+													<td class="alCenter"><a href="/ko/user/sds1">박상무</a></td>
+													<td class="alCenter">sds1</td>
+													<td class="alCenter">활성</td>
+													<td class="alCenter">적용</td>
+													<td class="alCenter">적용</td>
+													<td>타인동석, 카메라촬영, 웹캠가림</td>
+													<td class="alCenter">2023-09-10</td>
+													<td class="alCenter">2023-09-10</td>
+												</tr>
+												<tr role="row" class="odd">
+													<td class="select-checkbox"></td>
+													<td class="alCenter">100</td>
+													<td class="alCenter"><a href="/ko/user/sds1">박상무</a></td>
+													<td class="alCenter">sds1</td>
+													<td class="alCenter">활성</td>
+													<td class="alCenter">적용</td>
+													<td class="alCenter">적용</td>
+													<td>타인동석, 카메라촬영, 웹캠가림</td>
+													<td class="alCenter">2023-09-10</td>
+													<td class="alCenter">2023-09-10</td>
+												</tr>
+												<tr role="row" class="even">
+													<td class="select-checkbox"></td>
+													<td class="alCenter">100</td>
+													<td class="alCenter"><a href="/ko/user/sds1">박상무</a></td>
+													<td class="alCenter">sds1</td>
+													<td class="alCenter">활성</td>
+													<td class="alCenter">적용</td>
+													<td class="alCenter">적용</td>
+													<td>타인동석, 카메라촬영, 웹캠가림</td>
+													<td class="alCenter">2023-09-10</td>
+													<td class="alCenter">2023-09-10</td>
+												</tr>
+												<tr role="row" class="odd">
+													<td class="select-checkbox"></td>
+													<td class="alCenter">100</td>
+													<td class="alCenter"><a href="/ko/user/sds1">박상무</a></td>
+													<td class="alCenter">sds1</td>
+													<td class="alCenter">활성</td>
+													<td class="alCenter">적용</td>
+													<td class="alCenter">적용</td>
+													<td>타인동석, 카메라촬영, 웹캠가림</td>
+													<td class="alCenter">2023-09-10</td>
+													<td class="alCenter">2023-09-10</td>
+												</tr>
+												<tr role="row" class="even">
+													<td class="select-checkbox"></td>
+													<td class="alCenter">100</td>
+													<td class="alCenter"><a href="/ko/user/sds1">박상무</a></td>
+													<td class="alCenter">sds1</td>
+													<td class="alCenter">활성</td>
+													<td class="alCenter">적용</td>
+													<td class="alCenter">적용</td>
+													<td>타인동석, 카메라촬영, 웹캠가림</td>
+													<td class="alCenter">2023-09-10</td>
+													<td class="alCenter">2023-09-10</td>
+												</tr>
+												<tr role="row" class="odd">
+													<td class="select-checkbox"></td>
+													<td class="alCenter">100</td>
+													<td class="alCenter"><a href="/ko/user/sds1">박상무</a></td>
+													<td class="alCenter">sds1</td>
+													<td class="alCenter">활성</td>
+													<td class="alCenter">적용</td>
+													<td class="alCenter">적용</td>
+													<td>타인동석, 카메라촬영, 웹캠가림</td>
+													<td class="alCenter">2023-09-10</td>
+													<td class="alCenter">2023-09-10</td>
+												</tr>
+												<tr role="row" class="even">
+													<td class="select-checkbox"></td>
+													<td class="alCenter">100</td>
+													<td class="alCenter"><a href="/ko/user/sds1">박상무</a></td>
+													<td class="alCenter">sds1</td>
+													<td class="alCenter">활성</td>
+													<td class="alCenter">적용</td>
+													<td class="alCenter">적용</td>
+													<td>타인동석, 카메라촬영, 웹캠가림</td>
+													<td class="alCenter">2023-09-10</td>
+													<td class="alCenter">2023-09-10</td>
+												</tr>
+												<tr role="row" class="odd">
+													<td class="select-checkbox"></td>
+													<td class="alCenter">100</td>
+													<td class="alCenter"><a href="/ko/user/sds1">박상무</a></td>
+													<td class="alCenter">sds1</td>
+													<td class="alCenter">활성</td>
+													<td class="alCenter">적용</td>
+													<td class="alCenter">적용</td>
+													<td>타인동석, 카메라촬영, 웹캠가림</td>
+													<td class="alCenter">2023-09-10</td>
+													<td class="alCenter">2023-09-10</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- //Datatable -->
+						</div>
+					</div>
+				</div>
+				<!-- //검색결과영역 -->
+
+			</div>
+			<!-- //main-content-body -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+</body>
+
+</html>

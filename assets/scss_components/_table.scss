@@ -7,14 +7,11 @@
 //-------------------------------------------------------------------
 // Board Toolbar
 .dataTables_wrapper .toolbar {display: flex; margin-bottom: 10px;}
-.dataTables_wrapper .toolbar .left-area {display: flex; align-items: center; }
-.dataTables_wrapper .toolbar .right-area {display:flex; align-items: center; margin-left: auto; text-align: right;}
-.dataTables_wrapper .toolbar .left-area .form-select,
-.dataTables_wrapper .toolbar .left-area .btn-control {margin-right: 10px;}
-.dataTables_wrapper .toolbar .right-area .form-select,
-.dataTables_wrapper .toolbar .right-area .btn-control {margin-left: 10px;}
-.dataTables_wrapper .toolbar .form-select:first-child,
-.dataTables_wrapper .toolbar .btn-control:first-child {margin-left: 0px;}
+.dataTables_wrapper .toolbar .left-area {display: flex; align-items: center; margin-left: -5px;}
+.dataTables_wrapper .toolbar .right-area {display:flex; align-items: center; margin-left: auto; margin-right: -5px; text-align: right;}
+.dataTables_wrapper .toolbar .count,
+.dataTables_wrapper .toolbar .form-select,
+.dataTables_wrapper .toolbar .btn-control {margin:0 5px;}
 .dataTables_wrapper .toolbar .user-info {margin-right: 10px;}
 .dataTables_wrapper .toolbar .count .now {color: $ColorPrimary;}
 

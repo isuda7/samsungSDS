@@ -24,7 +24,8 @@
 .btn.btn-outline-dark {border-color: $ColorDark;}
 .btn.btn-outline-dark:hover, .btn-basic.btn-outline-dark:active, .btn-basic.btn-outline-dark:focus {background-color: #fff; border-color: $ColorDark;}
 .btn.btn-outline-dark:focus {border-color: $ColorDark !important; box-shadow: 0 0 0 3px rgba(0,0,0,.1);}
-.btn.linked {text-decoration: underline; text-underline-position: under; border-color: transparent !important;}
+.btn.btn-outline-negative {background-color: #fff; color:$ColorNegative; border-color: $ColorNegative;}
+.btn.linked {text-decoration: underline; text-underline-position: under; border: 0 !important; padding: 0; border-radius: 0;}
 .btn.linked:hover,.btn.linked:active, .btn.linked:focus {box-shadow:none; border-color: transparent !important;}
 
 //-------------------------------------------------------------------
@@ -50,13 +51,12 @@
 .btn-module.negative {background-color: #f03b2f; color: #fff;}
 .btn-module.negative:hover, .btn-module.negative:active, .btn-module.negative:focus {background-color: #f03b2f !important; color: #fff !important; border-color: transparent !important;}
 
-.btn-module2 {padding:6px 30px; border-radius: 6px; color: #fff;}
+.btn-module2 {padding:6px 30px; border-radius: 6px; color: #fff; border: 0; line-height: 16px;}
 .btn-module2.negative {background-color: #f03b2f;}
 .btn-module2.negative:hover, .btn-module2.negative:active, .btn-module2.negative:focus {background-color: #f03b2f !important; color: #fff !important; border-color: transparent !important;}
 .btn-module2.negative:focus {box-shadow: 0 0 0 3px rgba(240,59,47,0.25);}
 .btn-module2.positive {background-color: $ColorPrimary;}
 .btn-module2.positive:hover, .btn-module2.positive:active, .btn-module2.positive:focus {background-color: $ColorPrimary !important; color: #fff !important; border-color: transparent !important;}
-.btn-module2.positive:focus {box-shadow: 0 0 0 3px rgba(240,59,47,0.25);}
 
 // 검색
 .btn-search {width: 200px; height:28px; padding: 0 20px 2px 20px; border-radius: 6px; background-color: $ColorPrimary; color: white;}
@@ -64,3 +64,12 @@
 .btn-search:focus {border-color: transparent !important;}
 .btn-group-date .btn-search {width:auto; margin-left: 20px;}
 
+// 비밀번호 아이콘버튼
+.btn-visibility.is-hide .icn.hide {display:block;}
+.btn-visibility.is-hide .icn.show {display:none;}
+.btn-visibility.is-show .icn.hide {display:none;}
+.btn-visibility.is-show .icn.show {display:block;}
+
+.btn-login {height: 48px; min-width: 110px; padding: 0 10px; background-color: #e4e5ea; color: #fff; font-size: 16px; border-radius: 6px !important;}
+.btn-login:disabled {background-color: #e4e5ea; opacity: 1;}
+.btn-login.btn-block {width: 100%;}

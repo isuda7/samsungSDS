@@ -78,3 +78,9 @@ $GapBody: 20px;
 	color: #000000;
 	@include FontBody12;
 }
+
+@mixin scrollbarY {
+	&::-webkit-scrollbar {width: 6px;}
+	&::-webkit-scrollbar-thumb {border-radius: 6px;background-color: rgba(74, 76, 93, 0.3);}
+	&::-webkit-scrollbar-track {background-color: #fff;}
+}
