@@ -15,8 +15,12 @@
 .form-control::placeholder {color: #ccc;}
 textarea.form-control {@include formControls; height: auto; padding-top:10px; padding-bottom: 10px;}
 .form-select {@include formControls; padding-right: 35px; min-width: 100px;}
+.form-select:focus {box-shadow: 0 0 0 3px rgba(13,110,253,.25);}
 .form-select::placeholder {color: #e4e5ea;}
+.form-select.type-module {box-sizing: border-box; height: 24px; min-width: 80px; padding:0 35px 1px 10px; border-radius: 0 !important; color:$ColorPrimaryDark; font-size: 10px; background-size: 10px auto; background-position: right 10px center;}
+.form-select.type-module::placeholder {color: #e4e5ea;}
 .input-group {align-items: center;}
+.input-group > .btn:not(:first-child) {margin-left: 10px !important;}
 .input-group-over {display: flex; align-items: center; justify-content: center; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index:10;}
 .input-group-over .btn:focus, .input-group-over .btn:active, .input-group-over .btn:hover {box-shadow: none; border-color: transparent !important;}
 
@@ -26,6 +30,7 @@ textarea.form-control {@include formControls; height: auto; padding-top:10px; pa
 .form-split {display: flex; justify-content: center; align-items: center; padding: 0 7px; color: #000;}
 .form-byte {display: block; margin-left: 10px !important;}
 .form-byte .now {color: $ColorPrimary;}
+.form-text {display: block; margin: 0; margin-left: 10px !important;}
 .form-byte.len-2 {flex:none; width: 32px;}
 .form-byte.len-3 {flex:none; width: 48px;}
 
@@ -60,9 +65,9 @@ textarea.form-control {@include formControls; height: auto; padding-top:10px; pa
 
 // form checking
 .form-checking {color: #4a4c5d;}
-.form-checking .icn {position: relative; top:-1px; margin-right: 1px;}
+.form-checking .icn {position: relative; top:-2px; margin-right: 1px;}
 .form-checking .btn.linked {position: relative; top: -2px;}
-.input-group + .form-checking {margin-top: 10px;}
+.form-controls > .form-checking {margin-top: 10px; margin-bottom: 6px;}
 
 //-------------------------------------------------------------------
 //	@Groups
@@ -115,3 +120,11 @@ textarea.form-control {@include formControls; height: auto; padding-top:10px; pa
 .input-group.type-cert {justify-content: space-between;}
 .input-group.type-cert .btn-login {margin-left: 10px !important;}
 .input-group.type-cert .input-group {width: auto; flex:1 1 auto;}
+
+// 휴대폰번호
+.input-group.type-hp .form-select {width: calc(33.3333% - 4px);}
+.input-group.type-hp .form-control {width: calc(33.3333% - 3px); margin-left: 5px !important;}
+
+// IP 번호
+.input-group.type-ip .form-control {width:calc(25% - 4px); flex:1 1 auto;}
+.input-group.type-ip .form-control + .form-control {margin-left: 5px !important;}

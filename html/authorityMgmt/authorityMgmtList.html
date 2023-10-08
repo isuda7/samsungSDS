@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>운영자권한설정 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(6, 0); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 권한관리 / 운영자권한설정</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-section -->
+			<div class="main-section">
+				<!-- main-section-header -->
+				<div class="main-section-header lined">
+					<h1 class="title">운영자권한설정</h1>
+					<p class="explain">보안솔루션에 접근 가능한 운영자들 등록하고 관리할 수 있습니다.</p>
+					<button type="button" class="btn btn-module2 btn-primary">운영자 등록</button>
+				</div>
+				<!-- //main-section-header -->
+
+				<div class="authority-list-wrap">
+					<div class="row">
+						<div class="col-md-4">
+							<!-- Datatable -->
+							<div id="tableContainer_wrapper" class="dataTables_wrapper no-footer">
+								<!-- Toolbar -->
+								<div class="toolbar">
+									<div class="left-area">
+										<strong class="toolbar-title">운영자 목록</strong>
+									</div>
+								</div>
+								<!-- // Toolbar -->
+								<div class="dataTables_scroll">
+									<div class="dataTables_scrollHead"
+										style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+										<div class="dataTables_scrollHeadInner"
+											style="box-sizing: content-box; width: 100%; min-width: 100%; padding-right: 0px;">
+											<table class="table table-bordered datatable  no-footer dataTable"
+												aria-describedby="tableContainer_info" role="grid"
+												style="margin-left: 0px; width: 100%; min-width: 100%;">
+												<colgroup>
+													<col width="30%" />
+													<col width="35%" />
+													<col width="35%" />
+												</colgroup>
+												<thead>
+													<tr role="row">
+														<th class="alCenter sorting_disabled" rowspan="1" colspan="1"
+															aria-label="번호">번호</th>
+														<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+															aria-label="아이디: activate to sort column ascending" rowspan="1"
+															colspan="1">아이디</th>
+														<th class="sorting" tabindex="0" aria-controls="tableContainer"
+															aria-label="사용자명: activate to sort column ascending" rowspan="1"
+															colspan="1">사용자명</th>
+													</tr>
+												</thead>
+											</table>
+										</div>
+									</div>
+									<div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
+										<table class="table table-bordered datatable  no-footer dataTable" id="tableContainer"
+											aria-describedby="tableContainer_info" role="grid" style="width: 100%; min-width: 100%;">
+											<colgroup>
+												<col width="30%" />
+												<col width="35%" />
+												<col width="35%" />
+											</colgroup>
+											<thead>
+												<tr role="row" style="height: 0px;">
+													<th class="alCenter sorting_disabled" rowspan="1" colspan="1" aria-label="번호"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">번호</div>
+													</th>
+													<th class="alCenter sorting" aria-controls="tableContainer"
+														aria-label="아이디: activate to sort column ascending" rowspan="1" colspan="1"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">아이디</div>
+													</th>
+													<th class="sorting" aria-controls="tableContainer"
+														aria-label="사용자명: activate to sort column ascending" rowspan="1" colspan="1"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">사용자명</div>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr role="row" class="odd">
+													<td class="alCenter">31</td>
+													<td class="alCenter">idname</td>
+													<td class="alCenter">김프로</td>
+												</tr>
+												<tr role="row" class="even">
+													<td class="alCenter">31</td>
+													<td class="alCenter">idname</td>
+													<td class="alCenter">김프로</td>
+												</tr>
+												<tr role="row" class="odd">
+													<td class="alCenter">31</td>
+													<td class="alCenter">idname</td>
+													<td class="alCenter">김프로</td>
+												</tr>
+												<tr role="row" class="even">
+													<td class="alCenter">31</td>
+													<td class="alCenter">idname</td>
+													<td class="alCenter">김프로</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- //Datatable -->
+						</div>
+						<div class="col-md-8">
+							<!-- Datatable -->
+							<div id="tableContainer_wrapper2" class="dataTables_wrapper no-footer">
+								<!-- Toolbar -->
+								<div class="toolbar">
+									<div class="left-area">
+										<strong class="toolbar-title">메뉴 권한 설정</strong>
+									</div>
+									<div class="right-area">
+										<select name="" id="" class="form-select">
+											<option value="">접근허용</option>
+											<option value="">접근불가</option>
+										</select>
+										<select name="" id="" class="form-select">
+											<option value="">편집가능</option>
+											<option value="">편집불가</option>
+										</select>
+										<button type="button" class="btn btn-control">일괄적용</button>
+									</div>
+								</div>
+								<!-- // Toolbar -->
+								<div class="dataTables_scroll">
+									<div class="dataTables_scrollHead"
+										style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+										<div class="dataTables_scrollHeadInner"
+											style="box-sizing: content-box; width: 100%; min-width: 100%; padding-right: 0px;">
+											<table class="table table-bordered datatable  no-footer dataTable"
+												aria-describedby="tableContainer_info" role="grid"
+												style="margin-left: 0px; width: 100%; min-width: 100%;">
+												<colgroup>
+													<col width="80px" />
+													<col width="" />
+													<col width="150px" />
+													<col width="200px" />
+												</colgroup>
+												<thead>
+													<tr role="row">
+														<th class="select-checkbox sorting_disabled" rowspan="1" colspan="1" aria-label=""
+														style=" text-align: center; vertical-align: middle;">
+															<label class="checkbox style1">
+																<input type="checkbox" name="chkTblAll" value="" />
+																<span class="value" aria-label="전체선택"></span>
+															</label>
+														</th>
+														<th class="alCenter sorting" aria-label="메뉴/경로" rowspan="1"
+															colspan="1">메뉴/경로</th>
+														<th class="alCenter sorting" aria-label="권한설정" rowspan="1"
+															colspan="1">권한설정</th>
+														<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+															aria-label="파일다운로드/편집: activate to sort column ascending" rowspan="1"
+															colspan="1">파일다운로드/편집</th>
+													</tr>
+												</thead>
+											</table>
+										</div>
+									</div>
+									<div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
+										<table class="table table-bordered datatable  no-footer dataTable" id="tableContainer"
+											aria-describedby="tableContainer_info" role="grid" style="width: 100%; min-width: 100%;">
+											<colgroup>
+												<col width="80px" />
+												<col width="" />
+												<col width="150px" />
+												<col width="200px" />
+											</colgroup>
+											<thead>
+												<tr role="row" style="height: 0px;">
+													<th class="select-checkbox sorting_disabled" rowspan="1" colspan="1" aria-label=""
+													style="text-align: center; vertical-align: middle; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; ">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">
+															<label class="checkbox style1">
+																<input type="checkbox" name="chkTblAll" value="" />
+																<span class="value"></span>
+															</label>
+														</div>
+													</th>
+													<th class="alCenter sorting_disabled" aria-label="메뉴/경로" rowspan="1" colspan="1"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">메뉴/경로</div>
+													</th>
+													<th class="alCenter sorting" aria-controls="tableContainer"
+														aria-label="권한설정: activate to sort column ascending" rowspan="1" colspan="1"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">권한설정</div>
+													</th>
+													<th class="alCenter sorting" aria-controls="tableContainer"
+														aria-label="파일다운로드/편집: activate to sort column ascending" rowspan="1" colspan="1"
+														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+														<div class="dataTables_sizing" style="height:0;overflow:hidden;">파일다운로드/편집</div>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr role="row" class="odd selected">
+													<td class=" select-checkbox"></td>
+													<td>권한관리 > 개인정보 접근 이력 조회</td>
+													<td class="alCenter">
+														<select name="" id="" class="form-select type-module w-auto">
+															<option value="">접근허용</option>
+															<option value="">접근불가</option>
+														</select>
+													</td>
+													<td class="alCenter">
+														<div class="radio-inline">
+															<label class="radio style1">
+																<input type="radio" name="rdoDownload1" value="" />
+																<span class="value"><span>가능</span></span>
+															</label>
+															<label class="radio style1">
+																<input type="radio" name="rdoDownload1" value="" />
+																<span class="value"><span>불가</span></span>
+															</label>
+														</div>
+													</td>
+												</tr>
+												<tr role="row" class="even selected">
+													<td class=" select-checkbox"></td>
+													<td>권한관리 > 개인정보 접근 이력 조회</td>
+													<td class="alCenter">
+														<select name="" id="" class="form-select type-module w-auto">
+															<option value="">접근허용</option>
+															<option value="">접근불가</option>
+														</select>
+													</td>
+													<td class="alCenter">
+														<div class="radio-inline">
+															<label class="radio style1">
+																<input type="radio" name="rdoDownload2" value="" />
+																<span class="value"><span>가능</span></span>
+															</label>
+															<label class="radio style1">
+																<input type="radio" name="rdoDownload2" value="" />
+																<span class="value"><span>불가</span></span>
+															</label>
+														</div>
+													</td>
+												</tr>
+												<tr role="row" class="odd">
+													<td class=" select-checkbox"></td>
+													<td>권한관리 > 개인정보 접근 이력 조회</td>
+													<td class="alCenter">
+														<select name="" id="" class="form-select type-module w-auto">
+															<option value="">접근허용</option>
+															<option value="">접근불가</option>
+														</select>
+													</td>
+													<td class="alCenter">
+														<div class="radio-inline">
+															<label class="radio style1">
+																<input type="radio" name="rdoDownload3" value="" />
+																<span class="value"><span>가능</span></span>
+															</label>
+															<label class="radio style1">
+																<input type="radio" name="rdoDownload3" value="" />
+																<span class="value"><span>불가</span></span>
+															</label>
+														</div>
+													</td>
+												</tr>
+												<tr role="row" class="even">
+													<td class=" select-checkbox"></td>
+													<td>권한관리 > 개인정보 접근 이력 조회</td>
+													<td class="alCenter">
+														<select name="" id="" class="form-select type-module w-auto">
+															<option value="">접근허용</option>
+															<option value="">접근불가</option>
+														</select>
+													</td>
+													<td class="alCenter">
+														<div class="radio-inline">
+															<label class="radio style1">
+																<input type="radio" name="rdoDownload4" value="" />
+																<span class="value"><span>가능</span></span>
+															</label>
+															<label class="radio style1">
+																<input type="radio" name="rdoDownload4" value="" />
+																<span class="value"><span>불가</span></span>
+															</label>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- //Datatable -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //main-section -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+</body>
+
+</html>

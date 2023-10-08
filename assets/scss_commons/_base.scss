@@ -100,8 +100,10 @@ input::-webkit-calendar-picker-indicator {-webkit-appearance:none;}
 .pad-t-0 {padding-top:0px !important;}
 
 // width
-.w-auto {width:auto !important;}
-.w-260 {width:260px !important;}
+.w-auto {width:auto !important; flex:none !important;}
+.w-full {width:100% !important; flex:none !important;}
+.w-260 {width:260px !important; flex:none !important;}
+.w-120 {width:120px !important; flex:none !important;}
 
 // color
 .text-primary {color: $ColorPrimary !important;}
@@ -109,4 +111,4 @@ input::-webkit-calendar-picker-indicator {-webkit-appearance:none;}
 
 // font
 .bold {font-weight: 700 !important;}
-.fs-10 {font-size: 10px;}
+.fs-10 {@include FontBody10;}

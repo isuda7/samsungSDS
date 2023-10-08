@@ -9,10 +9,14 @@
 //-------------------------------------------------------------------
 //	@Default
 //-------------------------------------------------------------------
-.chip {position:relative;display:inline-flex;justify-content:center;align-items:center;overflow:hidden;max-width:100%;}
+.chip {position:relative;display:inline-flex;justify-content:center;align-items:center;overflow:hidden;max-width:100%;box-sizing: border-box;}
 
 //-------------------------------------------------------------------
 //	@Styles
 //-------------------------------------------------------------------
 .chip-label {padding: 1px 5px; border-radius: 2px; @include FontBody10;}
 .chip-label.orange {background-color: rgba(255, 99, 32, 0.1); color: #bf3900;}
+
+.chip-state {height: 20px; padding: 0 10px; border-radius: 20px; font-size: 10px; line-height: 14px; border:1px solid #107c41;}
+.chip-state.y {background-color: #107c41; color: #fff;}
+.chip-state.n {color: #107c41; background-color: #fff;}

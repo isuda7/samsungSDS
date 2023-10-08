@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>운영자관리 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(6, 1); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 권한관리 / 운영자관리 / 운영자등록</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-section -->
+			<div class="main-section">
+				<!-- main-section-header -->
+				<div class="main-section-header lined">
+					<h1 class="title">운영자관리</h1>
+					<p class="explain">보안솔루션에 접근 가능한 운영자들 등록하고 관리할 수 있습니다.</p>
+				</div>
+				<!-- //main-section-header -->
+
+				<!-- 운영자 등록 -->
+				<div class="form-create-sec">
+					<div class="main-sub-header lined">
+						<h2 class="title">운영자 등록</h2>
+					</div>
+					<!-- 그룹인원관리 -->
+					<div class="form">
+						<!-- 아이디 -->
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="frmID" class="form-label">아이디</label>
+							</div>
+							<div class="form-controls">
+								<div class="input-group w-auto">
+									<input type="text" id="frmID" value="" class="form-control w-260" />
+									<!-- len2 2자리 영역 -->
+									<span class="form-text">3자리 이상 입력</span>
+								</div>
+							</div>
+						</div>
+						<!-- //아이디 -->
+						<!-- 비밀번호 -->
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="frmPW" class="form-label">비밀번호</label>
+							</div>
+							<div class="form-controls">
+								<div class="input-group w-auto">
+									<input type="password" id="frmPW" value="" class="form-control w-260" />
+									<!-- len2 2자리 영역 -->
+									<span class="form-text">1자리 이상 입력</span>
+								</div>
+							</div>
+						</div>
+						<!-- //비밀번호 -->
+						<!-- 사용자명 -->
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="frmID" class="form-label">사용자명</label>
+							</div>
+							<div class="form-controls">
+								<div class="input-group w-auto">
+									<input type="text" id="frmID" value="" class="form-control w-260" />
+									<!-- len2 2자리 영역 -->
+									<span class="form-text">3자리 이상 입력</span>
+								</div>
+							</div>
+						</div>
+						<!-- //사용자명 -->
+						<!-- 휴대전화번호 -->
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="frmHP" class="form-label">휴대전화번호</label>
+							</div>
+							<div class="form-controls">
+								<div class="input-group type-hp w-260">
+									<select name="" id="frmHP" class="form-select">
+										<option value="">010</option>
+									</select>
+									<input type="text" class="form-control" />
+									<input type="text" class="form-control" />
+								</div>
+							</div>
+						</div>
+						<!-- //휴대전화번호 -->
+						<!-- 등록IP -->
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="frmIP" class="form-label">등록IP</label>
+							</div>
+							<div class="form-controls">
+								<div class="input-group type-ip w-260">
+									<input type="text" id="frmIP" value="" class="form-control" />
+									<input type="text" id="" value="" class="form-control" />
+									<input type="text" id="" value="" class="form-control" />
+									<input type="text" id="" value="" class="form-control" />
+								</div>
+							</div>
+						</div>
+						<!-- //등록IP -->
+						<!-- 계정상태 -->
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="frmAccount" class="form-label">계정상태</label>
+							</div>
+							<div class="form-controls">
+								<div class="radio-inline gap-xl">
+									<label class="radio style1">
+										<input type="radio" name="frmAccount" value="" />
+										<span class="value"><span>정상</span></span>
+									</label>
+									<label class="radio style1">
+										<input type="radio" name="frmAccount" value="" />
+										<span class="value"><span>로그인 제한</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- //계정상태 -->
+
+						<div class="form-action mar-t-20">
+							<div class="right-area">
+								<button type="button" class="btn btn-basic btn-outline-primary">취소</button>
+								<button type="button" class="btn btn-basic btn-primary">등록</button>
+							</div>
+						</div>
+					</div>
+					<!-- //그룹인원관리 -->
+				</div>
+				<!-- //운영자 등록 -->
+			</div>
+			<!-- //main-section -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+</body>
+
+</html>

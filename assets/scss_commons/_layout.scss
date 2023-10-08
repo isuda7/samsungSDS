@@ -33,7 +33,16 @@ html, body {height: 100%; position: relative;}
 .gnb-state-area {margin-left: auto; @include FontBody14;}
 .gnb-state {display:flex;}
 .gnb-state .btn-gnb {display:flex; align-items: center; height: 34px; margin-left: 10px; padding:0 10px; background-color: rgba(233, 240, 254, 0.6); border-radius: 6px;}
+.gnb-state .btn-gnb.show {border-color: $ColorPrimaryLight;}
 .gnb-state .language-dropdown .btn-gnb {width: 110px;}
+
+// Language Dropdown
+.language-dropdown .dropdown-menu {width: 110px; min-width: 110px; padding: 10px 0 10px; box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.05); border: 1px solid #e0e2e7;}
+.language-dropdown .dropdown-menu li a {display: block; @include FontBody14; padding: 3px 10px;}
+.language-dropdown .dropdown-menu li a:hover,
+.language-dropdown .dropdown-menu li a:focus,
+.language-dropdown .dropdown-menu li a:active {background-color: #f2f6fe;}
+.language-dropdown .dropdown-menu li + li {margin-top:10px;}
 
 //-------------------------------------------------------------------
 //	@Page Container

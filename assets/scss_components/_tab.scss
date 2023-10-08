@@ -11,3 +11,11 @@
 .tab-page .tab {padding:0 20px; @include FontBody16; height: inherit; border:0;}
 .tab-page .tab span {display: flex; align-items: center; padding: 5px 0; height: inherit; border-bottom: 1px solid transparent;}
 .tab-page .tab.is-selected span {border-bottom-color: $ColorPrimary; font-weight: 700;}
+
+// Tab Page2
+.tab-page2 {margin-top:20px;}
+.tab-page2 .tab-list {display: flex; justify-content: center; height: 34px; margin-bottom: 10px;}
+.tab-page2 .tab {width:200px; @include FontBody12; height: inherit; border:0;}
+.tab-page2 .tab span {display: flex; align-items: center; justify-content: center; padding: 5px 0; height: inherit; border-bottom: 1px solid $ColorPrimary;}
+.tab-page2 .tab.is-selected span {color: $ColorPrimary; font-weight: 700; background-color: $ColorPrimaryLight;}
+

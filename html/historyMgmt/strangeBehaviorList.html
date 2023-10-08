@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>이상생위 이력 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(3, 1); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 이력관리 / 이상생위 이력</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-section -->
+			<div class="main-section">
+				<!-- main-section-header -->
+				<div class="main-section-header">
+					<h1 class="title">이상생위 이력</h1>
+					<p class="explain">이상행위 발생 이력을 확인할 수 있습니다.</p>
+				</div>
+				<!-- //main-section-header -->
+
+				<!-- Search Form -->
+				<form>
+					<!-- SearchBox -->
+					<div class="form form-searchbox outlined">
+						<div class="field-inline">
+							<div class="form-title">
+								<strong class="form-label">사용자/부서</strong>
+							</div>
+							<div class="form-controls flex-wrap">
+								<button type="button" class="btn btn-control has-icn" data-bs-target="#userSearch" data-bs-toggle="modal">
+									<i class="icn icn-16-search-bk" aria-hidden="true"></i>통합검색
+								</button>
+								<div class="search-count">
+									<span class="text-primary">*</span>총 9명
+								</div>
+								<div class="form-listbox">
+									김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1), 김프로 (sds1)
+								</div>
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="chkStrange" class="form-label">이상행위</label>
+							</div>
+							<div class="form-controls row">
+								<div class="checkbox-inline">
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkStrange" value="" />
+										<span class="value"><span>전체</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkStrange" value="" />
+										<span class="value"><span>타인동석</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkStrange" value="" />
+										<span class="value"><span>카메라촬영</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkStrange" value="" />
+										<span class="value"><span>웹캠가림</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="rdoState" class="form-label">상태</label>
+							</div>
+							<div class="form-controls row">
+								<div class="checkbox-inline">
+									<label class="checkbox style1">
+										<input type="checkbox" name="rdoState" value="" />
+										<span class="value"><span>이상행위(기본)</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="rdoState" value="" />
+										<span class="value"><span>이상행위아님</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="" class="form-label">기간</label>
+							</div>
+							<div class="form-controls flex-wrap">
+								<!-- 달력선택 -->
+								<div class="input-group-date">
+									<div class="input-group">
+										<input type="text" id="inputStartDt" name="inputStartDt"
+											class="form-control datepicker" value="2023-09-28" data-format="yyyy-mm-dd"
+											autocomplete="off" />
+										<div class="input-group-over">
+											<i class="icn icn-16-calendar-bk"></i>
+										</div>
+									</div>
+									<div class="form-split">~</div>
+									<div class="input-group">
+										<input type="text" id="inputEndDt" name="inputEndDt"
+											class="form-control datepicker" value="2023-10-28" data-format="yyyy-mm-dd"
+											autocomplete="off" />
+										<div class="input-group-over">
+											<i class="icn icn-16-calendar-bk"></i>
+										</div>
+									</div>
+									<script>
+										$(function () {
+											$('#inputStartDt').datepicker();
+											$('#inputEndDt').datepicker();
+										})
+									</script>
+								</div>
+								<!-- //달력선택 -->
+								<!-- 기간선택 -->
+								<div class="btn-group-date">
+									<button type="button" class="btn btn-control btn-outline-primary">오늘</button>
+									<button type="button" class="btn btn-control">1주일</button>
+									<button type="button" class="btn btn-control">1개월</button>
+									<button type="button" class="btn btn-control">3개월</button>
+									<button type="button" class="btn btn-control">6개월</button>
+								</div>
+								<!-- //기간선택 -->
+							</div>
+						</div>
+						<div class="field-action">
+							<button type="button" class="btn btn-search has-icn">
+								<i class="icn icn-16-search-wh"></i>검색
+							</button>
+						</div>
+					</div>
+					<!-- //SearchBox -->
+				</form>
+				<!-- //Search Form -->
+
+				<!-- Datatable -->
+				<div id="tableContainer_wrapper" class="dataTables_wrapper no-footer">
+					<!-- Toolbar -->
+					<div class="toolbar">
+						<div class="left-area">
+							<button type="button" class="btn btn-control"  data-bs-toggle="modal" data-bs-target="#modal_setEventState1"><span>선택상태변경</span></button>
+							<select class="form-select w-auto">
+								<option value="" selected>20줄</option>
+								<option value="">40줄</option>
+								<option value="">60줄</option>
+								<option value="">80줄</option>
+								<option value="">100줄</option>
+							</select>
+							<p class="count">
+								검색결과 <em class="now">1,000</em>건
+							</p>
+						</div>
+						<div class="right-area">
+							<button type="button" class="btn btn-control excel has-icn" data-bs-target="#excelDown" data-bs-toggle="modal">
+								<i class="icn icn-16-excel"></i>엑셀다운로드
+							</button>
+						</div>
+					</div>
+					<!-- // Toolbar -->
+					<div class="dataTables_scroll">
+						<div class="dataTables_scrollHead"
+							style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+							<div class="dataTables_scrollHeadInner"
+								style="box-sizing: content-box; width: 1600px; min-width: 100%; padding-right: 0px;">
+								<table class="table table-bordered datatable  no-footer dataTable"
+									aria-describedby="tableContainer_info" role="grid"
+									style="margin-left: 0px; width: 1600px; min-width: 100%;">
+									<colgroup>
+										<col width="60px" />
+										<col width="60px" />
+										<col width="150px" />
+										<col width="100px" />
+										<col width="120px" />
+										<col width="100px" />
+										<col width="" />
+										<col width="120px" />
+										<col width="150px" />
+										<col width="120px" />
+										<col width="150px" />
+										<col width="120px" />
+									</colgroup>
+									<thead>
+										<tr role="row">
+											<th class="select-checkbox sorting_disabled" rowspan="1" colspan="1" aria-label=""
+											style="width: 40px; text-align: center; vertical-align: middle;">
+												<label class="checkbox style1">
+													<input type="checkbox" name="chkTblAll" value="" />
+													<span class="value" aria-label="전체선택"></span>
+												</label>
+											</th>
+											<th class="alCenter sorting_disabled" rowspan="1" colspan="1"
+												aria-label="번호">번호</th>
+											<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="일시: activate to sort column ascending" rowspan="1"
+												colspan="1">일시</th>
+											<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="이상행위: activate to sort column ascending" rowspan="1"
+												colspan="1">이상행위</th>
+											<th class="sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="ID: activate to sort column ascending" rowspan="1"
+												colspan="1">ID</th>
+											<th class="alCenter sorting_disabled" aria-label="이름" rowspan="1"
+												colspan="1">이름</th>
+											<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="소속: activate to sort column ascending" rowspan="1"
+												colspan="1">소속</th>
+											<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="이미지/이력보기: activate to sort column ascending" rowspan="1"
+												colspan="1">이미지/이력보기</th>
+											<th class="alLeft sorting_desc" tabindex="0" aria-controls="tableContainer"
+												aria-label="IP: activate to sort column ascending" rowspan="1"
+												colspan="1" aria-sort="descending">IP</th>
+											<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="상태: activate to sort column ascending" rowspan="1"
+												colspan="1">상태</th>
+											<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="상태변경일: activate to sort column ascending" rowspan="1"
+												colspan="1">상태변경일</th>
+											<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="변경사유: activate to sort column ascending" rowspan="1"
+												colspan="1">변경사유</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
+							<table class="table table-bordered datatable  no-footer dataTable" id="tableContainer"
+								aria-describedby="tableContainer_info" role="grid" style="width: 1600px; min-width: 100%;">
+								<colgroup>
+									<col width="60px" />
+									<col width="60px" />
+									<col width="150px" />
+									<col width="100px" />
+									<col width="120px" />
+									<col width="100px" />
+									<col width="" />
+									<col width="120px" />
+									<col width="150px" />
+									<col width="120px" />
+									<col width="150px" />
+									<col width="120px" />
+								</colgroup>
+								<thead>
+									<tr role="row" style="height: 0px;">
+										<th class="select-checkbox sorting_disabled" rowspan="1" colspan="1" aria-label=""
+										style="text-align: center; vertical-align: middle; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 40px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">
+												<label class="checkbox style1">
+													<input type="checkbox" name="chkTblAll" value="" />
+													<span class="value"></span>
+												</label>
+											</div>
+										</th>
+										<th class="alCenter sorting_disabled" rowspan="1" colspan="1" aria-label="번호"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">번호</div>
+										</th>
+										<th class="alCenter sorting" aria-controls="tableContainer"
+											aria-label="일시: activate to sort column ascending" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">일시</div>
+										</th>
+										<th class="alCenter sorting" aria-controls="tableContainer"
+											aria-label="이상행위: activate to sort column ascending" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">이상행위</div>
+										</th>
+										<th class="sorting" aria-controls="tableContainer"
+											aria-label="ID: activate to sort column ascending" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">ID</div>
+										</th>
+										<th class="alCenter sorting_disabled" aria-label="이름" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">이름</div>
+										</th>
+										<th class="alCenter sorting" aria-controls="tableContainer"
+											aria-label="소속: activate to sort column ascending" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">소속</div>
+										</th>
+										<th class="alCenter sorting" aria-controls="tableContainer"
+											aria-label="이미지/이력보기: activate to sort column ascending" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">이미지/이력보기</div>
+										</th>
+										<th class="alLeft sorting_asc" aria-controls="tableContainer"
+											aria-label="IP: activate to sort column descending" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+											aria-sort="ascending">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">IP</div>
+										</th>
+										<th class="alCenter sorting" aria-controls="tableContainer"
+											aria-label="상태: activate to sort column ascending" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">상태</div>
+										</th>
+										<th class="alCenter sorting" aria-controls="tableContainer"
+											aria-label="상태변경일: activate to sort column ascending" rowspan="1"
+											colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">상태변경일</div>
+										</th>
+										<th class="alCenter sorting" aria-controls="tableContainer"
+											aria-label="변경사유: activate to sort column ascending" rowspan="1"
+											colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">변경사유</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr role="row" class="odd selected">
+										<td class=" select-checkbox"></td>
+										<td class="alCenter">31</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">타인동석</td>
+										<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+										<td class="alCenter">안중근</td>
+										<td>
+											<div class="nowrap">IOT사업부/모바일실행그룹/모바일사업팀/Delivery혁신파트</div>
+										</td>
+										<td class="alCenter"><button type="button" class="btn btn-module">보기</button></td>
+										<td class="alCenter">12.345.67.123</td>
+										<td class="alCenter">N(이상행위 아님)</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">자리이동</td>
+									</tr>
+									<tr role="row" class="even selected">
+										<td class=" select-checkbox"></td>
+										<td class="alCenter">31</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">타인동석</td>
+										<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+										<td class="alCenter">안중근</td>
+										<td>
+											<div class="nowrap">IOT사업부/모바일실행그룹/모바일사업팀/Delivery혁신파트</div>
+										</td>
+										<td class="alCenter"><button type="button" class="btn btn-module">보기</button></td>
+										<td class="alCenter">12.345.67.123</td>
+										<td class="alCenter">N(이상행위 아님)</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">자리이동</td>
+									</tr>
+									<tr role="row" class="odd">
+										<td class=" select-checkbox"></td>
+										<td class="alCenter">31</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">타인동석</td>
+										<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+										<td class="alCenter">안중근</td>
+										<td>
+											<div class="nowrap">IOT사업부/모바일실행그룹/모바일사업팀/Delivery혁신파트</div>
+										</td>
+										<td class="alCenter"><button type="button" class="btn btn-module">보기</button></td>
+										<td class="alCenter">12.345.67.123</td>
+										<td class="alCenter">N(이상행위 아님)</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">자리이동</td>
+									</tr>
+									<tr role="row" class="even">
+										<td class=" select-checkbox"></td>
+										<td class="alCenter">31</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">타인동석</td>
+										<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+										<td class="alCenter">안중근</td>
+										<td>
+											<div class="nowrap">IOT사업부/모바일실행그룹/모바일사업팀/Delivery혁신파트</div>
+										</td>
+										<td class="alCenter"><button type="button" class="btn btn-module">보기</button></td>
+										<td class="alCenter">12.345.67.123</td>
+										<td class="alCenter">N(이상행위 아님)</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">자리이동</td>
+									</tr>
+									<tr role="row" class="odd">
+										<td class=" select-checkbox"></td>
+										<td class="alCenter">31</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">타인동석</td>
+										<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+										<td class="alCenter">안중근</td>
+										<td>
+											<div class="nowrap">IOT사업부/모바일실행그룹/모바일사업팀/Delivery혁신파트</div>
+										</td>
+										<td class="alCenter"><button type="button" class="btn btn-module">보기</button></td>
+										<td class="alCenter">12.345.67.123</td>
+										<td class="alCenter">N(이상행위 아님)</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">자리이동</td>
+									</tr>
+									<tr role="row" class="even">
+										<td class=" select-checkbox"></td>
+										<td class="alCenter">31</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">타인동석</td>
+										<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+										<td class="alCenter">안중근</td>
+										<td>
+											<div class="nowrap">IOT사업부/모바일실행그룹/모바일사업팀/Delivery혁신파트</div>
+										</td>
+										<td class="alCenter"><button type="button" class="btn btn-module">보기</button></td>
+										<td class="alCenter">12.345.67.123</td>
+										<td class="alCenter">N(이상행위 아님)</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">자리이동</td>
+									</tr>
+									<tr role="row" class="odd">
+										<td class=" select-checkbox"></td>
+										<td class="alCenter">31</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">타인동석</td>
+										<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+										<td class="alCenter">안중근</td>
+										<td>
+											<div class="nowrap">IOT사업부/모바일실행그룹/모바일사업팀/Delivery혁신파트</div>
+										</td>
+										<td class="alCenter"><button type="button" class="btn btn-module">보기</button></td>
+										<td class="alCenter">12.345.67.123</td>
+										<td class="alCenter">N(이상행위 아님)</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">자리이동</td>
+									</tr>
+									<tr role="row" class="even">
+										<td class=" select-checkbox"></td>
+										<td class="alCenter">31</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">타인동석</td>
+										<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+										<td class="alCenter">안중근</td>
+										<td>
+											<div class="nowrap">IOT사업부/모바일실행그룹/모바일사업팀/Delivery혁신파트</div>
+										</td>
+										<td class="alCenter"><button type="button" class="btn btn-module">보기</button></td>
+										<td class="alCenter">12.345.67.123</td>
+										<td class="alCenter">N(이상행위 아님)</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">자리이동</td>
+									</tr>
+									<tr role="row" class="odd">
+										<td class=" select-checkbox"></td>
+										<td class="alCenter">31</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">타인동석</td>
+										<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+										<td class="alCenter">안중근</td>
+										<td>
+											<div class="nowrap">IOT사업부/모바일실행그룹/모바일사업팀/Delivery혁신파트</div>
+										</td>
+										<td class="alCenter"><button type="button" class="btn btn-module">보기</button></td>
+										<td class="alCenter">12.345.67.123</td>
+										<td class="alCenter">N(이상행위 아님)</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">자리이동</td>
+									</tr>
+									<tr role="row" class="even">
+										<td class=" select-checkbox"></td>
+										<td class="alCenter">31</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">타인동석</td>
+										<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+										<td class="alCenter">안중근</td>
+										<td>
+											<div class="nowrap">IOT사업부/모바일실행그룹/모바일사업팀/Delivery혁신파트</div>
+										</td>
+										<td class="alCenter"><button type="button" class="btn btn-module">보기</button></td>
+										<td class="alCenter">12.345.67.123</td>
+										<td class="alCenter">N(이상행위 아님)</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">자리이동</td>
+									</tr>
+									<tr role="row" class="odd">
+										<td class=" select-checkbox"></td>
+										<td class="alCenter">31</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">타인동석</td>
+										<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+										<td class="alCenter">안중근</td>
+										<td>
+											<div class="nowrap">IOT사업부/모바일실행그룹/모바일사업팀/Delivery혁신파트</div>
+										</td>
+										<td class="alCenter"><button type="button" class="btn btn-module">보기</button></td>
+										<td class="alCenter">12.345.67.123</td>
+										<td class="alCenter">N(이상행위 아님)</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">자리이동</td>
+									</tr>
+									<tr role="row" class="even">
+										<td class=" select-checkbox"></td>
+										<td class="alCenter">31</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">타인동석</td>
+										<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+										<td class="alCenter">안중근</td>
+										<td>
+											<div class="nowrap">IOT사업부/모바일실행그룹/모바일사업팀/Delivery혁신파트</div>
+										</td>
+										<td class="alCenter"><button type="button" class="btn btn-module">보기</button></td>
+										<td class="alCenter">12.345.67.123</td>
+										<td class="alCenter">N(이상행위 아님)</td>
+										<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+										<td class="alCenter">자리이동</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="bottom">
+						<div id="tableContainer_processing" class="dataTables_processing" style="display: none;">
+							Processing...</div>
+						<div class="dataTables_paginate paging_simple_numbers" id="tableContainer_paginate">
+							<a class="paginate_button previous disabled" aria-controls="tableContainer" data-dt-idx="0"
+								tabindex="0" id="tableContainer_previous">Previous</a><span><a
+									class="paginate_button current" aria-controls="tableContainer" data-dt-idx="1"
+									tabindex="0">1</a><a class="paginate_button " aria-controls="tableContainer"
+									data-dt-idx="2" tabindex="0">2</a></span><a class="paginate_button next"
+								aria-controls="tableContainer" data-dt-idx="3" tabindex="0"
+								id="tableContainer_next">Next</a>
+						</div>
+					</div>
+				</div>
+				<!-- //Datatable -->
+			</div>
+			<!-- //main-section -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+</body>
+
+</html>

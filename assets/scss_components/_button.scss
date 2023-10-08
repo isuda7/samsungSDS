@@ -36,17 +36,18 @@
 
 // 기간선택
 .btn-group-date {display: flex; align-items: center; margin-right: 10px;}
+.btn-group-date .btn-control {min-width: 60px;}
 .input-group-date + .btn-group-date {margin-left: 10px;}
 
 // 폼버튼
-.btn-control {@include formControls; min-width: 60px;}
+.btn-control {@include formControls;}
 .btn-control:hover, .btn-control:active, .btn-control:focus {@include formControls;}
 .btn-control + .btn-control {margin-left: 5px;}
 .btn-control + .btn-control.btn-primary {margin-left: 10px;}
 .btn-control.excel {color:#107c41;}
 
 // 모듈버튼
-.btn-module {box-sizing: content-box; min-width: 46px; padding:4px 10px; border-radius: 2px; background-color: $ColorPrimaryLight; color: $ColorPrimaryDark; @include FontBody10;}
+.btn-module {box-sizing: content-box; padding:4px 10px; border-radius: 2px; border:1px solid #e4e5ea; background-color: #fff; color: $ColorPrimaryDark; @include FontBody10;}
 .btn-module:hover, .btn-module:active, .btn-module:focus {background-color: $ColorPrimaryLight; color: $ColorPrimaryDark;}
 .btn-module.negative {background-color: #f03b2f; color: #fff;}
 .btn-module.negative:hover, .btn-module.negative:active, .btn-module.negative:focus {background-color: #f03b2f !important; color: #fff !important; border-color: transparent !important;}
