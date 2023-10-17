@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>대시보드 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+	<!-- Google Chart -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<script type="text/javascript">
+		// Load the Visualization API and the corechart package.
+		google.charts.load('current', { 'packages': ['corechart'] });
+		// Set a callback to run when the Google Visualization API is loaded.
+		google.charts.setOnLoadCallback(drawChart1);
+		google.charts.setOnLoadCallback(drawChart2);
+		google.charts.setOnLoadCallback(drawChart3);
+		google.charts.setOnLoadCallback(drawChart4);
+		// Callback that creates and populates a data table,
+		// instantiates the pie chart, passes in the data and
+
+		// Chart1 draws it.
+		function drawChart1() {
+			// Create the data table.
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Topping');
+			data.addColumn('number', 'Slices');
+			data.addRows([
+				['현재 접속자 수', 7000],
+				['미 접속자 수', 3895],
+			]);
+
+			// Set chart options
+			var options = {
+				'width': 260,
+				'height': 260,
+				fontSize: 12,
+				colors: ['#3f89f7', '#d1d1d1'],
+				legend: 'none'
+			};
+
+			// Instantiate and draw our chart, passing in some options.
+			var chart = new google.visualization.PieChart(document.getElementById('chartDiv1'));
+			chart.draw(data, options);
+		}
+
+		// Chart2 draws it.
+		function drawChart2() {
+			// Create the data table.
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Topping');
+			data.addColumn('number', 'Slices');
+			data.addRows([
+				['인증성공', 7000],
+				['인증실패', 3895],
+			]);
+
+			// Set chart options
+			var options = {
+				'width': 260,
+				'height': 260,
+				fontSize: 12,
+				colors: ['#4c9b4d', '#d1d1d1'],
+				legend: 'none'
+			};
+
+			// Instantiate and draw our chart, passing in some options.
+			var chart = new google.visualization.PieChart(document.getElementById('chartDiv2'));
+			chart.draw(data, options);
+		}
+
+		// Chart2 draws it.
+		function drawChart3() {
+			// Create the data table.
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Topping');
+			data.addColumn('number', 'Slices');
+			data.addRows([
+				['타인동석', 1152],
+				['웹캠가림', 120],
+				['카메라촬영', 347],
+			]);
+
+			// Set chart options
+			var options = {
+				'width': 260,
+				'height': 260,
+				fontSize: 12,
+				colors: ['#e7974e', '#4c9b4d', '#f4c54c'],
+				legend: 'none'
+			};
+
+			// Instantiate and draw our chart, passing in some options.
+			var chart = new google.visualization.PieChart(document.getElementById('chartDiv3'));
+			chart.draw(data, options);
+		}
+
+		// Chart2 draws it.
+		function drawChart4() {
+			// Create the data table.
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Topping');
+			data.addColumn('number', 'Slices');
+			data.addRows([
+				['추가 웹캠', 32],
+				['추가 모니터', 17],
+			]);
+
+			// Set chart options
+			var options = {
+				'width': 260,
+				'height': 260,
+				fontSize: 12,
+				colors: ['#4c9b4d', '#f4c54c'],
+				legend: 'none'
+			};
+
+			// Instantiate and draw our chart, passing in some options.
+			var chart = new google.visualization.PieChart(document.getElementById('chartDiv4'));
+			chart.draw(data, options);
+		}
+	</script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(0, 0); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 대시보드</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-section -->
+			<div class="main-section">
+				<!-- dashboard-section -->
+				<div class="dashboard-section">
+					<!-- main-section-header -->
+					<div class="main-section-header">
+						<h1 class="title">대시보드</h1>
+					</div>
+					<!-- //main-section-header -->
+					<!-- dashboard-status -->
+					<ul class="dashboard-status">
+						<li class="item">
+							<strong class="tit">등록사용자수</strong>
+							<em class="count">10,895</em><span class="txt">명</span>
+						</li>
+						<li class="item">
+							<strong class="tit">현재접속자수</strong>
+							<em class="count">3,895</em><span class="txt">명</span>
+						</li>
+						<li class="item">
+							<strong class="tit">카메라오류</strong>
+							<em class="count">95</em><span class="txt">명</span>
+						</li>
+						<li class="item">
+							<strong class="tit">보안위험군</strong>
+							<em class="count">895</em><span class="txt">명</span>
+						</li>
+						<li class="item">
+							<strong class="tit">예외정책적용자</strong>
+							<em class="count">5</em><span class="txt">명</span>
+						</li>
+					</ul>
+					<!-- //dashboard-status -->
+					<!-- dashboard-chart -->
+					<ul class="dashboard-chart">
+						<li class="item">
+							<strong class="tit">현재 접속자 수</strong>
+							<ul class="chart-regend">
+								<li class="item"><span style="background-color: #3f89f7;"></span>현재 접속자 수</li>
+								<li class="item"><span style="background-color: #d1d1d1"></span>미 접속자 수</li>
+							</ul>
+							<div class="chart-area">
+								<div id="chartDiv1" class="chart-circle"></div>
+							</div>
+						</li>
+						<li class="item">
+							<strong class="tit">금일 인증 처리현황</strong>
+							<ul class="chart-regend">
+								<li class="item"><span style="background-color: #4c9b4d"></span>인증성공</li>
+								<li class="item"><span style="background-color: #d1d1d1"></span>인증실패</li>
+							</ul>
+							<div class="chart-area">
+								<div id="chartDiv2" class="chart-circle"></div>
+							</div>
+						</li>
+						<li class="item">
+							<strong class="tit">이상행위 발생현황</strong>
+							<ul class="chart-regend">
+								<li class="item"><span style="background-color: #e7974e"></span>타인동석</li>
+								<li class="item"><span style="background-color: #4c9b4d"></span>웹캠가림</li>
+								<li class="item"><span style="background-color: #f4c54c"></span>카메라촬영</li>
+							</ul>
+							<div class="chart-area">
+								<div id="chartDiv3" class="chart-circle"></div>
+							</div>
+						</li>
+						<li class="item">
+							<strong class="tit">추가 장비 발생현황</strong>
+							<ul class="chart-regend">
+								<li class="item"><span style="background-color: #4c9b4d"></span>추가 웹캠</li>
+								<li class="item"><span style="background-color: #f4c54c"></span>추가모니터</li>
+							</ul>
+							<div class="chart-area">
+								<div id="chartDiv4" class="chart-circle"></div>
+							</div>
+						</li>
+					</ul>
+					<!-- //dashboard-chart -->
+				</div>
+				<!-- //dashboard-section -->
+
+				<!-- dashboard-section -->
+				<div class="dashboard-section">
+					<!-- main-section-header -->
+					<div class="main-section-header">
+						<h1 class="title">카메라 오류 사용자 목록</h1>
+					</div>
+					<!-- //main-section-header -->
+					<!-- Datatable -->
+					<div id="tableContainer_wrapper" class="dataTables_wrapper no-footer">
+						<div class="dataTables_scroll">
+							<div class="dataTables_scrollHead"
+								style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+								<div class="dataTables_scrollHeadInner"
+									style="box-sizing: content-box; width: 1000px; min-width: 100%; padding-right: 0px;">
+									<table class="table table-bordered datatable  no-footer dataTable"
+										aria-describedby="tableContainer_info" role="grid"
+										style="margin-left: 0px; width: 1000px; min-width: 100%;">
+										<colgroup>
+											<col width="100px" />
+											<col width="130px" />
+											<col width="130px" />
+											<col width="130px" />
+											<col width="150px" />
+											<col width="150px" />
+											<col width="130px" />
+											<col width="" />
+										</colgroup>
+										<thead>
+											<tr role="row">
+												<th class="alCenter sorting_disabled" rowspan="1" colspan="1"
+												aria-label="번호">번호</th>
+												<th class="sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="ID: activate to sort column ascending" rowspan="1"
+												colspan="1">ID</th>
+												<th class="alCenter sorting_disabled" aria-label="이름" rowspan="1"
+												colspan="1">이름</th>
+												<th class="alCenter sorting_disabled" aria-label="장애유형" rowspan="1"
+												colspan="1">장애유형</th>
+												<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="발생시간: activate to sort column ascending" rowspan="1"
+												colspan="1">발생시간</th>
+												<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="접속IP: activate to sort column ascending" rowspan="1"
+												colspan="1">접속IP</th>
+												<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="비고: activate to sort column ascending" rowspan="1"
+												colspan="1">비고</th>
+												<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="" rowspan="1"
+												colspan="1"></th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+							<div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
+								<table class="table table-bordered datatable  no-footer dataTable" id="tableContainer"
+									aria-describedby="tableContainer_info" role="grid" style="width: 1000px; min-width: 100%;">
+									<colgroup>
+										<col width="100px" />
+										<col width="130px" />
+										<col width="130px" />
+										<col width="130px" />
+										<col width="150px" />
+										<col width="150px" />
+										<col width="130px" />
+										<col width="" />
+								</colgroup>
+									<thead>
+										<tr role="row" style="height: 0px;">
+											<th class="alCenter sorting_disabled" rowspan="1" colspan="1" aria-label="번호"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">번호</div>
+											</th>
+											<th class="sorting" aria-controls="tableContainer"
+												aria-label="ID: activate to sort column ascending" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">ID</div>
+											</th>
+											<th class="alCenter sorting_disabled" aria-label="이름" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">이름</div>
+											</th>
+											<th class="alCenter sorting" aria-controls="tableContainer"
+												aria-label="장애유형: activate to sort column ascending" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">장애유형</div>
+											</th>
+											<th class="alCenter sorting" aria-controls="tableContainer"
+												aria-label="발생시간: activate to sort column ascending" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">발생시간</div>
+											</th>
+											<th class="alCenter sorting" aria-controls="tableContainer"
+												aria-label="접속IP: activate to sort column ascending" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">접속IP</div>
+											</th>
+											<th class="alLeft sorting_asc" aria-controls="tableContainer"
+												aria-label="비고: activate to sort column descending" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+												aria-sort="ascending">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">비고</div>
+											</th>
+											<th class="alLeft sorting_asc" aria-controls="tableContainer"
+												aria-label="" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+												aria-sort="ascending">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;"></div>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr role="row" class="odd">
+											<td class="alCenter">31</td>
+											<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+											<td class="alCenter">안중근</td>
+											<td class="alCenter">카메라 미연결</td>
+											<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+											<td class="alCenter">123.123.123.123</td>
+											<td class="alCenter"><button type="button" class="btn btn-module">예외 허용</button></td>
+											<td class="alCenter"></td>
+										</tr>
+										<tr role="row" class="even">
+											<td class="alCenter">31</td>
+											<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+											<td class="alCenter">안중근</td>
+											<td class="alCenter">카메라 미연결</td>
+											<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+											<td class="alCenter">123.123.123.123</td>
+											<td class="alCenter"><button type="button" class="btn btn-module">예외 허용</button></td>
+											<td class="alCenter"></td>
+										</tr>
+										<tr role="row" class="odd">
+											<td class="alCenter">31</td>
+											<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+											<td class="alCenter">안중근</td>
+											<td class="alCenter">카메라 미연결</td>
+											<td class="alCenter"><div class="nowrap">2023-10-02 11:27:00</div></td>
+											<td class="alCenter">123.123.123.123</td>
+											<td class="alCenter"><button type="button" class="btn btn-module">예외 허용</button></td>
+											<td class="alCenter"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- //Datatable -->
+				</div>
+				<!-- //dashboard-section -->
+
+				<!-- dashboard-section -->
+				<div class="dashboard-section">
+					<!-- main-section-header -->
+					<div class="main-section-header">
+						<h1 class="title">얼굴 미등록 사용자 목록</h1>
+					</div>
+					<!-- //main-section-header -->
+					<!-- Datatable -->
+					<div id="tableContainer_wrapper" class="dataTables_wrapper no-footer">
+						<div class="dataTables_scroll">
+							<div class="dataTables_scrollHead"
+								style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+								<div class="dataTables_scrollHeadInner"
+									style="box-sizing: content-box; width: 1300px; min-width: 100%; padding-right: 0px;">
+									<table class="table table-bordered datatable  no-footer dataTable"
+										aria-describedby="tableContainer_info" role="grid"
+										style="margin-left: 0px; width: 1300px; min-width: 100%;">
+										<colgroup>
+											<col width="50px" />
+											<col width="130px" />
+											<col width="80px" />
+											<col width="80px" />
+											<col width="150px" />
+											<col width="150px" />
+											<col width="300px" />
+											<col width="" />
+										</colgroup>
+										<thead>
+											<tr role="row">
+												<th class="alCenter sorting_disabled" rowspan="1" colspan="1"
+												aria-label="번호">번호</th>
+												<th class="sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="ID: activate to sort column ascending" rowspan="1"
+												colspan="1">ID</th>
+												<th class="alCenter sorting_disabled" aria-label="이름" rowspan="1"
+												colspan="1">이름</th>
+												<th class="alCenter sorting_disabled" aria-label="직함" rowspan="1"
+												colspan="1">직함</th>
+												<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="이메일: activate to sort column ascending" rowspan="1"
+												colspan="1">이메일</th>
+												<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="전화번호: activate to sort column ascending" rowspan="1"
+												colspan="1">전화번호</th>
+												<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="소속: activate to sort column ascending" rowspan="1"
+												colspan="1">소속</th>
+												<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="파견부서: activate to sort column ascending" rowspan="1"
+												colspan="1">파견부서</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+							<div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
+								<table class="table table-bordered datatable  no-footer dataTable" id="tableContainer"
+									aria-describedby="tableContainer_info" role="grid" style="width: 1300px; min-width: 100%;">
+									<colgroup>
+										<col width="50px" />
+										<col width="130px" />
+										<col width="80px" />
+										<col width="80px" />
+										<col width="150px" />
+										<col width="150px" />
+										<col width="300px" />
+										<col width="" />
+									</colgroup>
+									<thead>
+										<tr role="row" style="height: 0px;">
+											<th class="alCenter sorting_disabled" rowspan="1" colspan="1" aria-label="번호"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">번호</div>
+											</th>
+											<th class="sorting" aria-controls="tableContainer"
+												aria-label="ID: activate to sort column ascending" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">ID</div>
+											</th>
+											<th class="alCenter sorting_disabled" aria-label="이름" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">이름</div>
+											</th>
+											<th class="alCenter sorting" aria-controls="tableContainer"
+												aria-label="장애유형: activate to sort column ascending" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">직함</div>
+											</th>
+											<th class="alCenter sorting" aria-controls="tableContainer"
+												aria-label="발생시간: activate to sort column ascending" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">이메일</div>
+											</th>
+											<th class="alCenter sorting" aria-controls="tableContainer"
+												aria-label="접속IP: activate to sort column ascending" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">전화번호</div>
+											</th>
+											<th class="alLeft sorting_asc" aria-controls="tableContainer"
+												aria-label="비고: activate to sort column descending" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+												aria-sort="ascending">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">소속</div>
+											</th>
+											<th class="alLeft sorting_asc" aria-controls="tableContainer"
+												aria-label="파견부서: activate to sort column descending" rowspan="1" colspan="1"
+												style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"
+												aria-sort="ascending">
+												<div class="dataTables_sizing" style="height:0;overflow:hidden;">파견부서</div>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr role="row" class="odd">
+											<td class="alCenter">31</td>
+											<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+											<td class="alCenter">안중근</td>
+											<td class="alCenter">상무</td>
+											<td class="alCenter">email@samsung.com</td>
+											<td class="alCenter">010-1234-5678</td>
+											<td class="alCenter">
+												<div class="nowrap">IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트</div>
+											</td>
+											<td class="alCenter">
+												<div class="nowrap">IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트</div>
+											</td>
+										</tr>
+										<tr role="row" class="even">
+											<td class="alCenter">31</td>
+											<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+											<td class="alCenter">안중근</td>
+											<td class="alCenter">상무</td>
+											<td class="alCenter">email@samsung.com</td>
+											<td class="alCenter">010-1234-5678</td>
+											<td class="alCenter">
+												<div class="nowrap">IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트</div>
+											</td>
+											<td class="alCenter">
+												<div class="nowrap">IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트</div>
+											</td>
+										</tr>
+										<tr role="row" class="odd">
+											<td class="alCenter">31</td>
+											<td class="alCenter"><a href="/ko/user/sds1">sds1</a></td>
+											<td class="alCenter">안중근</td>
+											<td class="alCenter">상무</td>
+											<td class="alCenter">email@samsung.com</td>
+											<td class="alCenter">010-1234-5678</td>
+											<td class="alCenter">
+												<div class="nowrap">IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트</div>
+											</td>
+											<td class="alCenter">
+												<div class="nowrap">IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- //Datatable -->
+				</div>
+				<!-- //dashboard-section -->
+			</div>
+			<!-- //main-section -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+</body>
+
+</html>

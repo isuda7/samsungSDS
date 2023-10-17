@@ -24,6 +24,16 @@ textarea.form-control {@include formControls; height: auto; padding-top:10px; pa
 .input-group-over {display: flex; align-items: center; justify-content: center; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index:10;}
 .input-group-over .btn:focus, .input-group-over .btn:active, .input-group-over .btn:hover {box-shadow: none; border-color: transparent !important;}
 
+// range
+.form-range {
+	width:100%;-webkit-appearance: none;background: transparent;
+	&:focus {outline: none;}
+	&::-ms-track {width: 100%;cursor: pointer;background: transparent;border-color: transparent;color: transparent;}
+	&::-webkit-slider-thumb {-webkit-appearance: none;background: #ffffff;cursor: pointer;border: 1px solid $ColorPrimary; height: 16px; width: 16px; margin-top:-6px;border-radius: 10px;
+	}
+	&::-webkit-slider-runnable-track { width: 100%;height:4px;cursor: pointer; background: #e0e2e7; border-radius:4px;}
+	&-value {display: flex; justify-content: space-between; @include FontBody10; color: #4a4c5d;}
+}
 // text
 .form-star {color: $ColorNegative;}
 .form-label {margin: 0;}
