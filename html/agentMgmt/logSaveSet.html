@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>로그 저장 설정 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(5, 2); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 에이전트 설정 / 로그 저장 설정</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-section -->
+			<div class="main-section">
+				<!-- main-section-header -->
+				<div class="main-section-header lined">
+					<h1 class="title">로그 저장 설정</h1>
+					<p class="explain">이벤트 별 로그 저장 옵션을 설정할 수 있습니다.</p>
+				</div>
+				<!-- //main-section-header -->
+
+				<!-- 로그 저장 옵션 -->
+				<div class="form-logset-sec">
+					<div class="main-sub-header lined">
+						<h2 class="title">로그 저장 옵션</h2>
+						<button type="button" class="btn btn-control has-icn">
+							<i class="icn icn-16-refresh-bk"></i>설정 초기화
+						</button>
+					</div>
+					<!-- 그룹인원관리 -->
+					<div class="form">
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="chkSet1" class="form-label">얼굴등록</label>
+							</div>
+							<div class="form-controls">
+								<!-- 라디오간격 기본값: 20px, gap-xl: 40px -->
+								<div class="checkbox-inline gap-xl">
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet1" value="" />
+										<span class="value"><span>로컬</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet1" value="" />
+										<span class="value"><span>서버</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet1" value="" />
+										<span class="value"><span>이미지 생성</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="chkSet2" class="form-label">얼굴인증성공</label>
+							</div>
+							<div class="form-controls">
+								<!-- 라디오간격 기본값: 20px, gap-xl: 40px -->
+								<div class="checkbox-inline gap-xl">
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet2" value="" />
+										<span class="value"><span>로컬</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet2" value="" />
+										<span class="value"><span>서버</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet2" value="" />
+										<span class="value"><span>이미지 생성</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="chkSet3" class="form-label">얼굴인증실패</label>
+							</div>
+							<div class="form-controls">
+								<!-- 라디오간격 기본값: 20px, gap-xl: 40px -->
+								<div class="checkbox-inline gap-xl">
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet3" value="" />
+										<span class="value"><span>로컬</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet3" value="" />
+										<span class="value"><span>서버</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet3" value="" />
+										<span class="value"><span>이미지 생성</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="chkSet4" class="form-label">타인동석</label>
+							</div>
+							<div class="form-controls">
+								<!-- 라디오간격 기본값: 20px, gap-xl: 40px -->
+								<div class="checkbox-inline gap-xl">
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet4" value="" />
+										<span class="value"><span>로컬</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet4" value="" />
+										<span class="value"><span>서버</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet4" value="" />
+										<span class="value"><span>이미지 생성</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="chkSet5" class="form-label">카메라촬영</label>
+							</div>
+							<div class="form-controls">
+								<!-- 라디오간격 기본값: 20px, gap-xl: 40px -->
+								<div class="checkbox-inline gap-xl">
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet5" value="" />
+										<span class="value"><span>로컬</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet5" value="" />
+										<span class="value"><span>서버</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet5" value="" />
+										<span class="value"><span>이미지 생성</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="chkSet6" class="form-label">웹캠가림</label>
+							</div>
+							<div class="form-controls">
+								<!-- 라디오간격 기본값: 20px, gap-xl: 40px -->
+								<div class="checkbox-inline gap-xl">
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet6" value="" />
+										<span class="value"><span>로컬</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet6" value="" />
+										<span class="value"><span>서버</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet6" value="" />
+										<span class="value"><span>이미지 생성</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="chkSet7" class="form-label">추가모니터</label>
+							</div>
+							<div class="form-controls">
+								<!-- 라디오간격 기본값: 20px, gap-xl: 40px -->
+								<div class="checkbox-inline gap-xl">
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet7" value="" />
+										<span class="value"><span>로컬</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet7" value="" />
+										<span class="value"><span>서버</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet7" value="" />
+										<span class="value"><span>이미지 생성</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="chkSet8" class="form-label">추가웹캠</label>
+							</div>
+							<div class="form-controls">
+								<!-- 라디오간격 기본값: 20px, gap-xl: 40px -->
+								<div class="checkbox-inline gap-xl">
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet8" value="" />
+										<span class="value"><span>로컬</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet8" value="" />
+										<span class="value"><span>서버</span></span>
+									</label>
+									<label class="checkbox style1">
+										<input type="checkbox" name="chkSet8" value="" />
+										<span class="value"><span>이미지 생성</span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //그룹인원관리 -->
+				</div>
+				<!-- //로그 저장 옵션 -->
+
+				<!-- 로컬 설정 -->
+				<div class="form-logset-sec">
+					<div class="main-sub-header lined">
+						<h2 class="title">로컬 설정</h2>
+					</div>
+					<!-- 그룹인원관리 -->
+					<div class="form">
+						<div class="field-inline">
+							<div class="form-title w-180">
+								<label for="frmSelect1" class="form-label">로컬 로그 저장 최대 기간</label>
+							</div>
+							<div class="form-controls">
+								<select id="frmSelect1" class="form-select w-auto">
+									<option value="">1일</option>
+									<option value="">5일</option>
+									<option value="">10일</option>
+									<option value="">15일</option>
+									<option value="">20일</option>
+									<option value="">25일</option>
+									<option value="" selected>30일</option>
+								</select>
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title w-180">
+								<label for="frmSelect2" class="form-label">로그 저장 최대 크기</label>
+							</div>
+							<div class="form-controls">
+								<select id="frmSelect2" class="form-select w-auto">
+									<option value="">50MB</option>
+									<option value="">100MB</option>
+									<option value="">200MB</option>
+									<option value="">300MB</option>
+									<option value="">400MB</option>
+									<option value="">500MB</option>
+									<option value="">750MB</option>
+									<option value="" selected>1GB</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<!-- //그룹인원관리 -->
+
+					<div class="form-action">
+						<div class="right-area">
+							<button type="button" class="btn btn-basic btn-outline-primary">취소</button>
+							<button type="button" class="btn btn-basic btn-primary">적용</button>
+						</div>
+					</div>
+				</div>
+				<!-- //로컬 설정 -->
+			</div>
+			<!-- //main-section -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+</body>
+
+</html>

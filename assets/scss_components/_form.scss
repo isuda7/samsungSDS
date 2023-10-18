@@ -37,6 +37,7 @@ textarea.form-control {@include formControls; height: auto; padding-top:10px; pa
 // text
 .form-star {color: $ColorNegative;}
 .form-label {margin: 0;}
+.form-label-sub {margin-right: 20px;}
 .form-split {display: flex; justify-content: center; align-items: center; padding: 0 7px; color: #000;}
 .form-byte {display: block; margin-left: 10px !important;}
 .form-byte .now {color: $ColorPrimary;}

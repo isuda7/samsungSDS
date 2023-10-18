@@ -171,14 +171,19 @@
 .form-rangebox .form-label {margin-right: 10px;}
 .form-rangebox .form-controls {margin-top:20px;}
 .form-rangebox + .form-rangebox {margin-top:20px;}
-.form-rangebox + .form-action {margin-top: 60px;}
+
+// 안내문구 설정
+.form-guidemgmt {padding: 10px 0;}
+.form-guidemgmt .form-title {width: 180px;}
+.form-guidemgmt .input-group + .input-group {margin-top:10px;}
+
+// 로그저장 설정
+.form-logset-sec {width: 820px;}
+.form-logset-sec + .form-logset-sec {margin-top:40px;}
 
 //-------------------------------------------------------------------
 //	@정책관리
 //-------------------------------------------------------------------
-// 기본정책
-.form-seterbox-wrap .form-action {margin-top: 60px;}
-
 // 예외정책 템플릿관리
 .policy-temp-group {display: flex; margin: 0 -10px; margin-top: 10px;}
 .policy-temp-box {display: flex; flex-direction: column; width: calc(25% - 20px); margin: 0 10px; padding: 16px 30px 20px 30px; border:1px solid #e4e5ea; background-color: #fbfcfd; border-radius: 6px;}
