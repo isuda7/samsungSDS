@@ -48,12 +48,12 @@
 		<div class="main-content">
 			<!-- breadcrumb -->
 			<div class="breadcrumb-area">
-				<div class="breadcrumb">홈 / 그룹관리 / 사용자정의그룹</div>
+				<div class="breadcrumb">홈 / 사용자관리 / 사용자목록 / 사용자상세정보</div>
 			</div>
 			<!-- //breadcrumb -->
 			<!-- main-section -->
 			<div class="main-section">
-				<button type="button" class="btn linked text-primary" data-bs-target="#groupHistory" data-bs-toggle="modal">더보기</button>
+				<button type="button" class="btn btn-control btn-outline-primary" data-bs-target="#vdiDetail" data-bs-toggle="modal">이력보기</button>
 			</div>
 			<!-- //main-section -->
 		</div>
@@ -62,45 +62,35 @@
 	<!-- //page-container -->
 
 	<!-- Modal Basic -->
-	<div class="modal fade" id="groupHistory" tabindex="-1" aria-labelledby="groupHistoryLabel" aria-hidden="true">
-		<!-- 2023-10-19 modal-xs 으로 변경 -->
+	<div class="modal fade" id="vdiDetail" tabindex="-1" aria-labelledby="vdiDetailLabel" aria-hidden="true">
 		<div class="modal-dialog modal-basic modal-xs">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title" id="groupHistoryLabel">그룹 정보 변경 이력</h1>
+					<h1 class="modal-title" id="vdiDetailLabel">VDI 정보</h1>
 					<button type="button" class="btn btn-close" data-bs-dismiss="modal">
 						<i class="icn icn-24-close-gr"><span class="blind">Close</span></i>
 					</button>
 				</div>
 				<div class="modal-body">
-					<div class="history-scroll-area">
-						<div class="list-group history-list-group">
-							<div class="item">
-								<span class="text">2023-08-02</span>
-								<button type="button" class="btn texted text-primary">admin1</button>
-								<span class="text">그룹 이름 변경 (그룹명: C레벨)</span>
-							</div>
-							<div class="item">
-								<span class="text">2023-08-02</span>
-								<button type="button" class="btn texted text-primary">admin1</button>
-								<span class="text">그룹인원 삭제 (1명: 박종훈)</span>
-							</div>
-							<div class="item">
-								<span class="text">2023-08-02</span>
-								<button type="button" class="btn texted text-primary">admin1</button>
-								<span class="text">그룹인원 삭제 (1명: 박종훈)</span>
-							</div>
-							<div class="item">
-								<span class="text">2023-08-02</span>
-								<button type="button" class="btn texted text-primary">admin1</button>
-								<span class="text">그룹인원 삭제 (1명: 박종훈)</span>
-							</div>
-							<div class="item">
-								<span class="text">2023-08-02</span>
-								<button type="button" class="btn texted text-primary">admin1</button>
-								<span class="text">그룹인원 삭제 (1명: 박종훈)</span>
-							</div>
-						</div>
+					<div class="vdi-detail-wrap">
+						<ul class="vdi-detail">
+							<li>
+								<strong class="tit">VDI 이름</strong>
+								<span class="txt">VDI 10</span>
+							</li>
+							<li>
+								<strong class="tit">에이전트 설치여부</strong>
+								<span class="txt">설치</span>
+							</li>
+							<li>
+								<strong class="tit">에이전트 설치일</strong>
+								<span class="txt">2023-09-01</span>
+							</li>
+							<li>
+								<strong class="tit">에이전트상태</strong>
+								<span class="txt">활성</span>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -117,7 +107,7 @@
 	<!-- //Modal Preview -->
 
 	<script>
-		var modal = new bootstrap.Modal(document.getElementById('groupHistory'));
+		var modal = new bootstrap.Modal(document.getElementById('vdiDetail'));
 		modal.show();
 	</script>
 </body>

@@ -73,6 +73,7 @@ input::-webkit-calendar-picker-indicator {-webkit-appearance:none;}
 .fluid {width:100% !important; flex:1 1 auto !important;}
 .nowrap {@include Ellipsis1;}
 .row.centered {justify-content: center;}
+.flex-between {display: flex; justify-content: space-between;}
 
 // align
 .alCenter {text-align: center;}

@@ -38,8 +38,8 @@
 	.modal-header {padding:0; border-bottom: 0;}
 	.modal-header .modal-title {@include FontTitle16;}
 	.modal-header .btn-close {position: absolute; right: 30px; top:20px; margin: -5px; background-image: none; padding: 0; width: 34px; height: 34px; opacity: 1;}
-	.modal-body {display: flex; flex-direction: column; overflow: auto; min-height: 120px; max-height: calc(100vh - 150px);  margin:20px 0 10px 0; padding: 0px; @include scrollbarY}
-	.modal-footer {display:flex; border-top-color:#e4e5ea; padding: 20px 0 0 0; margin: 0;}
+	.modal-body {display: flex; flex-direction: column; overflow: auto; min-height: 120px; max-height: calc(100vh - 150px);  margin:20px 0 0 0; padding: 0px; @include scrollbarY}
+	.modal-footer {display:flex; border-top-color:#e4e5ea; padding: 20px 0 0 0; margin-top: 20px;}
 	.modal-footer .btn-basic + .btn-basic {margin-left: 10px;}
 }
 
