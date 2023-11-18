@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>사용자상세정보 - 기본정보 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(1, 0); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 사용자관리 / 사용자목록 / 사용자상세정보</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-section -->
+			<div class="main-section">
+				<!-- main-section-header -->
+				<!-- 2023-10-19 업데이트일 위치 이동 및 flex-between 추가 -->
+				<div class="main-section-header flex-between">
+					<h1 class="title">사용자 상세정보</h1>
+					<p class="update">최종 업데이트일 : 2023-08-01 13:34:52</p>
+				</div>
+				<!-- //main-section-header -->
+
+				<!-- 사용자정보 -->
+				<div class="profile-sec">
+					<div class="avata-area">
+						<span class="avata">
+							<img src="../../assets/img/icn-32-myfrofile.png" alt="" class="img-circle">
+						</span>
+					</div>
+					<div class="info-area">
+						<p class="info-position">상무</p>
+						<p class="info-name">
+							<span class="text">정호연 (sds1000)</span>
+							<span class="chip chip-label orange">예외정책 적용 중</span>
+						</p>
+						<!-- 2023-11-17 프로필 이미지 삭제 버튼 추가 -->
+						<p class="info-part">
+							<span>IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트</span>
+							<button type="button" class="btn btn-module">기본 이미지로 변경</button>
+						</p>
+					</div>
+					<div class="util-area">
+						<button type="button" class="btn btn-module2 negative">예외정책 해제하기</button>
+					</div>
+				</div>
+				<!-- 사용자정보 -->
+
+				<!-- 2023-11-17 탭제거 및 PC정보 분리  -->
+				<!-- 상세정보 -->
+				<div class="tab-page">
+					<!-- 기본정보 영역 -->
+					<div class="detail-sec">
+						<div class="user-detail-header">
+							<h2 class="title">기본정보</h2>
+						</div>
+						<!-- 상세정보 테이블 -->
+						<div class="detail-table">
+							<table class="table">
+								<caption>기본정보</caption>
+								<colgroup>
+									<col style="width:13%" />
+									<col style="width:20%" />
+									<col style="width:13%" />
+									<col style="width:20%" />
+									<col style="width:13%" />
+									<col style="width:21%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">아이디<span class="form-star">*</span></th>
+										<td></td>
+										<th scope="row">이름<span class="form-star">*</span></th>
+										<td>정호연</td>
+										<th scope="row">직함<span class="form-star">*</span></th>
+										<td>상무</td>
+									</tr>
+									<tr>
+										<th scope="row">이메일<span class="form-star">*</span></th>
+										<td>email12345@samsung.com</td>
+										<th scope="row">전화번호<span class="form-star">*</span></th>
+										<td colspan="3">
+											<div class="text-wrap">
+												<p>010-1234-5678</p>
+												<button type="button" class="btn btn-module mar-l-10">삭제코드 발급</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">소속<span class="form-star">*</span></th>
+										<td colspan="3">IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트</td>
+										<th scope="row">파견부서<span class="form-star">*</span></th>
+										<td>IOT사업부/ 신사업파트</td>
+									</tr>
+									<tr>
+										<th scope="row">등록이미지<span class="form-star">*</span></th>
+										<td>
+											<button type="button" class="btn btn-module" data-bs-target="#listView" data-bs-toggle="modal">보기</button>
+										</td>
+										<th scope="row">이미지 등록일<span class="form-star">*</span></th>
+										<td colspan="3">2023-03-01</td>
+									</tr>
+									<tr>
+										<th scope="row">개인정보 동의여부<span class="form-star">*</span></th>
+										<td>동의</td>
+										<th scope="row">동의약관버전<span class="form-star">*</span></th>
+										<td colspan="3">Ver. 1.0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //상세정보 테이블 -->
+					</div>
+					<!-- //기본정보 영역 -->
+
+					<!-- PC정보 영역 -->
+					<div class="detail-sec">
+						<div class="user-detail-header">
+							<h2 class="title">PC정보</h2>
+							<p class="explain">PC번호를 눌러 VDI환경 및 이력을 확인할 수 있습니다.</p>
+						</div>
+						<!-- 상세정보 테이블 -->
+						<div class="detail-table">
+							<table class="table">
+								<caption>PC정보</caption>
+								<colgroup>
+									<col style="width:13%" />
+									<col style="width:20%" />
+									<col style="width:13%" />
+									<col style="width:20%" />
+									<col style="width:13%" />
+									<col style="width:21%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">등록 PC1<span class="form-star">*</span></th>
+										<td colspan="5"><a href="#" class="btn linked text-primary">PC789</a></td>
+									</tr>
+									<tr>
+										<th scope="row">등록 PC2<span class="form-star">*</span></th>
+										<td colspan="5"><a href="#" class="btn linked text-primary">PC789</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //상세정보 테이블 -->
+					</div>
+					<!-- //PC정보 영역 -->
+
+					<!-- 2023-11-17 뒤로가기 필요시 사용 -->
+					<div class="form-action">
+						<div class="left-area">
+							<button type="button" class="btn btn-basic btn-outline-primary has-icn">
+								<i class="icn icn-16-back-pr"></i>Back
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- //상세정보 -->
+			</div>
+			<!-- //main-section -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+</body>
+
+</html>

@@ -45,11 +45,19 @@
 .btn-control + .btn-control {margin-left: 5px;}
 .btn-control + .btn-control.btn-primary {margin-left: 10px;}
 .btn-control.excel {color:#107c41;}
+.dt-button {@extend .btn; @extend .btn-control;
+	border-color:#e4e5ea !important;
+	background-color: #fff !important;
+	background-image: none !important;
+	font-size: 12px !important;
+	padding: 5px 10px 7px !important;
+}
 
 // 모듈버튼
 .btn-module {box-sizing: content-box; padding:4px 10px; border-radius: 2px; border:1px solid #e4e5ea; background-color: #fff; color: $ColorPrimaryDark; @include FontBody10;}
 .btn-module:hover, .btn-module:active, .btn-module:focus {background-color: $ColorPrimaryLight; color: $ColorPrimaryDark;}
 .btn-module.negative {background-color: #f03b2f; color: #fff;}
+.btn-module:disabled {opacity: 0.5;}
 .btn-module.negative:hover, .btn-module.negative:active, .btn-module.negative:focus {background-color: #f03b2f !important; color: #fff !important; border-color: transparent !important;}
 
 .btn-module2 {padding:6px 30px; border-radius: 6px; color: #fff; border: 0; line-height: 16px;}
@@ -60,7 +68,7 @@
 .btn-module2.positive:hover, .btn-module2.positive:active, .btn-module2.positive:focus {background-color: $ColorPrimary !important; color: #fff !important; border-color: transparent !important;}
 
 // 검색
-.btn-search {width: 200px; height:28px; padding: 0 20px 2px 20px; border-radius: 6px; background-color: $ColorPrimary; color: white;}
+.btn-search {height:28px; padding: 0 20px 2px 20px; border-radius: 6px; background-color: $ColorPrimary; color: white;}
 .btn-search:hover, .btn-search:active, .btn-search:focus {background-color: $ColorPrimary !important; color: white !important;}
 .btn-search:focus {border-color: transparent !important;}
 .btn-group-date .btn-search {width:auto; margin-left: 20px;}

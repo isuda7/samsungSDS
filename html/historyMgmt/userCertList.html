@@ -167,18 +167,32 @@
 					<!-- Toolbar -->
 					<div class="toolbar">
 						<div class="left-area">
-							<select class="form-select w-auto">
+							<!-- 2023-11-17 개발팀요청건 toolbar (콤보박스) -->
+							<div class="dataTables_length" id="tableContainer_length">
+								<label>
+									<select name="tableContainer_length" aria-controls="tableContainer">
+										<option value="20">20줄</option>
+										<option value="40">20줄</option>
+										<option value="60">60줄</option>
+										<option value="80">80줄</option>
+										<option value="100">100줄</option>
+									</select>
+								</label>
+							</div>
+							<!-- <select class="form-select w-auto">
 								<option value="" selected>20줄</option>
 								<option value="">40줄</option>
 								<option value="">60줄</option>
 								<option value="">80줄</option>
 								<option value="">100줄</option>
-							</select>
+							</select> -->
 							<p class="count">
 								검색결과 <em class="now">1,000</em>건
 							</p>
 						</div>
 						<div class="right-area">
+							<!-- 2023-11-17 개발팀요청건 toolbar (버튼) -->
+							<div class="dt-buttons"><button class="dt-button">확인용</button></div>
 							<button type="button" class="btn btn-control has-icn" data-bs-target="#userSearch" data-bs-toggle="modal">
 								<i class="icn icn-16-refresh-bk"></i>검색조건 초기화
 							</button>

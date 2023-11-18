@@ -65,7 +65,8 @@
 
 	<!-- Modal Basic -->
 	<div class="modal fade" id="policyApply" tabindex="-1" aria-labelledby="policyApplyLabel" aria-hidden="true">
-		<div class="modal-dialog modal-basic modal-md">
+		<!-- 2023-11-17 v0.19 팝업키우기 modal-xl -->
+		<div class="modal-dialog modal-basic modal-xl">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h1 class="modal-title" id="policyApplyLabel">예외정책 적용</h1>
@@ -119,7 +120,8 @@
 									<!-- //달력선택 -->
 									<!-- 기간선택 -->
 									<!-- 2023-10-19 기간선택 추가 -->
-									<div class="btn-group-date mar-0 mar-t-10">
+									<!-- 2023-11-17 v0.19 기간여백 삭제 mar-0 mar-t-10 -->
+									<div class="btn-group-date">
 										<button type="button" class="btn btn-control btn-outline-primary">오늘</button>
 										<button type="button" class="btn btn-control">1주일</button>
 										<button type="button" class="btn btn-control">1개월</button>
@@ -129,11 +131,18 @@
 									<!-- //기간선택 -->
 								</div>
 							</div>
+							<!-- 2023-11-17 v0.19 적용할 예외정책 조건변경  -->
 							<div class="field-inline">
 								<div class="form-title">
 									<label for="chk2All" class="form-label">적용할 예외정책</label>
 								</div>
 								<div class="form-controls flex-wrap">
+									<div class="radio-inline">
+										<label class="radio style1">
+											<input type="radio" name="rdoPolicy" value="" />
+											<span class="value"><span>영상보안 기능 중지</span></span>
+										</label>
+									</div>
 									<div class="radio-inline">
 										<label class="radio style1">
 											<input type="radio" name="rdoPolicy" value="" />
@@ -162,36 +171,100 @@
 											<input type="radio" name="rdoPolicy" value="" />
 											<span class="value"><span>개별 정책 선택</span></span>
 										</label>
-										<label class="checkbox style1">
+										<!-- <label class="checkbox style1">
 											<input type="radio" name="rdoPolicy" value="" />
 											<span class="value"><span>개별 정책 선택</span></span>
 										</label>
 										<p class="form-desc fs-10">
 											<span class="text-primary">*</span>선택 사용자의 현재 예외정책이 자동 체크되어 보여집니다.
-										</p>
+										</p> -->
 									</div>
-									<div class="checkbox-inline outer">
-										<label class="checkbox style1">
-											<input type="checkbox" name="chkPolicy" value="" />
-											<span class="value"><span>타인동석</span></span>
-										</label>
-										<label class="checkbox style1">
-											<input type="checkbox" name="chkPolicy" value="" />
-											<span class="value"><span>카메라촬영</span></span>
-										</label>
-										<label class="checkbox style1">
-											<input type="checkbox" name="chkPolicy" value="" />
-											<span class="value"><span>웹캠가림</span></span>
-										</label>
-										<label class="checkbox style1">
-											<input type="checkbox" name="chkPolicy" value="" />
-											<span class="value"><span>추가모니터</span></span>
-										</label>
-										<label class="checkbox style1">
-											<input type="checkbox" name="chkPolicy" value="" />
-											<span class="value"><span>추가웹캠</span></span>
-										</label>
+									<div class="radio-inline">
+										<label for="rdoGroup1" class="radio style1 w-80">타인동석</label>
+										<div class="radio-inline flex-auto">
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup1" value="" />
+												<span class="value"><span>적용 (화면 차단 및 로그 수정)</span></span>
+											</label>
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup1" value="" />
+												<span class="value"><span>적용 (화면 미차단 및 로그 수정)</span></span>
+											</label>
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup1" value="" />
+												<span class="value"><span>미적용 (타인동석 허용)</span></span>
+											</label>
+										</div>
 									</div>
+									<div class="radio-inline">
+										<label for="rdoGroup2" class="radio style1 w-80">카메라 촬영</label>
+										<div class="radio-inline flex-auto">
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup2" value="" />
+												<span class="value"><span>적용 (화면 차단 및 로그 수정)</span></span>
+											</label>
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup2" value="" />
+												<span class="value"><span>적용 (화면 미차단 및 로그 수정)</span></span>
+											</label>
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup2" value="" />
+												<span class="value"><span>미적용 (카메라 촬영 허용)</span></span>
+											</label>
+										</div>
+									</div>
+									<div class="radio-inline">
+										<label for="rdoGroup3" class="radio style1 w-80"> 웹캠 가림</label>
+										<div class="radio-inline flex-auto">
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup3" value="" />
+												<span class="value"><span>적용 (화면 차단 및 로그 수정)</span></span>
+											</label>
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup3" value="" />
+												<span class="value"><span>적용 (화면 미차단 및 로그 수정)</span></span>
+											</label>
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup3" value="" />
+												<span class="value"><span>미적용 (웹캠 가림 허용)</span></span>
+											</label>
+										</div>
+									</div>
+									<div class="radio-inline">
+										<label for="rdoGroup4" class="radio style1 w-80">추가 모니터</label>
+										<div class="radio-inline flex-auto">
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup4" value="" />
+												<span class="value"><span>적용 (화면 차단 및 로그 수정)</span></span>
+											</label>
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup4" value="" />
+												<span class="value"><span>적용 (화면 미차단 및 로그 수정)</span></span>
+											</label>
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup4" value="" />
+												<span class="value"><span>미적용 (추가 모니터 허용)</span></span>
+											</label>
+										</div>
+									</div>
+									<div class="radio-inline">
+										<label for="rdoGroup5" class="radio style1 w-80">추가 웹캠</label>
+										<div class="radio-inline flex-auto">
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup5" value="" />
+												<span class="value"><span>적용 (화면 차단 및 로그 수정)</span></span>
+											</label>
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup5" value="" />
+												<span class="value"><span>적용 (화면 미차단 및 로그 수정)</span></span>
+											</label>
+											<label class="radio style1">
+												<input type="radio" name="rdoGroup5" value="" />
+												<span class="value"><span>미적용 (추가 웹캠 허용)</span></span>
+											</label>
+										</div>
+									</div>
+
 								</div>
 							</div>
 							<div class="field-inline">

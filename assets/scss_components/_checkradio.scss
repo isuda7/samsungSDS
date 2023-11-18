@@ -38,7 +38,7 @@ $chk-text-gap: 10px;
 	}
 	&.outer {background-color:#f2f6fe; border-radius: 6px;}
 	// 이중으로 처리되는 경우 여백 초기화
-	.radio-inline, .checkbox-inline {margin-top:0; margin-bottom:0; background-color:#f2f6fe; margin-left: 23px; border-radius: 6px;}
+	.radio-inline, .checkbox-inline {margin-top:0; margin-bottom:0; background-color:#f2f6fe; margin-left: 20px; border-radius: 6px;}
 }
 
 .form-controls {

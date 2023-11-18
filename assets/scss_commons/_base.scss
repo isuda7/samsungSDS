@@ -71,6 +71,7 @@ input::-webkit-calendar-picker-indicator {-webkit-appearance:none;}
 .blind {position:fixed; overflow: hidden; border: 0; margin:-1px; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px); -webkit-clip-path: inset(50%); clip-path: inset(50%);}
 .img-circle {border-radius: 50%;}
 .fluid {width:100% !important; flex:1 1 auto !important;}
+.flex-auto {flex:1 1 auto !important;}
 .nowrap {@include Ellipsis1;}
 .row.centered {justify-content: center;}
 .flex-between {display: flex; justify-content: space-between;}
@@ -103,6 +104,7 @@ input::-webkit-calendar-picker-indicator {-webkit-appearance:none;}
 // width
 .w-auto {width:auto !important; flex:none !important;}
 .w-full {width:100% !important; flex:none !important;}
+.w-80 {width:80px !important; flex:none !important;}
 .w-120 {width:120px !important; flex:none !important;}
 .w-180 {width:180px !important; flex:none !important;}
 .w-260 {width:260px !important; flex:none !important;}

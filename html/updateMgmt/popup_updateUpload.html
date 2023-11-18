@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>그룹 정보 변경 이력 | CUBOX K-FACEON</title>
+	<title>신규 업데이트 파일 등록 | CUBOX K-FACEON</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport"
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
@@ -48,12 +48,14 @@
 		<div class="main-content">
 			<!-- breadcrumb -->
 			<div class="breadcrumb-area">
-				<div class="breadcrumb">홈 / 사용자관리 / 사용자목록 / 사용자상세정보</div>
+				<div class="breadcrumb">홈 / 사용자관리 / 사용자목록</div>
 			</div>
 			<!-- //breadcrumb -->
 			<!-- main-section -->
 			<div class="main-section">
-				<button type="button" class="btn btn-control btn-outline-primary" data-bs-target="#vdiDetail" data-bs-toggle="modal">VDI 정보</button>
+				<button type="button" class="btn btn-control btn-outline-dark" data-bs-target="#fileUpload" data-bs-toggle="modal">
+					신규 업데이트 파일 등록
+				</button>
 			</div>
 			<!-- //main-section -->
 		</div>
@@ -62,54 +64,71 @@
 	<!-- //page-container -->
 
 	<!-- Modal Basic -->
-	<div class="modal fade" id="vdiDetail" tabindex="-1" aria-labelledby="vdiDetailLabel" aria-hidden="true">
+	<div class="modal fade" id="fileUpload" tabindex="-1" aria-labelledby="fileUploadLabel" aria-hidden="true">
 		<div class="modal-dialog modal-basic modal-xs">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h1 class="modal-title" id="vdiDetailLabel">VDI 정보</h1>
+					<h1 class="modal-title" id="fileUploadLabel">신규 업데이트 파일 등록</h1>
 					<button type="button" class="btn btn-close" data-bs-dismiss="modal">
 						<i class="icn icn-24-close-gr"><span class="blind">Close</span></i>
 					</button>
 				</div>
 				<div class="modal-body">
-					<div class="vdi-detail-wrap">
-						<ul class="vdi-detail">
-							<li>
-								<strong class="tit">VDI 이름</strong>
-								<span class="txt">VDI 10</span>
-							</li>
-							<li>
-								<strong class="tit">에이전트 설치여부</strong>
-								<span class="txt">설치</span>
-							</li>
-							<li>
-								<strong class="tit">에이전트 설치일</strong>
-								<span class="txt">2023-09-01</span>
-							</li>
-							<li>
-								<strong class="tit">에이전트상태</strong>
-								<span class="txt">활성</span>
-							</li>
-						</ul>
-					</div>
+					<form>
+						<p class="form-checking mar-b-20">
+							<i class="icn icn-11-feel-pr" aria-hidden="true"></i>
+							업데이트 대상 파일을 등록해 주세요.
+						</p>
+						<div class="form form-fileUpload">
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="frmFile" class="form-label">대상파일</label>
+								</div>
+								<div class="form-controls">
+									<div class="input-group">
+										<input type="text" id="frmFileValue" class="form-control" />
+										<label for="frmFile" class="btn btn-control has-icn">
+											<i class="icn icn-16-search-bk" aria-hidden="true"></i>파일검색
+										</label>
+										<input type="file" id="frmFile" class="form-file" />
+									</div>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="frmFilename" class="form-label">파일내용</label>
+								</div>
+								<div class="form-controls">
+									<div class="input-group">
+										<input type="text" id="frmFilename" value="추가 디바이스 감지 모델 고도화 버전" class="form-control" />
+									</div>
+								</div>
+							</div>
+							<div class="field-inline">
+								<div class="form-title">
+									<label for="frmVersion" class="form-label">파일버전</label>
+								</div>
+								<div class="form-controls">
+									<input type="text" id="frmVersion" value="1.1.2" class="form-control" style="width: 100px" />
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-basic btn-outline-primary" data-bs-dismiss="modal">취소</button>
+					<button type="button" class="btn btn-basic btn-primary">업로드</button>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- //Modal Basic -->
 
-	<!-- Modal Preview -->
-	<div class="enlarge-modal" id="enlargeImageModal">
-		<button type="button" class="enlarge-modal-close" onclick="$('#enlargeImageModal').hide()">×</button>
-		<img src="https://faceon-dev2.cuboxservice.com:8081/user/face-image/00001/view" class="enlarge-modal-content" alt="" />
-		<!--        <div class="caption"></div>-->
-	</div>
-	<!-- //Modal Preview -->
-
 	<script>
-		var modal = new bootstrap.Modal(document.getElementById('vdiDetail'));
+		var modal = new bootstrap.Modal(document.getElementById('fileUpload'));
 		modal.show();
 	</script>
+
 </body>
 
 </html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>업데이트 파일 관리 | CUBOX K-FACEON</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="keywords" content="CUBOX K-FACEON, 삼성 SDS" />
+	<meta name="description" content="CUBOX K-FACEON, 삼성 SDS" />
+	<!-- Bootstrap -->
+	<script src="../../assets/js/libs/datatables.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<script src="../../assets/js/libs/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../assets/js/libs/bootstrap-datepicker.js"></script>
+	<!-- Custom -->
+	<link rel="stylesheet" href="../../assets/css/index.css" />
+	<script src="../../assets/js/ui/ui.common.js"></script>
+</head>
+
+<body class="page-body">
+	<!-- page-header -->
+	<header class="page-header">
+		<script>
+			$('.page-header').load("../_include/Header.html", function () { });
+		</script>
+	</header>
+	<!-- //page-header -->
+
+	<!-- page-container -->
+	<div class="page-container">
+		<!-- sidebar-menu -->
+		<div class="sidebar-menu">
+			<script>
+				$('.sidebar-menu').load("../_include/sidebar.html", function () {
+					mainMenuInit(); setMainMenu(7, 0); sidebarCollapseInit();
+				});
+			</script>
+		</div>
+		<!-- //sidebar-menu -->
+
+		<!-- main-content -->
+		<div class="main-content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb-area">
+				<div class="breadcrumb">홈 / 업데이트 관리 / 업데이트 파일 관리</div>
+			</div>
+			<!-- //breadcrumb -->
+			<!-- main-section -->
+			<div class="main-section">
+				<!-- main-content-header -->
+				<div class="main-section-header">
+					<h1 class="title">업데이트 파일 관리</h1>
+					<p class="explain">에이전트에 대한 신규 업데이트 파일을 등록하고 관리할 수 있습니다.</p>
+				</div>
+				<!-- //main-content-header -->
+
+				<!-- Search Form -->
+				<form>
+					<!-- update-info -->
+					<div class="form-update">
+						<p class="txt">현재일자 : 2023-08-01 13:34:52</p>
+						<button type="button" class="btn btn-control btn-outline-dark">
+							신규 업데이트 파일 등록
+						</button>
+					</div>
+					<!-- //update-info -->
+
+					<!-- SearchBox -->
+					<div class="form form-searchbox outlined">
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="" class="form-label">조회기간</label>
+							</div>
+							<div class="form-controls flex-wrap">
+								<!-- 달력선택 -->
+								<div class="input-group-date">
+									<div class="input-group">
+										<input type="text" id="inputStartDt" name="inputStartDt"
+											class="form-control datepicker" value="2023-09-28" data-format="yyyy-mm-dd"
+											autocomplete="off" />
+										<div class="input-group-over">
+											<i class="icn icn-16-calendar-bk"></i>
+										</div>
+									</div>
+									<div class="form-split">~</div>
+									<div class="input-group">
+										<input type="text" id="inputEndDt" name="inputEndDt"
+											class="form-control datepicker" value="2023-10-28" data-format="yyyy-mm-dd"
+											autocomplete="off" />
+										<div class="input-group-over">
+											<i class="icn icn-16-calendar-bk"></i>
+										</div>
+									</div>
+									<script>
+										$(function () {
+											$('#inputStartDt').datepicker();
+											$('#inputEndDt').datepicker();
+										})
+									</script>
+								</div>
+								<!-- //달력선택 -->
+								<!-- 기간선택 -->
+								<div class="btn-group-date">
+									<button type="button" class="btn btn-control btn-outline-primary">오늘</button>
+									<button type="button" class="btn btn-control">1주일</button>
+									<button type="button" class="btn btn-control">1개월</button>
+									<button type="button" class="btn btn-control">3개월</button>
+									<button type="button" class="btn btn-control">6개월</button>
+								</div>
+								<!-- //기간선택 -->
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="frmVersion" class="form-label">버전</label>
+							</div>
+							<div class="form-controls">
+								<input type="text" id="frmVersion" class="form-control" style="width: 120px;" />
+							</div>
+						</div>
+						<div class="field-inline">
+							<div class="form-title">
+								<label for="frmTitle" class="form-label">타이틀</label>
+							</div>
+							<div class="form-controls">
+								<input type="text" id="frmTitle" class="form-control" style="width: 590px;"/>
+							</div>
+						</div>
+						<div class="field-action">
+							<button type="button" class="btn btn-search has-icn">
+								<i class="icn icn-16-search-wh"></i>검색
+							</button>
+						</div>
+					</div>
+					<!-- //SearchBox -->
+				</form>
+				<!-- //Search Form -->
+
+				<!-- Datatable -->
+				<div id="tableContainer_wrapper" class="dataTables_wrapper no-footer">
+					<div class="dataTables_scroll">
+						<div class="dataTables_scrollHead"
+							style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+							<div class="dataTables_scrollHeadInner"
+								style="box-sizing: content-box; width: 100%; padding-right: 0px;">
+								<table class="table table-bordered datatable  no-footer dataTable"
+									aria-describedby="tableContainer_info" role="grid"
+									style="margin-left: 0px; width: 100%;">
+									<colgroup>
+										<col width="80px" />
+										<col width="200px" />
+										<col width="120px" />
+										<col width="" />
+										<col width="160px" />
+										<col width="160px" />
+									</colgroup>
+									<thead>
+										<tr role="row">
+											<th class="alCenter sorting" rowspan="1" colspan="1" aria-label="번호">번호</th>
+											<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="파일명: activate to sort column ascending" rowspan="1"
+												colspan="1">파일명</th>
+											<th class="alCenter sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="버전: activate to sort column ascending" rowspan="1"
+												colspan="1">버전</th>
+											<th class="sorting sorting" tabindex="0" aria-controls="tableContainer"
+												aria-label="타이틀: activate to sort column ascending" rowspan="1"
+												colspan="1">타이틀</th>
+											<th class="alCenter sorting" aria-label="등록일시" rowspan="1"
+												colspan="1">등록일시</th>
+											<th class="alCenter sorting_disabled" tabindex="0" aria-controls="tableContainer"
+												aria-label="파일관리: activate to sort column ascending" rowspan="1"
+												colspan="1">파일관리</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
+							<table class="table table-bordered datatable  no-footer dataTable" id="tableContainer"
+								aria-describedby="tableContainer_info" role="grid" style="width:100%">
+								<colgroup>
+									<col width="80px" />
+									<col width="200px" />
+									<col width="120px" />
+									<col width="" />
+									<col width="160px" />
+									<col width="160px" />
+								</colgroup>
+
+								<thead>
+									<tr role="row" style="height: 0px;">
+										<th class="alCenter sorting_disabled" rowspan="1" colspan="1" aria-label="번호"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">번호</div>
+										</th>
+										<th class="alCenter sorting" aria-controls="tableContainer"
+											aria-label="파일명: activate to sort column ascending" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">파일명</div>
+										</th>
+										<th class="alCenter sorting" aria-controls="tableContainer"
+											aria-label="버전: activate to sort column ascending" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">버전</div>
+										</th>
+										<th class="sorting" aria-controls="tableContainer"
+											aria-label="타이틀: activate to sort column ascending" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">타이틀</div>
+										</th>
+										<th class="alCenter sorting_disabled" aria-label="등록일시" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">등록일시</div>
+										</th>
+										<th class="alCenter sorting" aria-controls="tableContainer"
+											aria-label="파일관리: activate to sort column ascending" rowspan="1" colspan="1"
+											style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;">
+											<div class="dataTables_sizing" style="height:0;overflow:hidden;">파일관리</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr role="row" class="odd">
+										<td class=" alCenter">4</td>
+										<td class=" alCenter">VDI_AGENT_V111.exe</td>
+										<td class=" alCenter">V 1.1.1</td>
+										<td>카메라 얼굴 인증 추출 모델 업데이트</td>
+										<td class=" alCenter">2023-08-01 13:15:20</td>
+										<td class=" alCenter">
+											<button class="btn btn-module">삭제</button>
+											<button class="btn btn-module">수정</button>
+										</td>
+									</tr>
+									<tr role="row" class="even">
+										<td class=" alCenter">4</td>
+										<td class=" alCenter">VDI_AGENT_V111.exe</td>
+										<td class=" alCenter">V 1.1.1</td>
+										<td>카메라 얼굴 인증 추출 모델 업데이트</td>
+										<td class=" alCenter">2023-08-01 13:15:20</td>
+										<td class=" alCenter">
+											<button class="btn btn-module">삭제</button>
+											<button class="btn btn-module">수정</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //Datatable -->
+			</div>
+			<!-- //main-section -->
+		</div>
+		<!-- //main-content -->
+	</div>
+	<!-- //page-container -->
+</body>
+
+</html>

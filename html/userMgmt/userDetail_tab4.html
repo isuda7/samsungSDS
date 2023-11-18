@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>사용자상세정보 - 이상행위이력 | CUBOX K-FACEON</title>
+	<title>사용자상세정보 - 추가모니터/웹감지이력 | CUBOX K-FACEON</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport"
 		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
@@ -72,7 +72,8 @@
 							<span class="text">정호연 (sds1000)</span>
 						</p>
 						<p class="info-part">
-							IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트
+							<span>IOT사업부/ 모바일 사업팀/ 모바일실행그룹/ Delivery혁신파트</span>
+							<button type="button" class="btn btn-module">기본 이미지로 변경</button>
 						</p>
 					</div>
 				</div>
@@ -81,16 +82,16 @@
 				<!-- Tab Container -->
 				<div class="tab-container tab-page">
 					<div class="tab-list" role="tablist">
-						<button type="button" id="tabNav1" role="tab" aria-selected="false" class="tab"><span>기본정보</span></button>
-						<button type="button" id="tabNav2" role="tab" aria-selected="false" class="tab"><span>사용자인증이력</span></button>
-						<button type="button" id="tabNav3" role="tab" aria-selected="false" class="tab"><span>예외정책/접속이력</span></button>
-						<button type="button" id="tabNav4" role="tab" aria-selected="true" class="tab is-selected"><span>이상행위이력</span></button>
-						<button type="button" id="tabNav5" role="tab" aria-selected="false" class="tab"><span>추가모니터/웹감지이력</span></button>
-						<button type="button" id="tabNav6" role="tab" aria-selected="false" class="tab"><span>에이전트설치이력</span></button>
-						<button type="button" id="tabNav7" role="tab" aria-selected="false" class="tab"><span>삭제코드발급이력</span></button>
+						<!-- 2023-11-17 탭수정, 최하단 툴팁활성화 -->
+						<button type="button" id="tabNav1" role="tab" data-bs-toggle="tooltip" class="tab" data-bs-placement="top" aria-selected="false" data-bs-title="로그인, 얼굴인증 이력을 확인할 수 있습니다."><span>사용자인증이력</span></button>
+						<button type="button" id="tabNav2" role="tab" data-bs-toggle="tooltip" class="tab" data-bs-placement="top" aria-selected="false" data-bs-title="예외정책 적용 현황 및 적용 기간 내 접속 이력을 확인할 수 있습니다."><span>예외정책/접속이력</span></button>
+						<button type="button" id="tabNav3" role="tab" data-bs-toggle="tooltip" class="tab" data-bs-placement="top" aria-selected="false" data-bs-title="이상행위 발생 이력을 확인할 수 있습니다."><span>이상행위이력</span></button>
+						<button type="button" id="tabNav4" role="tab" data-bs-toggle="tooltip" class="tab is-selected" data-bs-placement="top" aria-selected="true" data-bs-title="추가모니터 및 추가웹캠 감지 이력을 확인할 수 있습니다."><span>추가모니터/웹감지이력</span></button>
+						<button type="button" id="tabNav5" role="tab" data-bs-toggle="tooltip" class="tab" data-bs-placement="top" aria-selected="false" data-bs-title="에이전트 설치 이력을 확인할 수 있습니다."><span>에이전트설치이력</span></button>
+						<button type="button" id="tabNav6" role="tab" data-bs-toggle="tooltip" class="tab" data-bs-placement="top" aria-selected="false" data-bs-title="삭제코드 발급 이력을 확인할 수 있습니다."><span>삭제코드발급이력</span></button>
 					</div>
 
-					<div class="tab-panel" aria-labelledby="tabNav2">
+					<div class="tab-panel" aria-labelledby="tabNav4">
 						<!-- 상세정보 영역 -->
 						<div class="detail-sec">
 							<div class="form-searchbox">
@@ -151,10 +152,9 @@
 								<div class="toolbar">
 									<div class="left-area">
 										<select class="form-select w-auto">
-											<option value="">이상행위</option>
-											<option value="">타인동석</option>
-											<option value="">카메라촬영</option>
-											<option value="">웹캠가림</option>
+											<option value="">감지유형</option>
+											<option value="">추가모니터</option>
+											<option value="">추가웹캠</option>
 										</select>
 										<button type="button" class="btn btn-control"  data-bs-toggle="modal" data-bs-target="#modal_setEventState1"><span>선택상태변경</span></button>
 										<select class="form-select w-auto">
@@ -179,94 +179,47 @@
 
 								<div class="dataTables_scroll">
 									<div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;">
-										<div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 100%; padding-right: 0px;">
-											<table class="table table-bordered datatable no-footer dataTable" aria-describedby="tableContainer_info"
-												role="grid" style="margin-left: 0px; width: 100%;">
+										<div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 100%;">
+											<table class="table table-bordered datatable dataTable no-footer" aria-describedby="tableContainer_info"
+												role="grid" style="margin-left: 0px;">
 												<thead>
 													<tr role="row">
 														<th class="select-checkbox sorting_disabled" rowspan="1" colspan="1"
-															style="text-align: center; vertical-align: middle; width: 37px;" aria-label="">
+															style="text-align: center; vertical-align: middle;">
 															<label class="checkbox style1">
 																<input type="checkbox" name="chkTblAll" value="" />
 																<span class="value" aria-label="전체선택"></span>
 															</label>
 														</th>
-														<th class="sorting_disabled" rowspan="1" colspan="1" aria-label="번호" style="width: 54px;">번호
+														<th class="sorting_disabled" rowspan="1" colspan="1">번호</th>
+														<th class="sorting" tabindex="0" aria-controls="tableContainer" rowspan="1" colspan="1">감지일시
 														</th>
-														<th class="sorting_desc" tabindex="0" aria-controls="tableContainer" rowspan="1" colspan="1"
-															aria-sort="descending" aria-label="일시: activate to sort column ascending"
-															style="width: 54px;">일시</th>
-														<th class="sorting" tabindex="0" aria-controls="tableContainer" rowspan="1" colspan="1"
-															aria-label="이상행위: activate to sort column ascending" style="width: 89px;">이상행위</th>
-														<th class="alCenter sorting_disabled" rowspan="1" colspan="1" aria-label="이미지"
-															style="width: 72px;">이미지</th>
-														<th class="sorting" tabindex="0" aria-controls="tableContainer" rowspan="1" colspan="1"
-															aria-label="IP: activate to sort column ascending" style="width: 35px;">IP</th>
-														<th class="sorting_disabled" rowspan="1" colspan="1" aria-label="상태" style="width: 54px;">상태
+														<th class="sorting" tabindex="0" aria-controls="tableContainer" rowspan="1" colspan="1">감지유형
 														</th>
-														<th class="sorting_disabled" rowspan="1" colspan="1" aria-label="상태변경일" style="width: 107px;">
-															상태변경일</th>
-														<th class="sorting_disabled" rowspan="1" colspan="1" aria-label="변경사유" style="width: 89px;">변경사유
+														<th class="alCenter sorting_disabled" rowspan="1" colspan="1">이미지</th>
+														<th class="sorting" tabindex="0" aria-controls="tableContainer" rowspan="1" colspan="1">IP(VDI)
 														</th>
+														<th class="sorting" tabindex="0" aria-controls="tableContainer" rowspan="1" colspan="1">IP(PC)
+														</th>
+														<th class="sorting_disabled" rowspan="1" colspan="1">상태</th>
+														<th class="sorting_disabled" rowspan="1" colspan="1">상태변경일</th>
+														<th class="sorting_disabled" rowspan="1" colspan="1">변경사유</th>
 													</tr>
 												</thead>
 											</table>
 										</div>
 									</div>
 									<div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
-										<table class="table table-bordered datatable no-footer dataTable" id="tableContainer"
+										<table class="table table-bordered datatable dataTable no-footer" id="tableContainer"
 											aria-describedby="tableContainer_info" role="grid">
-											<thead>
-												<tr role="row" style="height: 0px;">
-													<th class="select-checkbox sorting_disabled" rowspan="1" colspan="1"
-														style="text-align: center; vertical-align: middle; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 37px;"
-														aria-label="">
-														<div class="dataTables_sizing" style="height:0;overflow:hidden;"><input type="checkbox"></div>
-													</th>
-													<th class="sorting_disabled" rowspan="1" colspan="1" aria-label="번호"
-														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 54px;">
-														<div class="dataTables_sizing" style="height:0;overflow:hidden;">번호</div>
-													</th>
-													<th class="sorting_desc" aria-controls="tableContainer" rowspan="1" colspan="1"
-														aria-sort="descending" aria-label="일시: activate to sort column ascending"
-														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 54px;">
-														<div class="dataTables_sizing" style="height:0;overflow:hidden;">일시</div>
-													</th>
-													<th class="sorting" aria-controls="tableContainer" rowspan="1" colspan="1"
-														aria-label="이상행위: activate to sort column ascending"
-														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 89px;">
-														<div class="dataTables_sizing" style="height:0;overflow:hidden;">이상행위</div>
-													</th>
-													<th class="alCenter sorting_disabled" rowspan="1" colspan="1" aria-label="이미지"
-														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 72px;">
-														<div class="dataTables_sizing" style="height:0;overflow:hidden;">이미지</div>
-													</th>
-													<th class="sorting" aria-controls="tableContainer" rowspan="1" colspan="1"
-														aria-label="IP: activate to sort column ascending"
-														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 35px;">
-														<div class="dataTables_sizing" style="height:0;overflow:hidden;">IP</div>
-													</th>
-													<th class="sorting_disabled" rowspan="1" colspan="1" aria-label="상태"
-														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 54px;">
-														<div class="dataTables_sizing" style="height:0;overflow:hidden;">상태</div>
-													</th>
-													<th class="sorting_disabled" rowspan="1" colspan="1" aria-label="상태변경일"
-														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 107px;">
-														<div class="dataTables_sizing" style="height:0;overflow:hidden;">상태변경일</div>
-													</th>
-													<th class="sorting_disabled" rowspan="1" colspan="1" aria-label="변경사유"
-														style="padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; width: 89px;">
-														<div class="dataTables_sizing" style="height:0;overflow:hidden;">변경사유</div>
-													</th>
-												</tr>
-											</thead>
 											<tbody>
 												<tr role="row" class="even selected">
 													<td class=" select-checkbox"></td>
 													<td class="alCenter">100</td>
 													<td>2023-08-01 13:15:20</td>
 													<td>타인동석</td>
-													<td><button class="btn btn-module" data-bs-target="#strangePreview" data-bs-toggle="modal">보기</button></td>
+													<td><button class="btn btn-module" data-bs-target="#monitorPreview" data-bs-toggle="modal">보기</button></td>
+													<td>12.345.67.255</td>
 													<td>12.345.67.255</td>
 													<td>Y(이상행위)</td>
 													<td>2023-08-01 13:15:20</td>
@@ -277,7 +230,8 @@
 													<td class="alCenter">100</td>
 													<td>2023-08-01 13:15:20</td>
 													<td>타인동석</td>
-													<td><button class="btn btn-module" data-bs-target="#strangePreview" data-bs-toggle="modal">보기</button></td>
+													<td><button class="btn btn-module" data-bs-target="#monitorPreview" data-bs-toggle="modal">보기</button></td>
+													<td>12.345.67.255</td>
 													<td>12.345.67.255</td>
 													<td>Y(이상행위)</td>
 													<td>2023-08-01 13:15:20</td>
@@ -288,7 +242,8 @@
 													<td class="alCenter">100</td>
 													<td>2023-08-01 13:15:20</td>
 													<td>타인동석</td>
-													<td><button class="btn btn-module" data-bs-target="#strangePreview" data-bs-toggle="modal">보기</button></td>
+													<td><button class="btn btn-module" data-bs-target="#monitorPreview" data-bs-toggle="modal">보기</button></td>
+													<td>12.345.67.255</td>
 													<td>12.345.67.255</td>
 													<td>Y(이상행위)</td>
 													<td>2023-08-01 13:15:20</td>
@@ -299,8 +254,9 @@
 													<td class="alCenter">100</td>
 													<td>2023-08-01 13:15:20</td>
 													<td>타인동석</td>
-													<td><button class="btn btn-module" data-bs-target="#strangePreview" data-bs-toggle="modal">보기</button></td>
+													<td><button class="btn btn-module" data-bs-target="#monitorPreview" data-bs-toggle="modal">보기</button></td>
 													<td>12.345.67.255</td>
+													<td>2023-08-01 13:15:20</td>
 													<td>Y(이상행위)</td>
 													<td>2023-08-01 13:15:20</td>
 													<td>자리이동</td>
@@ -339,6 +295,11 @@
 		<!-- //main-content -->
 	</div>
 	<!-- //page-container -->
+	<script>
+		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+	</script>
+
 </body>
 
 </html>

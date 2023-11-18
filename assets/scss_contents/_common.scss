@@ -52,6 +52,11 @@
 //-------------------------------------------------------------------
 //	@사용자관리
 //-------------------------------------------------------------------
+// 사용자상세
+.user-detail-header {display: flex; align-items: center; margin-top:30px; margin-bottom: 10px;}
+.user-detail-header .title {@include FontBody16; font-weight:700; margin-right: 30px;}
+.user-detail-header .explain {padding-top:4px; color: #777;}
+
 // 프로필영역
 .profile-sec {display: flex; align-items: center; padding: 20px; border:1px solid #e4e5ea; border-radius: 6px;}
 .profile-sec .avata-area {flex:none; margin-right: 18px;}
@@ -61,7 +66,8 @@
 .profile-sec .info-position {color: $ColorPrimaryDark;}
 .profile-sec .info-name {display: flex; align-items: center; margin: 2px 0; @include FontBody16;}
 .profile-sec .info-name .chip {margin-left: 10px;}
-.profile-sec .info-part {color:#4a4c5d;}
+.profile-sec .info-part span {color:#4a4c5d;}
+.profile-sec .info-part .btn {margin-left: 6px;}
 .main-section-header + .profile-sec {margin-top:10px;}
 
 // 등록 이미지 보기
@@ -126,8 +132,7 @@
 .vdi-deleteCode-list .item + .item {margin-top:10px;}
 
 // 상세정보
-.detail-toolbar {position: relative; padding-top:4px; padding-bottom: 12px;}
-.detail-toolbar .detail-desc {display: inline-block; margin-left: 22px; padding: 8px 10px; border: 1px solid #e4e5ea; color: $ColorPrimaryDark;}
+.tooltip-inner {padding: 8px 10px; border: 1px solid #e4e5ea; font-size: 10px; color:#fff; word-wrap: break-word; word-break: keep-all;}
 
 // 이상행위 이미지 보기
 .strangePreview-sec {display: flex; justify-content: space-between;}
