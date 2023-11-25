@@ -105,15 +105,15 @@
 // VDI List
 .vdi-list-wrap {margin-top:30px;}
 .vdi-list-wrap .title {@include FontBody16; font-weight:700; margin-bottom: 10px;}
-.vdi-list {display: flex;}
-.vdi-list .item {flex:1 1 auto; max-width:20%; padding: 16px 20px 20px 20px; border-radius:6px; border:1px solid #e4e5ea; text-align: center;}
-.vdi-list .item + .item {margin-left: 25px;}
+.vdi-list {display: flex; gap: 20px; overflow: auto;}
+.vdi-list .item {flex:none; width: calc(20% - 16px); padding: 16px 20px 20px 20px; border-radius:6px; border:1px solid #e4e5ea; text-align: center;}
 .vdi-list .item .tit {display: flex; text-align: left; font-weight: 700; align-items: center;}
 .vdi-list .item .tit .icn {margin-left: 5px;}
 .vdi-list .pc {margin: 22px auto 14px auto;}
 .vdi-list .btn-control {width: 100%; max-width: 140px;}
-.vdi-list .item.is-disabled .pc,
-.vdi-list .item.is-disabled .btn-control {opacity: 0.3; pointer-events: none;}
+.vdi-list .item.is-disabled .pc {opacity: 0.3; pointer-events: none;}
+
+.vdi-list.type-wrap {width:100%; flex-wrap: wrap;}
 
 // VDI Detail
 .vdi-detail {display: table; width: 100%;}
