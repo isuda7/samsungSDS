@@ -32,6 +32,15 @@
 .page-system-section .msg-area .msg {font-size: 16px; line-height: 26px; color: #000;}
 .page-system-section .btn-area .btn {width: 340px;}
 
+// Loading
+.loading {visibility: hidden; display: flex; align-items: center; justify-content: center; position: fixed; left: 0; top: 0; z-index: 2000; width: 100%; height: 100%; background-color: rgba($color: #000000, $alpha: 0.5);transition: all 0.15s ease; opacity: 0; pointer-events: none;}
+.loading.show {visibility: visible; opacity: 1; pointer-events: auto;}
+.loading-sec {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 200px; height: 200px; text-align: center; background-color: #fff; border-radius: 20px;}
+.loading-sec .loading-img {width: 50px; height: 50px; margin: 0 auto;}
+.loading-sec .loading-img .spinner-border {width: 100%; height: 100%; border:0; background: url('../img/img-loading-full.png') no-repeat center center / 100% auto;}
+.loading-sec .loading-img .spinner-border.half {background-image: url('../img/img-loading-half.png');}
+.loading-sec .loading-txt {margin-top: 10px; font-size: 14px;}
+
 
 //-------------------------------------------------------------------
 //	@대쉬보드
