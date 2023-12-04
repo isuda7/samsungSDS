@@ -53,6 +53,15 @@ function mainMenuInit(){
 		}
 		return false;
 	})
+	$(document).off('click.gnb focusin.gnb').on('click.gnb focusin.gnb', function(e){
+		var isTarget = $('.sidebar-menu').has(e.target).length === 0;
+		var isTablue = $(window).width() <= 1440;
+		var $opened = $('.main-menu>.root-level.opened');
+		var isOpened = $opened.length > 0;
+		if (isTarget && isTablue && isOpened){
+			$opened.children("ul").fadeOut("fast").parent().removeClass(clsActive);
+		}
+	})
 }
 
 /* Main Menu Selected */
