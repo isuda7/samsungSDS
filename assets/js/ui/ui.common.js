@@ -37,10 +37,19 @@ function mainMenuInit(){
 	$items.off("click").on("click", function(){
 		var $itemParent = $(this).parent();
 		if ($itemParent.hasClass(clsActive)){
-			$(this).next('ul').slideUp("fast").parent().removeClass(clsActive);
+			if ($(window).width() <= 1440) {
+				$(this).next('ul').fadeOut("fast").parent().removeClass(clsActive);
+			} else {
+				$(this).next('ul').slideUp("fast").parent().removeClass(clsActive);
+			}
 		} else {
-			$(this).next('ul').slideDown("fast").parent().addClass(clsActive);
-			$itemParent.siblings(".has-sub.root-level").children("ul").slideUp("fast").parent().removeClass(clsActive);
+			if ($(window).width() <= 1440) {
+				$(this).next('ul').fadeIn("fast").parent().addClass(clsActive);
+				$itemParent.siblings(".has-sub.root-level").children("ul").fadeOut("fast").parent().removeClass(clsActive);
+			} else {
+				$(this).next('ul').slideDown("fast").parent().addClass(clsActive);
+				$itemParent.siblings(".has-sub.root-level").children("ul").slideUp("fast").parent().removeClass(clsActive);
+			}
 		}
 		return false;
 	})
