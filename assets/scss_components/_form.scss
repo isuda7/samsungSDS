@@ -94,7 +94,7 @@ textarea.form-control {@include formControls; height: auto; padding-top:10px; pa
 .form-action .right-area .btn + .btn {margin-left: 10px;}
 .field-inline {display: flex; flex-direction: row;}
 .field-inline .form-title {flex:none; display: flex; min-height: 26px; padding-top:6px; width:100px;}
-.field-inline .form-controls {flex:1 1 auto;}
+.field-inline .form-controls {width: calc(100% - 100px);}
 .field-block {display: flex; flex-direction: column;}
 .field-block .form-title {flex:none; display: flex; min-height: 26px; padding-top:6px;}
 .field-block .form-label {width:100px;}
