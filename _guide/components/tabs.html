@@ -28,107 +28,27 @@
 		<main id="content" class="content" role="main">
 			<div class="content-body">
 				<div class="in-sec">
-					<h1 class="g-h1">Tabs, Select Items</h1>
+					<h1 class="g-h1">Tabs</h1>
 				</div>
 				<!-- Section -->
 				<section class="g-section in-sec">
 					<div class="g-section-head">
-						<h2 class="g-h2">Actions</h2>
+						<h2 class="g-h2">.tab-page</h2>
 					</div>
 					<div class="g-section-body">
-						<div class="grid demo1">
-							<div class="col col-3">
-								<!-- Tab Link -->
-								<h3 class="g-h3">Tab Link</h3>
-								<div class="tab-nav demo1">
-									<ul role="tablist" class="tab-list">
-										<li id="tabItem11" role="tab" aria-controls="tabpanel11" aria-selected="true" class="is-active">
-											<button type="button" class="btn"><span>탭제목1</span></button>
-										</li>
-										<li id="tabItem11" role="tab" aria-controls="tabpanel11" aria-selected="false">
-											<button type="button" class="btn"><span>탭제목2</span></button>
-										</li>
-									</ul>
-								</div>
-								<div class="tab-body">
-									<!-- 탭내용 -->
-									<div id="tabpanel11" role="tabpanel" aria-labelledby="tabItem11" class="tab-cont is-active">
-										<p>탭 패널 고정</p>
-										<p>기능없음</p>
-									</div>
-									<!-- //탭내용 -->
-								</div>
-								<!-- //Tab Link -->
+						<div class="tab-container tab-page">
+							<div class="tab-list" role="tablist">
+								<!-- 2023-11-17 탭수정, 최하단 툴팁활성화 -->
+								<button type="button" id="tabNav1" role="tab" data-bs-toggle="tooltip" class="tab" data-bs-placement="top" aria-selected="false" data-bs-title="로그인, 얼굴인증 이력을 확인할 수 있습니다."><span>사용자인증이력</span></button>
+								<button type="button" id="tabNav2" role="tab" data-bs-toggle="tooltip" class="tab is-selected" data-bs-placement="top" aria-selected="true" data-bs-title="예외정책 적용 현황 및 적용 기간 내 접속 이력을 확인할 수 있습니다."><span>예외정책/접속이력</span></button>
+								<button type="button" id="tabNav3" role="tab" data-bs-toggle="tooltip" class="tab" data-bs-placement="top" aria-selected="false" data-bs-title="이상행위 발생 이력을 확인할 수 있습니다."><span>이상행위이력</span></button>
+								<button type="button" id="tabNav4" role="tab" data-bs-toggle="tooltip" class="tab" data-bs-placement="top" aria-selected="false" data-bs-title="추가모니터 및 추가웹캠 감지 이력을 확인할 수 있습니다."><span>추가모니터/웹감지이력</span></button>
+								<button type="button" id="tabNav5" role="tab" data-bs-toggle="tooltip" class="tab" data-bs-placement="top" aria-selected="false" data-bs-title="에이전트 설치 이력을 확인할 수 있습니다."><span>에이전트설치이력</span></button>
+								<button type="button" id="tabNav6" role="tab" data-bs-toggle="tooltip" class="tab" data-bs-placement="top" aria-selected="false" data-bs-title="삭제코드 발급 이력을 확인할 수 있습니다."><span>삭제코드발급이력</span></button>
 							</div>
-							<div class="col col-3">
-								<h3 class="g-h3">Tab Panels</h3>
-								<!-- Tab Change -->
-								<div class="tab-nav demo1">
-									<ul role="tablist" class="tab-list">
-										<li id="tabItem21" role="tab" aria-controls="tabpanel21" aria-selected="true" class="js-tab is-active">
-											<button type="button" class="btn"><span>탭제목1</span></button>
-										</li>
-										<li id="tabItem22" role="tab" aria-controls="tabpanel22" aria-selected="false" class="js-tab">
-											<button type="button" class="btn"><span>탭제목2</span></button>
-										</li>
-									</ul>
-								</div>
-								<div class="tab-body">
-									<!-- 탭내용1 -->
-									<div id="tabpanel21" role="tabpanel" aria-labelledby="tabItem21" class="tab-cont is-active">
-										<p>탭 패널 전환 1</p>
-										<p>js-tab 적용</p>
-									</div>
-									<!-- //탭내용1 -->
-									<!-- 탭내용2 -->
-									<div id="tabpanel22" role="tabpanel" aria-labelledby="tabItem22" class="tab-cont">
-										<p>탭 패널 전환 2</p>
-										<p>js-tab 적용</p>
-									</div>
-									<!-- //탭내용2 -->
-								</div>
-								<!-- //Tab Change -->
-							</div>
-							<div class="col col-3">
-								<!-- Tab Ajax -->
-								<h3 class="g-h3">Tab Ajax</h3>
-								<div class="tab-nav demo1">
-									<ul class="tab-list">
-										<li id="tabItem31" role="tab" aria-controls="tabpanel3" aria-selected="true" class="js-select is-active">
-											<button type="button" class="btn"><span>탭제목1</span></button>
-										</li>
-										<li id="tabItem32" role="tab" aria-controls="tabpanel3" aria-selected="false" class="js-select">
-											<button type="button" class="btn"><span>탭제목2</span></button>
-										</li>
-									</ul>
-								</div>
-								<div class="tab-body">
-									<!-- 탭내용2 -->
-									<div id="tabpanel3" role="tabpanel" aria-labelledby="tabItem31" class="tab-cont is-active">
-										<p>탭 패널 고정</p>
-										<p>js-select 적용</p>
-									</div>
-									<!-- //탭내용2 -->
-								</div>
-								<!-- //Tab Ajax -->
-							</div>
-							<div class="col col-3">
-								<!-- Tab Select -->
-								<h3 class="g-h3">Tab Select</h3>
-								<div class="tab-nav demo1">
-									<ul class="tab-list">
-										<li id="tabItem31" role="tab" aria-controls="tabpanel3" aria-selected="true" class="js-select is-active">
-											<button type="button" class="btn"><span>탭제목1</span></button>
-										</li>
-										<li id="tabItem32" role="tab" aria-controls="tabpanel3" aria-selected="false" class="js-select">
-											<button type="button" class="btn"><span>탭제목2</span></button>
-										</li>
-									</ul>
-								</div>
-								<div style="line-height:1.5; margin-top:10px">
-									<p>탭 패널 없음</p>
-									<p>js-select 적용</p>
-								</div>
+
+							<div class="tab-panel" aria-labelledby="tabNav2">
+								<!-- tab-panel -->
 							</div>
 						</div>
 					</div>
@@ -138,39 +58,18 @@
 				<!-- Section -->
 				<section class="g-section in-sec">
 					<div class="g-section-head">
-						<h2 class="g-h2">Styles</h2>
+						<h2 class="g-h2">.tab-page2</h2>
 					</div>
 					<div class="g-section-body">
-						<h3 class="g-h3">Style1</h3>
-						<!-- Tab -->
-						<div class="tab-nav demo1">
-							<ul role="tablist" class="tab-list">
-								<li id="tabItem41" role="tab" aria-controls="tabpanel41" aria-selected="true" class="js-tab is-active">
-									<button type="button" class="btn"><span>탭제목1</span></button>
-								</li>
-								<li id="tabItem42" role="tab" aria-controls="tabpanel42" aria-selected="false" class="js-tab">
-									<button type="button" class="btn"><span>탭제목2</span></button>
-								</li>
-							</ul>
-						</div>
-						<div class="tab-body">
-							<!-- 탭내용1 -->
-							<div id="tabpanel41" role="tabpanel" aria-labelledby="tabItem41" class="tab-cont is-active">
-								<p>탭 패널1</p>
-								<p>js-tab 적용</p>
+						<div class="tab-container tab-page2">
+							<div class="tab-list" role="tablist">
+								<button type="button" id="tabNav1" role="tab" aria-selected="false" class="tab"><span>파일 다운로드</span></button>
+								<button type="button" id="tabNav2" role="tab" aria-selected="true" class="tab is-selected"><span>로그인</span></button>
 							</div>
-							<!-- //탭내용1 -->
-							<!-- 탭내용2 -->
-							<div id="tabpanel42" role="tabpanel" aria-labelledby="tabItem42" class="tab-cont">
-								<p>탭 패널2</p>
-								<p>js-tab 적용</p>
+							<div class="tab-panel" aria-labelledby="tabNav2">
+								<!-- tab-panel -->
 							</div>
-							<!-- //탭내용2 -->
 						</div>
-						<!-- Tab -->
-
-						<h3 class="g-h3">Style2</h3>
-					</div>
 				</section>
 				<!-- //Section -->
 			</div>

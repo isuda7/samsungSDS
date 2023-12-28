@@ -36,113 +36,140 @@
 				<!-- Section -->
 				<section class="g-section in-sec">
 					<div class="g-section-head">
-						<h2 class="g-h2">Action</h2>
+						<h2 class="g-h2">Case 1</h2>
 					</div>
 					<div class="g-section-body">
-						<div class="grid demo1">
-							<div class="col col-4">
-								<h3 class="g-h3">data-sync="true" data-toggle="true"</h3>
-								<div class="acco-demo-area">
-									<ul class="acco demo1" data-sync="true" data-toggle="true">
-										<li class="acco-item is-active">
-											<div class="acco-title">
-												<strong>Accodion Title11</strong>
-												<button type="button" aria-controls="acco11" aria-expanded="true" class="btn acco-toggle"><span>자세히보기</span></button>
+						<div class="accordion style1" id="accordionExample">
+							<div class="accordion-item">
+								<h3 class="accordion-header" id="headingOne">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										기본정보
+									</button>
+								</h3>
+								<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+									<div class="accordion-body">
+										<div class="form">
+											<!-- 제목 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="frmTitle">제목</label>
+												</div>
+												<div class="form-controls">
+													<input type="text" id="frmTitle" class="form-control" />
+												</div>
 											</div>
-											<div id="acco11" class="acco-cont">
-												<p>Accodion Content</p>
+											<!-- //제목 -->
+											<!-- 버전 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="frmVision">버전</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group w-auto">
+														<input type="text" id="frmVision" class="form-control w-260" />
+														<button type="button" class="btn btn-control text-primary-dark">수정</button>
+													</div>
+													<p class="form-checking w-full">
+														<i class="icn icn-11-feel-pr" aria-hidden="true"></i>
+														신규 등록 시 버전은 자동 입력됩니다. (단, 임의 수정 가능)
+													</p>
+												</div>
 											</div>
-										</li>
-										<li class="acco-item">
-											<div class="acco-title">
-												<strong>Accodion Title12</strong>
-												<button type="button" aria-controls="acco12" aria-expanded="false" class="btn acco-toggle"><span>자세히보기</span></button>
+											<!-- //버전 -->
+											<!-- 개정일 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="inputStartDt">개정일</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group-date">
+														<div class="input-group">
+															<input type="text" id="inputStartDt" name="inputStartDt"
+																class="form-control datepicker" value="2023-09-28" data-format="yyyy-mm-dd"
+																autocomplete="off" />
+															<div class="input-group-over">
+																<i class="icn icn-16-calendar-bk"></i>
+															</div>
+														</div>
+														<script>
+															$(function () {
+																$('#inputStartDt').datepicker();
+															})
+														</script>
+													</div>
+													<p class="form-checking w-full">
+														<i class="icn icn-11-feel-pr" aria-hidden="true"></i>
+														약관의 효력이 발생하는 일자입니다.
+													</p>
+												</div>
 											</div>
-											<div id="acco12" class="acco-cont">
-												<p>Accodion Content</p>
+											<!-- //개정일 -->
+											<!-- 노출여부 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="frmDisplay">노출여부</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="radio-inline gap-xl">
+														<label class="radio style1">
+															<input type="radio" name="frmDisplay" value="" />
+															<span class="value"><span>Y(노출)</span></span>
+														</label>
+														<label class="radio style1">
+															<input type="radio" name="frmDisplay" value="" />
+															<span class="value"><span>N(미노출)</span></span>
+														</label>
+													</div>
+													<p class="form-checking w-full">
+														<i class="icn icn-11-feel-pr" aria-hidden="true"></i>
+														노출여부를 설정하지 않은 경우 개정일 7일전에 자동 노출 처리되며 가장 최신 버전의 약관만 노출됩니다.
+													</p>
+												</div>
 											</div>
-										</li>
-										<li class="acco-item">
-											<div class="acco-title">
-												<strong>Accodion Title13</strong>
-												<button type="button" aria-controls="acco13" aria-expanded="false" class="btn acco-toggle"><span>자세히보기</span></button>
+											<!-- //노출여부 -->
+											<!-- 사용여부 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="frmApply">사용여부</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="radio-inline gap-xl">
+														<label class="radio style1">
+															<input type="radio" name="frmApply" value="" />
+															<span class="value"><span>Y(사용)</span></span>
+														</label>
+														<label class="radio style1">
+															<input type="radio" name="frmApply" value="" />
+															<span class="value"><span>N(미사용)</span></span>
+														</label>
+													</div>
+													<p class="form-checking w-full">
+														<i class="icn icn-11-feel-pr" aria-hidden="true"></i>
+														이전 약관도 사용 여부를 설정하면 이력을 확인할 수 있습니다. ( 권장:사용 )
+													</p>
+												</div>
 											</div>
-											<div id="acco13" class="acco-cont">
-												<p>Accodion Content</p>
-											</div>
-										</li>
-									</ul>
+											<!-- //사용여부 -->
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="col col-4">
-								<h3 class="g-h3">data-sync="true"</h3>
-								<div class="acco-demo-area">
-									<ul class="acco demo1" data-sync="true">
-										<li class="acco-item">
-											<div class="acco-title">
-												<strong>Accodion Title11</strong>
-												<button type="button" aria-controls="acco21" aria-expanded="false" class="btn acco-toggle"><span>자세히보기</span></button>
-											</div>
-											<div id="acco21" class="acco-cont">
-												<p>Accodion Content</p>
-											</div>
-										</li>
-										<li class="acco-item is-active">
-											<div class="acco-title">
-												<strong>Accodion Title12</strong>
-												<button type="button" aria-controls="acco22" aria-expanded="true" class="btn acco-toggle"><span>자세히보기</span></button>
-											</div>
-											<div id="acco22" class="acco-cont">
-												<p>Accodion Content</p>
-											</div>
-										</li>
-										<li class="acco-item">
-											<div class="acco-title">
-												<strong>Accodion Title13</strong>
-												<button type="button" aria-controls="acco23" aria-expanded="false" class="btn acco-toggle"><span>자세히보기</span></button>
-											</div>
-											<div id="acco23" class="acco-cont">
-												<p>Accodion Content</p>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col col-4">
-								<h3 class="g-h3">data-toggle="true"</h3>
-								<div class="acco-demo-area">
-									<ul class="acco demo1" data-toggle="true">
-										<li class="acco-item">
-											<div class="acco-title">
-												<strong>Accodion Title11</strong>
-												<button type="button" aria-controls="acco31" aria-expanded="true" class="btn acco-toggle"><span>자세히보기</span></button>
-											</div>
-											<div id="acco31" class="acco-cont">
-												<p>Accodion Content</p>
-											</div>
-										</li>
-										<li class="acco-item ">
-											<div class="acco-title">
-												<strong>Accodion Title12</strong>
-												<button type="button" aria-controls="acco32" aria-expanded="false" class="btn acco-toggle"><span>자세히보기</span></button>
-											</div>
-											<div id="acco32" class="acco-cont">
-												<p>Accodion Content</p>
-											</div>
-										</li>
-										<li class="acco-item is-disaebld">
-											<div class="acco-title">
-												<strong>Accodion Title13 (Disabled)</strong>
-												<button type="button" aria-controls="acco33" aria-expanded="false" class="btn acco-toggle" disabled><span>자세히보기</span></button>
-											</div>
-											<div id="acco33" class="acco-cont">
-												<p>Accodion Content</p>
-											</div>
-										</li>
-									</ul>
+							<div class="accordion-item">
+								<h3 class="accordion-header" id="headingTwo">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										내용
+									</button>
+								</h3>
+								<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+									<div class="accordion-body">
+										<div style="background-color: #fbfcfd; height: 300px; padding: 20px;">
+											에디터영역
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
+
 					</div>
 				</section>
 				<!-- //Section -->
@@ -150,10 +177,279 @@
 				<!-- Section -->
 				<section class="g-section in-sec">
 					<div class="g-section-head">
-						<h2 class="g-h2">style1</h2>
+						<h2 class="g-h2">Case 2</h2>
 					</div>
 					<div class="g-section-body">
-						<h3 class="g-h3">제목</h3>
+						<div class="accordion style1" id="accordionExample2">
+							<div class="accordion-item">
+								<h3 class="accordion-header" id="headingOne2">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne">
+										에이전트 연결 및 인증
+									</button>
+								</h3>
+								<div id="collapseOne2" class="accordion-collapse collapse show" aria-labelledby="headingOne2" data-bs-parent="#accordionExample2">
+									<div class="accordion-body">
+										<div class="form form-guidemgmt lined">
+											<!-- msg001 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="msg001_kor" class="form-label bold">msg001</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group">
+														<label for="msg001_kor" class="form-label-sub">한글</label>
+														<input type="text" id="msg001_kor" value="얼굴이 촬영 영역(왼쪽, 오른쪽)을 벗어났습니다. 카메라 중앙으로 이동해주세요." class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark">미리보기</button>
+													</div>
+													<div class="input-group">
+														<label for="msg001_eng" class="form-label-sub">영문</label>
+														<input type="text" id="msg001_eng" value="" class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark" disabled>미리보기</button>
+													</div>
+												</div>
+											</div>
+											<!-- //msg001 -->
+											<!-- msg002 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="msg002_kor" class="form-label bold">msg002</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group">
+														<label for="msg002_kor" class="form-label-sub">한글</label>
+														<input type="text" id="msg002_kor" value="얼굴이 촬영 영역(왼쪽, 오른쪽)을 벗어났습니다. 카메라 중앙으로 이동해주세요." class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark">미리보기</button>
+													</div>
+													<div class="input-group">
+														<label for="msg002_eng" class="form-label-sub">영문</label>
+														<input type="text" id="msg002_eng" value="" class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark" disabled>미리보기</button>
+													</div>
+												</div>
+											</div>
+											<!-- //msg002 -->
+											<!-- msg003 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="msg003_kor" class="form-label bold">msg003</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group">
+														<label for="msg003_kor" class="form-label-sub">한글</label>
+														<input type="text" id="msg003_kor" value="얼굴이 촬영 영역(왼쪽, 오른쪽)을 벗어났습니다. 카메라 중앙으로 이동해주세요." class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark">미리보기</button>
+													</div>
+													<div class="input-group">
+														<label for="msg003_eng" class="form-label-sub">영문</label>
+														<input type="text" id="msg003_eng" value="" class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark" disabled>미리보기</button>
+													</div>
+												</div>
+											</div>
+											<!-- //msg003 -->
+											<!-- msg004 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="msg004_kor" class="form-label bold">msg004</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group">
+														<label for="msg004_kor" class="form-label-sub">한글</label>
+														<input type="text" id="msg004_kor" value="얼굴이 촬영 영역(왼쪽, 오른쪽)을 벗어났습니다. 카메라 중앙으로 이동해주세요." class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark">미리보기</button>
+													</div>
+													<div class="input-group">
+														<label for="msg004_eng" class="form-label-sub">영문</label>
+														<input type="text" id="msg004_eng" value="" class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark" disabled>미리보기</button>
+													</div>
+												</div>
+											</div>
+											<!-- //msg004 -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h3 class="accordion-header" id="headingTwo2">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo">
+										얼굴 인식
+									</button>
+								</h3>
+								<div id="collapseTwo2" class="accordion-collapse collapse" aria-labelledby="headingTwo2" data-bs-parent="#accordionExample2">
+									<div class="accordion-body">
+										<div class="form form-guidemgmt lined">
+											<!-- msg011 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="msg011_kor" class="form-label bold">msg011</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group">
+														<label for="msg011_kor" class="form-label-sub">한글</label>
+														<input type="text" id="msg011_kor" value="얼굴이 촬영 영역(왼쪽, 오른쪽)을 벗어났습니다. 카메라 중앙으로 이동해주세요." class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark">미리보기</button>
+													</div>
+													<div class="input-group">
+														<label for="msg011_eng" class="form-label-sub">영문</label>
+														<input type="text" id="msg011_eng" value="" class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark" disabled>미리보기</button>
+													</div>
+												</div>
+											</div>
+											<!-- //msg011 -->
+											<!-- msg012 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="msg012_kor" class="form-label bold">msg012</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group">
+														<label for="msg012_kor" class="form-label-sub">한글</label>
+														<input type="text" id="msg012_kor" value="얼굴이 촬영 영역(왼쪽, 오른쪽)을 벗어났습니다. 카메라 중앙으로 이동해주세요." class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark">미리보기</button>
+													</div>
+													<div class="input-group">
+														<label for="msg012_eng" class="form-label-sub">영문</label>
+														<input type="text" id="msg012_eng" value="" class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark" disabled>미리보기</button>
+													</div>
+												</div>
+											</div>
+											<!-- //msg012 -->
+											<!-- msg013 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="msg013_kor" class="form-label bold">msg013</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group">
+														<label for="msg013_kor" class="form-label-sub">한글</label>
+														<input type="text" id="msg013_kor" value="얼굴이 촬영 영역(왼쪽, 오른쪽)을 벗어났습니다. 카메라 중앙으로 이동해주세요." class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark">미리보기</button>
+													</div>
+													<div class="input-group">
+														<label for="msg013_eng" class="form-label-sub">영문</label>
+														<input type="text" id="msg013_eng" value="" class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark" disabled>미리보기</button>
+													</div>
+												</div>
+											</div>
+											<!-- //msg013 -->
+											<!-- msg014 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="msg014_kor" class="form-label bold">msg014</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group">
+														<label for="msg014_kor" class="form-label-sub">한글</label>
+														<input type="text" id="msg014_kor" value="얼굴이 촬영 영역(왼쪽, 오른쪽)을 벗어났습니다. 카메라 중앙으로 이동해주세요." class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark">미리보기</button>
+													</div>
+													<div class="input-group">
+														<label for="msg014_eng" class="form-label-sub">영문</label>
+														<input type="text" id="msg014_eng" value="" class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark" disabled>미리보기</button>
+													</div>
+												</div>
+											</div>
+											<!-- //msg014 -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h3 class="accordion-header" id="headingThree2">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree">
+										사용자 인증
+									</button>
+								</h3>
+								<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree2" data-bs-parent="#accordionExample2">
+									<div class="accordion-body">
+										<div class="form form-guidemgmt lined">
+											<!-- msg021 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="msg021_kor" class="form-label bold">msg021</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group">
+														<label for="msg021_kor" class="form-label-sub">한글</label>
+														<input type="text" id="msg021_kor" value="얼굴이 촬영 영역(왼쪽, 오른쪽)을 벗어났습니다. 카메라 중앙으로 이동해주세요." class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark">미리보기</button>
+													</div>
+													<div class="input-group">
+														<label for="msg021_eng" class="form-label-sub">영문</label>
+														<input type="text" id="msg021_eng" value="" class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark" disabled>미리보기</button>
+													</div>
+												</div>
+											</div>
+											<!-- //msg021 -->
+											<!-- msg022 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="msg022_kor" class="form-label bold">msg022</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group">
+														<label for="msg022_kor" class="form-label-sub">한글</label>
+														<input type="text" id="msg022_kor" value="얼굴이 촬영 영역(왼쪽, 오른쪽)을 벗어났습니다. 카메라 중앙으로 이동해주세요." class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark">미리보기</button>
+													</div>
+													<div class="input-group">
+														<label for="msg022_eng" class="form-label-sub">영문</label>
+														<input type="text" id="msg022_eng" value="" class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark" disabled>미리보기</button>
+													</div>
+												</div>
+											</div>
+											<!-- //msg022 -->
+											<!-- msg023 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="msg023_kor" class="form-label bold">msg023</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group">
+														<label for="msg023_kor" class="form-label-sub">한글</label>
+														<input type="text" id="msg023_kor" value="얼굴이 촬영 영역(왼쪽, 오른쪽)을 벗어났습니다. 카메라 중앙으로 이동해주세요." class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark">미리보기</button>
+													</div>
+													<div class="input-group">
+														<label for="msg023_eng" class="form-label-sub">영문</label>
+														<input type="text" id="msg023_eng" value="" class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark" disabled>미리보기</button>
+													</div>
+												</div>
+											</div>
+											<!-- //msg023 -->
+											<!-- msg024 -->
+											<div class="field-inline">
+												<div class="form-title">
+													<label for="msg024_kor" class="form-label bold">msg024</label>
+												</div>
+												<div class="form-controls flex-wrap">
+													<div class="input-group">
+														<label for="msg024_kor" class="form-label-sub">한글</label>
+														<input type="text" id="msg024_kor" value="얼굴이 촬영 영역(왼쪽, 오른쪽)을 벗어났습니다. 카메라 중앙으로 이동해주세요." class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark">미리보기</button>
+													</div>
+													<div class="input-group">
+														<label for="msg024_eng" class="form-label-sub">영문</label>
+														<input type="text" id="msg024_eng" value="" class="form-control" />
+														<button type="button" class="btn btn-control text-primary-dark" disabled>미리보기</button>
+													</div>
+												</div>
+											</div>
+											<!-- //msg024 -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</section>
 				<!-- //Section -->

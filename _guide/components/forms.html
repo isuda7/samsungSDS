@@ -101,43 +101,9 @@
 
 
 						<h4 class="g-h4">검색버튼</h4>
-						<button class="btn btn-control has-icn">
-							<i class="icn icn-16-search-bk" aria-hidden="true"></i>통합검색
+						<button type="button" class="btn btn-search has-icn">
+							<i class="icn icn-16-search-wh"></i>검색
 						</button>
-
-						<h3 class="g-h3">File Attach</h3>
-                        <h4 class="g-h4">기본</h4>
-						<div class="form-controls">
-							<span class="file-add demo1">
-								<input type="text" id="sFilesName11" class="input demo1" title="첨부된 파일명">
-								<label for="sFiles1" class="btn demo1 type-attach" role="button">
-									<span><input type="file" name="sFiles1" id="sFiles1" value="찾아보기" tabindex="-1" aria-hidden="true" onchange="fileAttachSrc(this, event)">첨부</span>
-								</label>
-							</span>
-						</div>
-                        <h4 class="g-h4">추가삭제</h4>
-						<div class="form-controls type-file">
-							<div class="file-add-row">
-								<span class="file-add demo1">
-									<input type="text" id="sFileName21" class="input demo1" title="첨부된 파일명">
-									<label for="sFilesAdd21" class="btn demo1 btn-file" role="button">
-										<span><input type="file" name="sFilesAdd21" id="sFilesAdd21" value="찾아보기" tabindex="-1" aria-hidden="true" onchange="fileAttachSrc(this, event)">첨부</span>
-									</label>
-									<button type="button" class="btn demo1 type-add" onclick="fileAttachAdd(this, 'sFilesAdd2')"><span>추가</span></button>
-									<button type="button" class="btn demo1 type-remove" onclick="fileAttachRemove(this)"><span>삭제</span></button>
-								</span>
-							</div>
-						</div>
-                        <h4 class="g-h4">미리보기</h4>
-						<div class="form-controls type-file">
-							<div id="sFilePreview31" class="file-preview"></div>
-							<span class="file-add demo1">
-								<input type="text" id="sFileName31" class="input demo1" title="첨부된 파일명">
-								<label for="sFilesAdd31" class="btn demo1 btn_file" role="button">
-									<span><input type="file" name="sFilesAdd31" id="sFilesAdd31" value="찾아보기" tabindex="-1" aria-hidden="true" onchange="fileAttachSrc(this, event); fileAttachPreview('sFilePreview31', event)">첨부</span>
-								</label>
-							</span>
-						</div>
 					</div>
 				</section>
 				<!-- //Section -->

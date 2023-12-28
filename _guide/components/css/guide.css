@@ -6,7 +6,7 @@
 /* Section */
 /* .g-section {color:#222;}
 .g-section a { color:#222;} */
-.g-section + .g-section {margin-top:40px;}
+.g-section {padding-bottom:50px;}
 .g-section-head {position:relative; padding-bottom:10px; border-bottom:1px solid #eee;}
 .g-section-body {margin-top:20px;}
 .g-section xmp {border:1px solid #ddd; border-radius:5px; padding:0 30px;font-weight:300; line-height:1.5;}

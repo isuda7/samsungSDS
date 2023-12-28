@@ -33,35 +33,14 @@
 				<!-- Section -->
 				<section class="g-section in-sec">
 					<div class="g-section-head">
-						<h2 class="g-h2">Dropmenus</h2>
+						<h2 class="g-h2">Tooltip</h2>
 					</div>
 					<div class="g-section-body">
-						<h3 class="g-h3">Styles</h3>
-						<div class="drop up">
-							<button type="button" data-id="drop1" aria-expanded="false" class="btn drop-toggle style1 primary"><span>Drop Up</span></button>
-							<div id="drop1" class="drop-menu">
-								<ul class="drop-list">
-									<li><a href="javascript:;">링크메뉴</a></li>
-									<li><a href="javascript:;">링크메뉴</a></li>
-									<li><a href="javascript:;">링크메뉴</a></li>
-									<li><a href="javascript:;">링크메뉴</a></li>
-									<li><a href="javascript:;">링크메뉴</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="drop down">
-							<button type="button" data-id="drop2" aria-expanded="false" class="btn drop-toggle style1 primary"><span>Drop Down</span></button>
-							<div class="drop-menu" id="drop2">
-								<ul class="drop-list">
-									<li><a href="javascript:;">링크메뉴</a></li>
-									<li><a href="javascript:;">링크메뉴</a></li>
-									<li><a href="javascript:;">링크메뉴</a></li>
-									<li><a href="javascript:;">링크메뉴</a></li>
-									<li><a href="javascript:;">링크메뉴</a></li>
-								</ul>
-							</div>
-						</div>
+						<button type="button" id="tabNav2" role="tab" data-bs-toggle="tooltip" class="tab" data-bs-placement="top" aria-selected="false" data-bs-title="예외정책 적용 현황 및 적용 기간 내 접속 이력을 확인할 수 있습니다."><span>예외정책/접속이력</span></button>
+						<script>
+							const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+							const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+						</script>
 					</div>
 				</section>
 				<!-- //Section -->
@@ -69,59 +48,23 @@
 				<!-- Section -->
 				<section class="g-section in-sec">
 					<div class="g-section-head">
-						<h2 class="g-h2">Tooltips</h2>
+						<h2 class="g-h2">Dropdown</h2>
 					</div>
 					<div class="g-section-body">
-						<h3 class="g-h3">Styles</h3>
-						<div class="tooltip-area">
-							<button type="button" data-id="tooltip1" aria-expanded="false" class="btn js-tooltip"><span>버튼</span></button>
-							<div id="tooltip1" class="tooltip">
-								<p>Tooltip Content</p>
+						<div class="dropdown dropdown-level">
+							<button type="button" class="btn text-primary linked dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+							aria-expanded="false">상세보기</button>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+								<div class="dropdown-title">
+									<strong>C레벨</strong>
+								</div>
+								<dl class="dropdown-define">
+									<dt>적용 예외정책</dt>
+									<dd>타인동석, 카메라촬영, 웹캠가림, 추가모니터, 추가웹캠</dd>
+								</dl>
 							</div>
 						</div>
-						<br /><br />
-						<div class="tooltip-area">
-							<button type="button" data-id="tooltip2" aria-expanded="false" class="btn js-tooltip"><span>버튼</span></button>
-							<div id="tooltip2" class="tooltip">
-								<p>Tooltip Content</p>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- //Section -->
 
-				<!-- Section -->
-				<section class="g-section in-sec">
-					<div class="g-section-head">
-						<h2 class="g-h2">Popovers</h2>
-					</div>
-					<div class="g-section-body">
-						<h3 class="g-h3">Styles</h3>
-						<div class="popover-area">
-							<button type="button" data-id="popover1" aria-expanded="false" class="btn js-popover"><span>버튼</span></button>
-							<div id="popover1" class="popover">
-								<div class="popover-head">
-									<h3>popover-head</h3>
-								</div>
-								<div class="popover-cont">
-									<p>Popover Content</p>
-								</div>
-								<button type="button" class="btn btn-close"><span>닫기</span></button>
-							</div>
-						</div>
-						<br /><br />
-						<div class="popover-area">
-							<button type="button" data-id="popover2" aria-expanded="false" class="btn js-popover"><span>버튼</span></button>
-							<div id="popover2" class="popover">
-								<div class="popover-head">
-									<h3>popover-head</h3>
-								</div>
-								<div class="popover-cont">
-									<p>Popover Content</p>
-								</div>
-								<button type="button" class="btn btn-close"><span>닫기</span></button>
-							</div>
-						</div>
 					</div>
 				</section>
 				<!-- //Section -->
